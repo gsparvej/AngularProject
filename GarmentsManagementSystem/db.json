@@ -1,0 +1,62 @@
+{
+  "employees": [
+    {
+      "id": "",
+      "name": "Eiasin",
+      "phoneNumber": "89798879",
+      "email": "eiasin@gamil.com",
+      "joinDate": "2025-01-02",
+      "department": {
+        "name": "Cutting",
+        "designationTitle": "Operator"
+      }
+    }
+  ],
+  "department": [
+    {
+      "id": "982e",
+      "name": "Cutting",
+      "designationTitle": "Supervisor"
+    },
+    {
+      "id": "3cd3",
+      "name": "Sewing",
+      "designationTitle": "Operator"
+    }
+  ],
+  "attendance": [
+    {
+      "id": "1",
+      "date": "01-03-2025",
+      "status": "Present",
+      "employees": {
+        "id": "1"
+      }
+    }
+  ],
+  "leave": [
+    {
+      "id": "1",
+      "leaveType": "Casual",
+      "fromDate": "Present",
+      "toDate": "",
+      "status": "Approve",
+      "employees": {
+        "id": "1"
+      }
+    }
+  ],
+  "payroll": [
+    {
+      "id": "1",
+      "month": "01-03-2025",
+      "basic": "5000",
+      "gross": "2000",
+      "total": "7000",
+      "employees": {
+        "id": "1",
+        "name": "Parvej"
+      }
+    }
+  ]
+}

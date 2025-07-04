@@ -1,0 +1,58 @@
+<div class="container border rounded my-3">
+    <h1 class="text-center text-success">Employee Information Form</h1>
+
+    <form [formGroup]="formGroup" method="post">
+
+     <div class="mb-3">
+    <label for="" class="form-label">Name</label>
+    <input type="text" class="form-control" id="name" formControlName="name" placeholder="Input Employee's Full Name">
+  </div> 
+ <div class="mb-3">
+    <label for="" class="form-label">Phone Number</label>
+    <input type="text" class="form-control" id="phoneNumber" formControlName="phoneNumber" placeholder="Designation">
+  </div>
+
+
+ <div class="row">
+  <div class="col-md-6">
+    <label for="" class="form-label">Joining Date</label>
+    <input type="date" class="form-control" id="joinDate" formControlName="joinDate" placeholder="Date">
+  </div>
+   <div class=" col-md-6">
+      <div class="mb-3">
+    <label for="" class="form-label">email</label>
+    <input type="email" class="form-control" id="email" formControlName="email" placeholder="example@gmail.com">
+  </div>
+  </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6 " formGroupName="department">
+                <div class="invalid-feedback">Please select Department Name.</div>
+                <label for="department" class="form-label">Department Name:</label>
+                <select id="department" formControlName="name" class="form-select" required>
+                    <option *ngFor="let dep of departments" [ngValue]="dep.name">{{dep.name}}</option>
+                </select>
+
+            </div>
+
+            <div class="col-md-6 " formGroupName="department">
+                <div class="invalid-feedback">Please select Designation Title.</div>
+                <label for="department" class="form-label">Designation Title:</label>
+                <select id="department" formControlName="designationTitle" class="form-select" required>
+                    <option *ngFor="let dep of departments" [ngValue]="dep.designationTitle">{{dep.designationTitle}}</option>
+                </select>
+
+            </div>
+  </div>
+    <div class="row mt-3 text-center">
+            <div class="col-md-6">
+                <button type="submit" class="btn btn-success text-center mb-2"  (click)="addEmp()">Save</button>
+            </div>
+            <div class="col-md-6">
+                <button type="reset" class="btn btn-danger text-center mb-2" >Reset</button>
+            </div>
+        </div>
+</form>
+
+</div>

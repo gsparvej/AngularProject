@@ -1,0 +1,38 @@
+
+
+<div class="container border rounded my-3">
+    <h1 class="text-center my-3 text-success">All Employee List</h1>
+    <table class="table table-striped">
+<thead>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Phone Number</th>
+        <th>Email</th>
+        <th>Join Date</th>
+        <th>Department Name</th>
+        <th>Designation Title</th>
+        <th>Action</th>
+    </tr>
+</thead>
+<tbody>
+    <tr *ngFor = "let e of employees | async">
+        <td>{{e.id}}</td>
+        <td>{{e.name}}</td>
+        <td>{{e.phoneNumber}}</td>
+        <td>{{e.email}}</td>
+        <td>{{e.joinDate}}</td>
+
+        <td>{{e.department?.name}}</td>
+         <td>{{e.department?.designationTitle}}</td>
+        <td>
+            <button class="btn btn-warning m-1 p-1" (click)="getEmpById(e.id)">Edit</button>
+            <button class="btn btn-danger m-1 p-1" (click)="deleteEmp(e.id)">Delete</button>
+        </td>
+    </tr>
+</tbody>
+
+
+</table>
+
+</div>

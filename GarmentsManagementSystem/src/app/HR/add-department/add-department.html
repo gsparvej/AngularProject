@@ -1,0 +1,25 @@
+<div class="container border rounded my-3">
+    <h1 class="text-center text-success"> Add Department Form</h1>
+
+    <form [formGroup]="formGroup" method="post">
+
+     <div class="mb-3">
+    <label for="" class="form-label">Department Name</label>
+    <input type="text" class="form-control" id="name" formControlName="name" placeholder="Write Department Name">
+  </div>
+
+   <div class="mb-3">
+    <label for="" class="form-label">Designation Title</label>
+    <input type="text" class="form-control" id="designationTitle" formControlName="designationTitle" placeholder="Designation title">
+  </div>
+    <div class="row mt-3 text-center">
+            <div class="col-md-6">
+                <button type="submit" class="btn btn-success text-center mb-2"  (click)="addDepartment()">Save</button>
+            </div>
+            <div class="col-md-6">
+                <button type="reset" class="btn btn-danger text-center mb-2" >Reset</button>
+            </div>
+        </div>
+</form>
+
+</div>
