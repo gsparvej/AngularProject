@@ -6,6 +6,7 @@ import { AddDepartment } from './HR/add-department/add-department';
 import { AddEmployee } from './HR/add-employee/add-employee';
 
 const routes: Routes = [
+  {path: '',component: ViewAllEmployee},
   {path: 'viewAllEmp', component: ViewAllEmployee},
   {path: 'addEmp', component: AddEmployee},
   {path: 'viewAllDepart', component: ViewAllDepartment},
