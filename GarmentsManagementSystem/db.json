@@ -1,13 +1,13 @@
 {
   "employees": [
     {
-      "id": "",
+      "id": "68b4",
       "name": "Eiasin",
-      "phoneNumber": "89798879",
-      "email": "eiasin@gamil.com",
-      "joinDate": "2025-01-02",
+      "phoneNumber": "3836",
+      "email": "rakib@gmail.com",
+      "joinDate": "2025-04-05",
       "department": {
-        "name": "Cutting",
+        "name": "Sewing",
         "designationTitle": "Operator"
       }
     }
@@ -22,6 +22,11 @@
       "id": "3cd3",
       "name": "Sewing",
       "designationTitle": "Operator"
+    },
+    {
+      "id": "f77e",
+      "name": "Sewing",
+      "designationTitle": "Supervisor"
     }
   ],
   "attendance": [

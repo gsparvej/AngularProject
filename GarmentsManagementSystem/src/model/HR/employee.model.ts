@@ -7,8 +7,8 @@ export class Employee {
     joinDate !: string;
     department !: {
         id: string;
-        address: string;
-        image: string;
+        name: string;
+        designationTitle: string;
     }
 
 
