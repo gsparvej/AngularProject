@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { Buyer } from '../../../model/Merchandiser/buyer.model';
 
 @Injectable({
   providedIn: 'root'
@@ -21,5 +22,12 @@ export class MerchandiserService {
   
     }
   
+    saveBuyer(buy: Buyer) : Observable<any> {
+    
+        return this.http.post(this.baseUrlBuyer,buy);
+      }
+
+
+
   // buyer add, update, delete ,view end 
 }

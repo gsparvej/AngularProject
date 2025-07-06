@@ -24,7 +24,7 @@ export class AddDepartment implements OnInit{
     this.formGroup = this.formBuilder.group({
 
       name :[''],
-      designationTitle :['']
+      designationTitle :[''] // ekhane eta hbe na , eita ektu kheyal korte hbe 
 
 
     });

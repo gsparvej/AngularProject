@@ -204,26 +204,26 @@
       ]
     }
   ],
-
-"buyer": [
-  {
-    "id":"5df0",
-    "name":"L&M Industries Ltd.",
-    "country": "England",
-    "contactperson": "Parvej",
-    "phone": "878967989",
-    "email": "rakib@gmail.com",
-    "address": "London"
-
-
-  }
-],
-
-
-
-
-
-
+  "buyer": [
+    {
+      "id": "5df0",
+      "name": "L&M Industries Ltd.",
+      "country": "England",
+      "contactperson": "Parvej",
+      "phone": "878967989",
+      "email": "rakib@gmail.com",
+      "address": "London"
+    },
+    {
+      "id": "5950",
+      "name": "Badshah Group",
+      "country": "Bangladesh",
+      "contactperson": "Rakib",
+      "phone": "77868767",
+      "email": "badshah@gmail.com",
+      "address": "Mymensingh"
+    }
+  ],
   "user": [
     {
       "id": "48e0",
