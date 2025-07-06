@@ -1,0 +1,40 @@
+<div class="container border rounded my-3">
+    <h1 class="text-center text-success">Attendance Activity Form</h1>
+
+    <form [formGroup]="formGroup" method="post">
+
+     <div class="mb-3">
+    <label for="" class="form-label">Current Attendance Date</label>
+    <input type="date" class="form-control" id="attDate" formControlName="attDate">
+  </div> 
+
+  <div class="row">
+    <div class="col-md-6 " formGroupName="employees">
+                
+                <label for="employees" class="form-label">Employee ID:</label>
+                <select id="employees" formControlName="id" class="form-select">
+                    <option *ngFor="let emp of employee" [ngValue]="emp.id">{{emp.id}}</option>
+                </select>
+
+            </div>
+
+      <div class="col-md-6 " formGroupName="atten_status">
+                
+                <label for="employees" class="form-label">Attendance Status:</label>
+                <select id="employees" formControlName="status" class="form-select">
+                    <option *ngFor="let s of status" [ngValue]="s.status">{{s.status}}</option>
+                </select>
+
+            </div>       
+  </div>
+    <div class="row mt-3 text-center">
+            <div class="col-md-6">
+                <button type="submit" class="btn btn-success text-center mb-2"  (click)="addAtten()">Save</button>
+            </div>
+            <div class="col-md-6">
+                <button type="reset" class="btn btn-danger text-center mb-2" >Reset</button>
+            </div>
+        </div>
+</form>
+
+</div>

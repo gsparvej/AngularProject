@@ -4,6 +4,8 @@ import { Observable } from 'rxjs';
 import { Employee } from '../../../model/HR/employee.model';
 import { Department } from '../../../model/HR/department.model';
 import { Designation } from '../../../model/HR/designation.model';
+import { Attendance } from '../../../model/HR/attendance.model';
+import { Leave } from '../../../model/HR/leave.model';
 
 @Injectable({
   providedIn: 'root'
@@ -16,6 +18,7 @@ export class HrService {
   baseUrlLeave: string = "http://localhost:3000/leave";
   baseUrlPay: string = "http://localhost:3000/payroll";
   baseUrlDesig: string ="http://localhost:3000/designation";
+  baseUrlStatus: string = "http://localhost:3000/atten_status";
 
   constructor(private http: HttpClient) { }
 
@@ -114,5 +117,81 @@ saveDepartment(dep: Department) : Observable<any> {
 
 
 //  Department add, delete , update end
+
+
+// ?Attendance add, delete, view update start
+
+getAllAttendance(): Observable<any>{
+
+    return this.http.get(this.baseUrlAtten);
+
+  }
+
+  deleteAttendance(id: string): Observable<any> {
+
+    return this.http.delete(this.baseUrlAtten+'/'+id);
+  }
+
+saveAttendance(atten: Attendance) : Observable<any> {
+
+    return this.http.post(this.baseUrlAtten,atten);
+  }
+
+  getAttendanceById(id: string): Observable<any> {
+
+    return this.http.get(this.baseUrlAtten+'/'+id);
+  }
+  updateAttendance(id: string, atten: Attendance): Observable<any> {
+
+   return this.http.put(this.baseUrlAtten+'/'+id,atten);
+  }
+
+
+// ?Attendance add, delete, view update end
+
+
+
+
+
+
+// Leave add, delete, view , update start 
+
+getAllLeave(): Observable<any>{
+
+    return this.http.get(this.baseUrlLeave);
+
+  }
+
+  deleteLeave(id: string): Observable<any> {
+
+    return this.http.delete(this.baseUrlLeave+'/'+id);
+  }
+
+saveLeave(leave: Leave) : Observable<any> {
+
+    return this.http.post(this.baseUrlLeave,leave);
+  }
+
+  getLeaveById(id: string): Observable<any> {
+
+    return this.http.get(this.baseUrlLeave+'/'+id);
+  }
+  updateLeave(id: string, leave: Leave): Observable<any> {
+
+   return this.http.put(this.baseUrlLeave+'/'+id,leave);
+  }
+
+
+// Leave add, delete, view , update start 
+
+
+
+getAllStatus(): Observable<any>{
+
+    return this.http.get(this.baseUrlStatus);
+
+  }
+
+
 
 }

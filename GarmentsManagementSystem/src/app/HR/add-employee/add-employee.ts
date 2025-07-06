@@ -26,80 +26,6 @@ export class AddEmployee implements OnInit{
     private formBuilder: FormBuilder,
   ) { }
 
-
-
-
-  // eta chatgpt
-
-  // ngOnInit(): void {
-  //  this.formGroup = this.formBuilder.group({
-  //     name: [''],
-  //     phoneNumber: [''],
-  //     email: [''],
-  //     joinDate: [''],
-  //     departmentId: [''],     // Store only department ID
-  //     designationId: ['']     // Store only designation ID
-  //   });
-
-  //   this.loadDepartment();
-
-  //   this.formGroup.get('id')?.valueChanges.subscribe(deptId => {
-  //     const selectedDept = this.departments.find(dep => dep.id === deptId);
-  //     if (selectedDept) {
-  //       this.designations = selectedDept.designations;   // Auto update designation list
-  //       this.formGroup.get('id')?.reset();    // Reset designation
-  //     } else {
-  //       this.designations = [];
-  //     }
-  //   });
-  // }
-
-  // loadDepartment(): void {
-  //   this.hrService.getAllDepartment().subscribe({
-  //     next: (dep) => {
-  //       this.departments = dep;
-  //     },
-  //     error: (err) => {
-  //       console.log(err);
-  //     }
-  //   });
-  // }
-
-  // addEmp(): void {
-  //   const emp: Employee = {
-  //     name: this.formGroup.value.name,
-  //     phoneNumber: this.formGroup.value.phoneNumber,
-  //     email: this.formGroup.value.email,
-  //     joinDate: this.formGroup.value.joinDate,
-  //     department: this.departments.find(d => d.id === this.formGroup.value.id),
-  //     designation: this.designations.find(d => d.id === this.formGroup.value.id)
-  //   };
-
-  //   this.hrService.saveEmployee(emp).subscribe({
-  //     next: (employee) => {
-  //       console.log(employee, 'added Successfully!');
-  //       this.loadDepartment();
-  //       this.formGroup.reset();
-  //       this.router.navigate(['/viewAllEmp']);
-  //     },
-  //     error: (err) => {
-  //       console.log(err);
-  //     }
-  //   });
-  // }
-  // }
-
-
-
-
-
-
-
-
-
-
-
-
   ngOnInit(): void {
      this.formGroup = this.formBuilder.group({
 
@@ -121,6 +47,7 @@ export class AddEmployee implements OnInit{
    });
 
    this.loadDepartment();
+   this.loadDesignation();
 
    this.formGroup.get('department')?.get('name')?.valueChanges.subscribe(name => {
     const selectedDepartment = this.departments.find(dep => dep.name === name);
@@ -131,7 +58,7 @@ export class AddEmployee implements OnInit{
    });
 
     this.formGroup.get('designation')?.get('designationTitle')?.valueChanges.subscribe(designationTitle => {
-    const selectedDepartment = this.designations.find(dep => dep.designationTitle === designationTitle);
+    const selectedDepartment = this.designations.find(desig => desig.designationTitle === designationTitle);
     if(selectedDepartment) {
 
       this.formGroup.patchValue({department: selectedDepartment});
@@ -158,6 +85,23 @@ export class AddEmployee implements OnInit{
 
   }
 
+  loadDesignation(): void {
+
+    this.hrService.getAllDesignation().subscribe({
+
+      next: (dep) => {
+        this.designations = dep;
+
+      },
+      error: (err) => {
+
+        console.log(err);
+      }
+
+    });
+
+  }
+
   addEmp(): void {
 
 const emp : Employee = {...this.formGroup.value};
@@ -166,6 +110,7 @@ this.hrService.saveEmployee(emp).subscribe({
   next: (employee) => {
     console.log(employee,'added Successfully ! ');
     this.loadDepartment();
+    this.loadDesignation();
     this.formGroup.reset();
     this.router.navigate(['/viewAllEmp']);
   },

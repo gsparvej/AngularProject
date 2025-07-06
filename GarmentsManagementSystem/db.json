@@ -10,6 +10,19 @@
         "name": "Sewing",
         "designationTitle": ""
       }
+    },
+    {
+      "id": "764c",
+      "name": "Eiasin Prodhan",
+      "phoneNumber": "7687",
+      "email": "eiasin@gamil.com",
+      "joinDate": "2025-03-06",
+      "department": {
+        "name": "Sewing"
+      },
+      "designation": {
+        "designationTitle": ""
+      }
     }
   ],
   "department": [
@@ -52,10 +65,47 @@
     {
       "id": "1",
       "attDate": "01-03-2025",
-      "status": "Present",
       "employees": {
-        "id": "1"
+        "id": "1494"
+      },
+      "atten_status": {
+        "id": "1",
+        "status": "Present"
       }
+    },
+    {
+      "id": "6cb4",
+      "attDate": "2025-07-06",
+      "atten_status": {
+        "status": "Present"
+      },
+      "employees": {
+        "id": "764c"
+      }
+    },
+    {
+      "id": "5dda",
+      "attDate": "2025-07-06",
+      "atten_status": {
+        "status": "Absent"
+      },
+      "employees": {
+        "id": "1494"
+      }
+    }
+  ],
+  "atten_status": [
+    {
+      "id": "1",
+      "status": "Present"
+    },
+    {
+      "id": "2",
+      "status": "Absent"
+    },
+    {
+      "id": "3",
+      "status": "Late"
     }
   ],
   "leave": [
