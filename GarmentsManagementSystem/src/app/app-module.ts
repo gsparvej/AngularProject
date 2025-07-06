@@ -24,6 +24,8 @@ import { Registration } from './Auth/registration/registration';
 import { UserProfile } from './Auth/user-profile/user-profile';
 import { Logout } from './Auth/logout/logout';
 import { Home } from './home/home';
+import { ViewAllBuyer } from './Merchandiser/view-all-buyer/view-all-buyer';
+import { AddBuyer } from './Merchandiser/add-buyer/add-buyer';
 
 @NgModule({
   declarations: [
@@ -46,7 +48,9 @@ import { Home } from './home/home';
     Registration,
     UserProfile,
     Logout,
-    Home
+    Home,
+    ViewAllBuyer,
+    AddBuyer
   ],
   imports: [
     BrowserModule,

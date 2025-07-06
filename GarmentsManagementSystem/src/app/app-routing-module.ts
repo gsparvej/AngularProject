@@ -11,9 +11,11 @@ import { AddLeave } from './HR/add-leave/add-leave';
 import { Registration } from './Auth/registration/registration';
 import { Login } from './Auth/login/login';
 import { Home } from './home/home';
+import { ViewAllBuyer } from './Merchandiser/view-all-buyer/view-all-buyer';
 
 const routes: Routes = [
-  {path: '', component: Home},
+  {path: 'home', component: Home},
+  {path: 'login',component: Login},
   {path: 'viewAllEmp', component: ViewAllEmployee},
   {path: 'addEmp', component: AddEmployee},
   {path: 'viewAllDepart', component: ViewAllDepartment},
@@ -23,7 +25,8 @@ const routes: Routes = [
   {path: 'viewAllLeave', component: ViewAllLeave},
   {path: 'addLeave', component: AddLeave},
   {path: 'reg', component: Registration},
-  {path: 'login', component: Login}
+  {path: 'login', component: Login},
+  {path: 'viewAllBuyer', component: ViewAllBuyer}
 ];
 
 @NgModule({
