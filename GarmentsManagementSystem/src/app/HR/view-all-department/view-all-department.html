@@ -6,8 +6,7 @@
 <thead>
     <tr>
         <th>ID</th>
-        <th>Name</th>
-        <th>Designation Title</th>
+        <th>Department Name</th>
         <th>Action</th>
     </tr>
 </thead>
@@ -15,7 +14,6 @@
     <tr *ngFor = "let d of department | async">
         <td>{{d.id}}</td>
         <td>{{d.name}}</td>
-        <td>{{d.designationTitle}}</td>
         <td>
             <button class="btn btn-warning m-1 p-1" (click)="getDepartById(d.id)">Edit</button>
             <button class="btn btn-danger m-1 p-1" (click)="deleteDepart(d.id)">Delete</button>

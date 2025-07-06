@@ -13,6 +13,8 @@ import { AddDepartment } from './HR/add-department/add-department';
 import { ViewAllDepartment } from './HR/view-all-department/view-all-department';
 import { UpdateEmployee } from './HR/update-employee/update-employee';
 import { UpdateDepartment } from './HR/update-department/update-department';
+import { AddDesignation } from './HR/add-designation/add-designation';
+import { ViewAllDesignation } from './HR/view-all-designation/view-all-designation';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { UpdateDepartment } from './HR/update-department/update-department';
     AddDepartment,
     ViewAllDepartment,
     UpdateEmployee,
-    UpdateDepartment
+    UpdateDepartment,
+    AddDesignation,
+    ViewAllDesignation
   ],
   imports: [
     BrowserModule,

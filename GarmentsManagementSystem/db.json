@@ -1,14 +1,14 @@
 {
   "employees": [
     {
-      "id": "68b4",
-      "name": "Eiasin",
-      "phoneNumber": "3836",
-      "email": "rakib@gmail.com",
-      "joinDate": "2025-04-05",
+      "id": "1494",
+      "name": "grgtrg",
+      "phoneNumber": "7687",
+      "email": "eiasin@gamil.com",
+      "joinDate": "2025-07-03",
       "department": {
         "name": "Sewing",
-        "designationTitle": "Operator"
+        "designationTitle": ""
       }
     }
   ],
@@ -16,23 +16,42 @@
     {
       "id": "982e",
       "name": "Cutting",
-      "designationTitle": "Supervisor"
+      "designation": [
+        {
+          "id": "982e",
+          "designationTitle": "Operator"
+        },
+        {
+          "id": "3cd3",
+          "designationTitle": "Supervisor"
+        }
+      ]
     },
     {
-      "id": "3cd3",
+      "id": "76d5",
       "name": "Sewing",
+      "designationTitle": ""
+    },
+    {
+      "id": "d1de",
+      "name": "Sewing",
+      "designationTitle": ""
+    }
+  ],
+  "designation": [
+    {
+      "id": "982e",
       "designationTitle": "Operator"
     },
     {
-      "id": "f77e",
-      "name": "Sewing",
+      "id": "3cd3",
       "designationTitle": "Supervisor"
     }
   ],
   "attendance": [
     {
       "id": "1",
-      "date": "01-03-2025",
+      "attDate": "01-03-2025",
       "status": "Present",
       "employees": {
         "id": "1"
@@ -58,10 +77,15 @@
       "basic": "5000",
       "gross": "2000",
       "total": "7000",
-      "employees": {
-        "id": "1",
-        "name": "Parvej"
-      }
+      "employees": [
+        {
+          "id": "68b4",
+          "name": "Eiasin",
+          "phoneNumber": "3836",
+          "email": "rakib@gmail.com",
+          "joinDate": "2025-04-05"
+        }
+      ]
     }
   ]
 }

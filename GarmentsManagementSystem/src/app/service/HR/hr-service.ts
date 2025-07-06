@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Employee } from '../../../model/HR/employee.model';
 import { Department } from '../../../model/HR/department.model';
+import { Designation } from '../../../model/HR/designation.model';
 
 @Injectable({
   providedIn: 'root'
@@ -14,7 +15,7 @@ export class HrService {
   baseUrlAtten: string = "http://localhost:3000/attendance";
   baseUrlLeave: string = "http://localhost:3000/leave";
   baseUrlPay: string = "http://localhost:3000/payroll";
-
+  baseUrlDesig: string ="http://localhost:3000/designation";
 
   constructor(private http: HttpClient) { }
 
@@ -51,9 +52,42 @@ saveEmployee(emp: Employee) : Observable<any> {
 
 
 
-  // Department and Designation add, delete , update start
+  // Designation add, delete , update start
 
-  getAllDepartment(): Observable<any>{
+  getAllDesignation(): Observable<any>{
+
+    return this.http.get(this.baseUrlDesig);
+
+  }
+
+  deleteDesignation(id: string): Observable<any> {
+
+    return this.http.delete(this.baseUrlDesig+'/'+id);
+  }
+
+saveDesignation(deisg: Designation) : Observable<any> {
+
+    return this.http.post(this.baseUrlDepart,deisg);
+  }
+
+  getDesignationById(id: string): Observable<any> {
+
+    return this.http.get(this.baseUrlDesig+'/'+id);
+  }
+  updateDesignation(id: string, deisg: Designation): Observable<any> {
+
+   return this.http.put(this.baseUrlDesig+'/'+id,deisg);
+  }
+
+// Designation add, delete , update end
+
+
+
+
+
+//  Department add, delete , update start
+
+ getAllDepartment(): Observable<any>{
 
     return this.http.get(this.baseUrlDepart);
 
@@ -78,7 +112,7 @@ saveDepartment(dep: Department) : Observable<any> {
    return this.http.put(this.baseUrlDepart+'/'+id,dep);
   }
 
-// Department and Designation add, delete , update start
 
+//  Department add, delete , update end
 
 }

@@ -1,11 +1,19 @@
+import { Employee } from "./employee.model";
+
 export class Attendance {
 
     id !: string;
-    date !: string;
+    attDate !: string;
     status !: string;
-    employees !: {
-        id: string;
-    }
+   employee : Employee;
+
+   constructor(id:string, attDate:string,status: string, employee: Employee){
+    this.id = id;
+    this.attDate = attDate ;
+    this.status = status;
+    this.employee = employee;
+
+   }
 
 
 
