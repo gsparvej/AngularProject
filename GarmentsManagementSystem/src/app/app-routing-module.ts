@@ -8,6 +8,8 @@ import { ViewAllAttendance } from './HR/view-all-attendance/view-all-attendance'
 import { AddAttendance } from './HR/add-attendance/add-attendance';
 import { ViewAllLeave } from './HR/view-all-leave/view-all-leave';
 import { AddLeave } from './HR/add-leave/add-leave';
+import { Registration } from './Auth/registration/registration';
+import { Login } from './Auth/login/login';
 
 const routes: Routes = [
   {path: '',component: ViewAllEmployee},
@@ -18,7 +20,9 @@ const routes: Routes = [
   {path: 'viewAllAtten', component: ViewAllAttendance},
   {path: 'addAtten', component: AddAttendance},
   {path: 'viewAllLeave', component: ViewAllLeave},
-  {path: 'addLeave', component: AddLeave}
+  {path: 'addLeave', component: AddLeave},
+  {path: 'reg', component: Registration},
+  {path: 'login', component: Login}
 ];
 
 @NgModule({

@@ -19,6 +19,10 @@ import { ViewAllAttendance } from './HR/view-all-attendance/view-all-attendance'
 import { AddAttendance } from './HR/add-attendance/add-attendance';
 import { ViewAllLeave } from './HR/view-all-leave/view-all-leave';
 import { AddLeave } from './HR/add-leave/add-leave';
+import { Login } from './Auth/login/login';
+import { Registration } from './Auth/registration/registration';
+import { UserProfile } from './Auth/user-profile/user-profile';
+import { Logout } from './Auth/logout/logout';
 
 @NgModule({
   declarations: [
@@ -36,7 +40,11 @@ import { AddLeave } from './HR/add-leave/add-leave';
     ViewAllAttendance,
     AddAttendance,
     ViewAllLeave,
-    AddLeave
+    AddLeave,
+    Login,
+    Registration,
+    UserProfile,
+    Logout
   ],
   imports: [
     BrowserModule,
