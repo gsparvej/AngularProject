@@ -10,9 +10,10 @@ import { ViewAllLeave } from './HR/view-all-leave/view-all-leave';
 import { AddLeave } from './HR/add-leave/add-leave';
 import { Registration } from './Auth/registration/registration';
 import { Login } from './Auth/login/login';
+import { Home } from './home/home';
 
 const routes: Routes = [
-  {path: '',component: ViewAllEmployee},
+  {path: '', component: Home},
   {path: 'viewAllEmp', component: ViewAllEmployee},
   {path: 'addEmp', component: AddEmployee},
   {path: 'viewAllDepart', component: ViewAllDepartment},

@@ -23,6 +23,7 @@ import { Login } from './Auth/login/login';
 import { Registration } from './Auth/registration/registration';
 import { UserProfile } from './Auth/user-profile/user-profile';
 import { Logout } from './Auth/logout/logout';
+import { Home } from './home/home';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { Logout } from './Auth/logout/logout';
     Login,
     Registration,
     UserProfile,
-    Logout
+    Logout,
+    Home
   ],
   imports: [
     BrowserModule,
