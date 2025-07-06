@@ -1,4 +1,5 @@
 import { Employee } from "./employee.model";
+import { LeaveStatus } from "./leave_status.model";
 
 export class Leave {
 
@@ -6,10 +7,10 @@ export class Leave {
     leaveType !: string;
     fromDate !: string;
     toDate !: string;
-    status !: string;
+    status !: LeaveStatus;
     employee : Employee;
     
-    constructor(id: string, leaveType: string, fromDate: string, toDate: string, status: string, employee: Employee){
+    constructor(id: string, leaveType: string, fromDate: string, toDate: string,status: LeaveStatus , employee: Employee){
 
         this.id = id;
         this.leaveType = leaveType;

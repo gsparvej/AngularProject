@@ -2,7 +2,7 @@
   "employees": [
     {
       "id": "1494",
-      "name": "grgtrg",
+      "name": "Eiasin",
       "phoneNumber": "7687",
       "email": "eiasin@gamil.com",
       "joinDate": "2025-07-03",
@@ -92,6 +92,28 @@
       "employees": {
         "id": "1494"
       }
+    },
+    {
+      "id": "fe18",
+      "attDate": "2025-07-06",
+      "atten_status": {
+        "status": "Late"
+      },
+      "employees": {
+        "id": "1494",
+        "name": "Eiasin"
+      }
+    },
+    {
+      "id": "5df0",
+      "attDate": "2025-07-06T17:10",
+      "atten_status": {
+        "status": "Absent"
+      },
+      "employees": {
+        "id": "764c",
+        "name": "Eiasin Prodhan"
+      }
     }
   ],
   "atten_status": [
@@ -112,12 +134,56 @@
     {
       "id": "1",
       "leaveType": "Casual",
-      "fromDate": "Present",
-      "toDate": "",
-      "status": "Approve",
+      "fromDate": "01-06-2025",
+      "toDate": "03-06-2025",
       "employees": {
-        "id": "1"
+        "id": "1494",
+        "name": "Eiasin"
+      },
+      "leave_status": {
+        "id": "1",
+        "status": "Pending"
       }
+    },
+    {
+      "id": "d84c",
+      "leaveType": "Marriage",
+      "fromDate": "2025-07-04",
+      "toDate": "2025-07-06",
+      "leave_status": {
+        "status": "Pending"
+      },
+      "employees": {
+        "id": "1494",
+        "name": "Eiasin"
+      }
+    },
+    {
+      "id": "ca37",
+      "leaveType": "Casual",
+      "fromDate": "2025-07-01",
+      "toDate": "2025-07-05",
+      "leave_status": {
+        "status": "Rejected"
+      },
+      "employees": {
+        "id": "764c",
+        "name": "Eiasin Prodhan"
+      }
+    }
+  ],
+  "leave_status": [
+    {
+      "id": "1",
+      "status": "Pending"
+    },
+    {
+      "id": "2",
+      "status": "Approve"
+    },
+    {
+      "id": "3",
+      "status": "Rejected"
     }
   ],
   "payroll": [

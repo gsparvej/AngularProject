@@ -13,6 +13,7 @@
         <th>Department Name</th>
         <th>Designation Title</th>
         <th>Action</th>
+        <th>Profile</th>
     </tr>
 </thead>
 <tbody>
@@ -29,6 +30,9 @@
             <button class="btn btn-warning m-1 p-1" (click)="getEmpById(e.id)">Edit</button>
             <button class="btn btn-danger m-1 p-1" (click)="deleteEmp(e.id)">Delete</button>
         </td>
+         <td> 
+            <button class="btn btn-border rounded m-1 p-1">View</button>
+             </td>
     </tr>
 </tbody>
 

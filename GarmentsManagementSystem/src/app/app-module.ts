@@ -17,6 +17,8 @@ import { AddDesignation } from './HR/add-designation/add-designation';
 import { ViewAllDesignation } from './HR/view-all-designation/view-all-designation';
 import { ViewAllAttendance } from './HR/view-all-attendance/view-all-attendance';
 import { AddAttendance } from './HR/add-attendance/add-attendance';
+import { ViewAllLeave } from './HR/view-all-leave/view-all-leave';
+import { AddLeave } from './HR/add-leave/add-leave';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,9 @@ import { AddAttendance } from './HR/add-attendance/add-attendance';
     AddDesignation,
     ViewAllDesignation,
     ViewAllAttendance,
-    AddAttendance
+    AddAttendance,
+    ViewAllLeave,
+    AddLeave
   ],
   imports: [
     BrowserModule,

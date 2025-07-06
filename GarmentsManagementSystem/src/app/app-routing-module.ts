@@ -6,6 +6,8 @@ import { AddDepartment } from './HR/add-department/add-department';
 import { AddEmployee } from './HR/add-employee/add-employee';
 import { ViewAllAttendance } from './HR/view-all-attendance/view-all-attendance';
 import { AddAttendance } from './HR/add-attendance/add-attendance';
+import { ViewAllLeave } from './HR/view-all-leave/view-all-leave';
+import { AddLeave } from './HR/add-leave/add-leave';
 
 const routes: Routes = [
   {path: '',component: ViewAllEmployee},
@@ -14,7 +16,9 @@ const routes: Routes = [
   {path: 'viewAllDepart', component: ViewAllDepartment},
   {path: 'addDepart', component: AddDepartment},
   {path: 'viewAllAtten', component: ViewAllAttendance},
-  {path: 'addAtten', component: AddAttendance}
+  {path: 'addAtten', component: AddAttendance},
+  {path: 'viewAllLeave', component: ViewAllLeave},
+  {path: 'addLeave', component: AddLeave}
 ];
 
 @NgModule({

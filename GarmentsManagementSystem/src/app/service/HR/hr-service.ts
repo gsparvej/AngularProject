@@ -18,7 +18,8 @@ export class HrService {
   baseUrlLeave: string = "http://localhost:3000/leave";
   baseUrlPay: string = "http://localhost:3000/payroll";
   baseUrlDesig: string ="http://localhost:3000/designation";
-  baseUrlStatus: string = "http://localhost:3000/atten_status";
+  baseUrlAttendStatus: string = "http://localhost:3000/atten_status";
+  baseUrlLeaveStatus: string = "http://localhost:3000/leave_status";
 
   constructor(private http: HttpClient) { }
 
@@ -182,13 +183,18 @@ saveLeave(leave: Leave) : Observable<any> {
   }
 
 
-// Leave add, delete, view , update start 
+// Leave add, delete, view , update end 
 
 
 
-getAllStatus(): Observable<any>{
+getAllAttendStatus(): Observable<any>{
 
-    return this.http.get(this.baseUrlStatus);
+    return this.http.get(this.baseUrlAttendStatus);
+
+  }
+  getAllLeaveStatus(): Observable<any>{
+
+    return this.http.get(this.baseUrlLeaveStatus);
 
   }
 

@@ -4,8 +4,16 @@
     <form [formGroup]="formGroup" method="post">
 
      <div class="mb-3">
-    <label for="" class="form-label">Current Attendance Date</label>
-    <input type="datetime" class="form-control" id="attDate" formControlName="attDate">
+    <label for="" class="form-label">Leave Type</label>
+    <input type="text" class="form-control" id="leaveType" formControlName="leaveType">
+  </div>
+   <div class="mb-3">
+    <label for="" class="form-label">From Date</label>
+    <input type="date" class="form-control" id="leaveType" formControlName="fromDate">
+  </div>
+   <div class="mb-3">
+    <label for="" class="form-label">To Date</label>
+    <input type="date" class="form-control" id="leaveType" formControlName="toDate">
   </div> 
 
   <div class="row">
@@ -18,10 +26,10 @@
 
             </div>
 
-      <div class="col-md-6 " formGroupName="atten_status">
+      <div class="col-md-6 " formGroupName="leave_status">
                 
-                <label for="employees" class="form-label">Attendance Status:</label>
-                <select id="employees" formControlName="status" class="form-select">
+                <label for="" class="form-label">Leave Status:</label>
+                <select id="" formControlName="status" class="form-select">
                     <option *ngFor="let s of status" [ngValue]="s.status">{{s.status}}</option>
                 </select>
 
@@ -29,7 +37,7 @@
   </div>
     <div class="row mt-3 text-center">
             <div class="col-md-6">
-                <button type="submit" class="btn btn-success text-center mb-2"  (click)="addAtten()">Save</button>
+                <button type="submit" class="btn btn-success text-center mb-2"  (click)="addLeave()">Save</button>
             </div>
             <div class="col-md-6">
                 <button type="reset" class="btn btn-danger text-center mb-2" >Reset</button>

@@ -1,25 +1,29 @@
 
 
 <div class="container border rounded my-3">
-    <h1 class="text-center my-3 text-success">All Attendance List</h1>
+    <h1 class="text-center my-3 text-success">All Leave List</h1>
     <table class="table table-striped">
 <thead>
     <tr>
         <th>ID</th>
         <th>Employee ID</th>
         <th>Employee Name</th>
-        <th>Attendance Date</th>
+        <th>Leave Type</th>
+        <th>From Date</th>
+        <th>To Date</th>
         <th>Status</th>
         <th>Action</th>
     </tr>
 </thead>
 <tbody>
-    <tr *ngFor = "let a of attendance | async">
-        <td>{{a.id}}</td>
-        <td>{{a.employees?.id}}</td>
-         <td>{{a.employees?.name}}</td>
-        <td>{{a.attDate}}</td>
-        <td>{{a.atten_status?.status}}</td>
+    <tr *ngFor = "let l of leave | async">
+        <td>{{l.id}}</td>
+        <td>{{l.employees?.id}}</td>
+         <td>{{l.employees?.name}}</td>
+         <td>{{l.leaveType}}</td>
+        <td>{{l.fromDate}}</td>
+        <td>{{l.toDate}}</td>
+        <td>{{l.leave_status?.status}}</td>
         <td>
             <button class="btn btn-warning m-1 p-1">Edit</button>
             <button class="btn btn-danger m-1 p-1">Delete</button>

@@ -6,7 +6,7 @@ export class Attendance {
     id !: string;
     attDate !: string;
     status : AttendStatus;
-   employee : Employee;
+    employee : Employee;
 
    constructor(id:string, attDate:string,status: AttendStatus, employee: Employee){
     this.id = id;
