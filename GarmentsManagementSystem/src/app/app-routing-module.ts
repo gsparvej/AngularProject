@@ -13,6 +13,7 @@ import { Login } from './Auth/login/login';
 import { Home } from './home/home';
 import { ViewAllBuyer } from './Merchandiser/view-all-buyer/view-all-buyer';
 import { AddBuyer } from './Merchandiser/add-buyer/add-buyer';
+import { UserProfile } from './Auth/user-profile/user-profile';
 
 const routes: Routes = [
   {path: '', component: Home},
@@ -28,7 +29,8 @@ const routes: Routes = [
   {path: 'reg', component: Registration},
   {path: 'login', component: Login},
   {path: 'viewAllBuyer', component: ViewAllBuyer},
-  {path: 'addBuyer', component: AddBuyer}
+  {path: 'addBuyer', component: AddBuyer},
+  {path:'userprofile', component: UserProfile}
 ];
 
 @NgModule({
