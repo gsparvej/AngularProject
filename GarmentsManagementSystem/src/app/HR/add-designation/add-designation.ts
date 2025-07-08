@@ -51,7 +51,7 @@ export class AddDesignation implements OnInit{
     else{
       const {designationTitle} = this.desigForm.value;
       this.hrService.saveDesignation({ designationTitle }).subscribe(() => {
-        alert('Saaved Successfully!');
+        alert('Saved Successfully!');
         this.loadDesignation();
         this.desigForm.reset();
         this.editing = false;

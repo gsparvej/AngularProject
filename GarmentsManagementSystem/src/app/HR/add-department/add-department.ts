@@ -22,7 +22,7 @@ export class AddDepartment implements OnInit{
     private formBuilder : FormBuilder,
 
   ){
-    this.departForm = formBuilder.group({
+    this.departForm = this.formBuilder.group({
       name: ['', Validators.required],
       designations: [[], Validators.required]
     });

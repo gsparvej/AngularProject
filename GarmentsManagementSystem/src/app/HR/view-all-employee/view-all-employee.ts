@@ -15,7 +15,7 @@ employees: any;
 constructor(
 private hrService: HrService,
 private cdr: ChangeDetectorRef,
-private router: Router
+private router: Router,
 
 
 ){}

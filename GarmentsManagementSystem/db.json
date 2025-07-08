@@ -1,31 +1,25 @@
 {
   "employees": [
     {
-      "id": "1494",
-      "name": "Eiasin",
-      "phoneNumber": "7687",
-      "email": "eiasin@gamil.com",
-      "joinDate": "2025-07-03",
-      "department": {
-        "name": "Sewing",
-        "designationTitle": ""
-      }
-    },
-    {
-      "id": "764c",
-      "name": "Eiasin Prodhan",
-      "phoneNumber": "7687",
-      "email": "eiasin@gamil.com",
-      "joinDate": "2025-03-06",
-      "department": {
-        "name": "Sewing"
-      },
-      "designation": {
-        "designationTitle": ""
-      }
+      "id": "c636",
+      "name": "Rakib Hasan",
+      "phoneNumber": "01865986548",
+      "email": "rakib@gmail.com",
+      "joinDate": "2025-07-08",
+      "department": "0781",
+      "designation": "d104"
     }
   ],
-  "department": [],
+  "department": [
+    {
+      "id": "0781",
+      "name": "Production",
+      "designations": [
+        "d104",
+        "978a"
+      ]
+    }
+  ],
   "designation": [
     {
       "id": "d104",
@@ -42,6 +36,10 @@
     {
       "id": "16d7",
       "designationTitle": "Line QC"
+    },
+    {
+      "id": "9472",
+      "designationTitle": "Executive"
     }
   ],
   "attendance": [

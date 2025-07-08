@@ -23,9 +23,9 @@
         <td>{{e.phoneNumber}}</td>
         <td>{{e.email}}</td>
         <td>{{e.joinDate}}</td>
-
-        <td>{{e.department?.name}}</td>
-         <td>{{e.department?.designationTitle}}</td>
+        <!-- <td>{{ departmentConverter(e.department) }}</td>  -->
+         <!-- ekhane kaj korte hbe ***  -->
+         <td>{{e.designation}}</td>
         <td>
             <button class="btn btn-warning m-1 p-1" (click)="getEmpById(e.id)">Edit</button>
             <button class="btn btn-danger m-1 p-1" (click)="deleteEmp(e.id)">Delete</button>

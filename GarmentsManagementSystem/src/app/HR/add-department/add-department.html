@@ -16,7 +16,7 @@
       <label for="designations" class="form-label">Select Designations</label>
       <select
         id="designationTitle"
-        formControlName="designationTitle"
+        formControlName="designations"
         class="form-select"
         multiple
         size="5"
@@ -35,8 +35,7 @@
       <button
         type="submit"
         class="btn btn-primary"
-        [disabled]="departForm.invalid"
-      >
+        [disabled]="departForm.invalid">
         Add Department
       </button>
     </div>
