@@ -14,6 +14,8 @@ import { Home } from './home/home';
 import { ViewAllBuyer } from './Merchandiser/view-all-buyer/view-all-buyer';
 import { AddBuyer } from './Merchandiser/add-buyer/add-buyer';
 import { UserProfile } from './Auth/user-profile/user-profile';
+import { Designation } from '../model/HR/designation.model';
+import { AddDesignation } from './HR/add-designation/add-designation';
 
 const routes: Routes = [
   {path: '', component: Home},
@@ -21,6 +23,7 @@ const routes: Routes = [
   {path: 'viewAllEmp', component: ViewAllEmployee},
   {path: 'addEmp', component: AddEmployee},
   {path: 'viewAllDepart', component: ViewAllDepartment},
+  {path: 'addDesig', component: AddDesignation},
   {path: 'addDepart', component: AddDepartment},
   {path: 'viewAllAtten', component: ViewAllAttendance},
   {path: 'addAtten', component: AddAttendance},

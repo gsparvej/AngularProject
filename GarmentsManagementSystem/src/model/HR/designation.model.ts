@@ -1,7 +1,7 @@
 export class Designation {
 
-    id !: string;
-    designationTitle !: string;
+    id? : string;
+    designationTitle  : string;
 
      constructor(id: string, designationTitle: string) {
         

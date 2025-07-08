@@ -58,29 +58,29 @@ saveEmployee(emp: Employee) : Observable<any> {
 
   // Designation add, delete , update start
 
-  getAllDesignation(): Observable<any>{
+  getAllDesignation(): Observable<Designation[]>{
 
-    return this.http.get(this.baseUrlDesig);
+    return this.http.get<Designation[]>(this.baseUrlDesig);
 
   }
 
-  deleteDesignation(id: string): Observable<any> {
+  deleteDesignation(id: string): Observable<void> {
 
-    return this.http.delete(this.baseUrlDesig+'/'+id);
+    return this.http.delete<void>(`${this.baseUrlDesig}/${id}`);
   }
 
-saveDesignation(deisg: Designation) : Observable<any> {
+saveDesignation(deisg: Designation) : Observable<Designation> {
 
-    return this.http.post(this.baseUrlDepart,deisg);
+    return this.http.post<Designation>(this.baseUrlDesig,deisg);
   }
 
-  getDesignationById(id: string): Observable<any> {
+  // getDesignationById(id: string): Observable<any> {
 
-    return this.http.get(this.baseUrlDesig+'/'+id);
-  }
-  updateDesignation(id: string, deisg: Designation): Observable<any> {
+  //   return this.http.get(this.baseUrlDesig+'/'+id);
+  // }
+  updateDesignation(desig: Designation): Observable<Designation> {
 
-   return this.http.put(this.baseUrlDesig+'/'+id,deisg);
+   return this.http.put<Designation>(`${this.baseUrlDesig}/${desig.id}`,desig);
   }
 
 // Designation add, delete , update end
@@ -91,29 +91,29 @@ saveDesignation(deisg: Designation) : Observable<any> {
 
 //  Department add, delete , update start
 
- getAllDepartment(): Observable<any>{
+ getAllDepartment(): Observable<Department[]>{
 
-    return this.http.get(this.baseUrlDepart);
+    return this.http.get<Department[]>(this.baseUrlDepart);
 
   }
 
-  deleteDepartment(id: string): Observable<any> {
+  deleteDepartment(id: string): Observable<void> {
 
-    return this.http.delete(this.baseUrlDepart+'/'+id);
+    return this.http.delete<void>(`${this.baseUrlDepart}/${id}`);
   }
 
-saveDepartment(dep: Department) : Observable<any> {
+saveDepartment(dep: Department) : Observable<Department> {
 
-    return this.http.post(this.baseUrlDepart,dep);
+    return this.http.post<Department>(this.baseUrlDepart,dep);
   }
 
   getDepartmentById(id: string): Observable<any> {
 
     return this.http.get(this.baseUrlDepart+'/'+id);
   }
-  updateDepartment(id: string, dep: Department): Observable<any> {
+  updateDepartment(dep: Department): Observable<Department> {
 
-   return this.http.put(this.baseUrlDepart+'/'+id,dep);
+   return this.http.put<Department>(`${this.baseUrlDepart}/${dep.id}`,dep);
   }
 
 

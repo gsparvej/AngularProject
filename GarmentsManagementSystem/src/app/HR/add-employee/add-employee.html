@@ -1,58 +1,46 @@
-<div class="container border rounded my-3">
-    <h1 class="text-center text-success">Employee Information Form</h1>
+<div class="container mt-4">
+  <h2 class="mb-4">Add Employee</h2>
 
-    <form [formGroup]="formGroup" method="post">
+  <form [formGroup]="formGroup" (ngSubmit)="onSubmit()" class="row g-3">
+    <div class="col-md-6">
+      <label class="form-label">Name</label>
+      <input formControlName="name" class="form-control" placeholder="Full Name" />
+    </div>
 
-     <div class="mb-3">
-    <label for="" class="form-label">Name</label>
-    <input type="text" class="form-control" id="name" formControlName="name" placeholder="Input Employee's Full Name">
-  </div> 
- <div class="mb-3">
-    <label for="" class="form-label">Phone Number</label>
-    <input type="text" class="form-control" id="phoneNumber" formControlName="phoneNumber" placeholder="Designation">
-  </div>
+    <div class="col-md-6">
+      <label class="form-label">Phone Number</label>
+      <input type="text" formControlName="phoneNumber" class="form-control" placeholder="phoneNumber" />
+    </div>
 
+    <div class="col-md-6">
+      <label class="form-label">Email</label>
+      <input formControlName="email" type="email" class="form-control" placeholder="example@gmail.com" />
+    </div>
+     <div class="col-md-6">
+      <label class="form-label">Joining Date</label>
+      <input formControlName="joinDate" type="date" class="form-control" placeholder="Date" />
+    </div>
 
- <div class="row">
-  <div class="col-md-6">
-    <label for="" class="form-label">Joining Date</label>
-    <input type="date" class="form-control" id="joinDate" formControlName="joinDate" placeholder="Date">
-  </div>
-   <div class=" col-md-6">
-      <div class="mb-3">
-    <label for="" class="form-label">email</label>
-    <input type="email" class="form-control" id="email" formControlName="email" placeholder="example@gmail.com">
-  </div>
-  </div>
-  </div>
+    <div class="col-md-6">
+      <label class="form-label">Department</label>
+      <select formControlName="department" class="form-select" (change)="onDepartmentChange()">
+        <option value="">Select Department</option>
+        <option *ngFor="let depart of allDepartments" [value]="depart.id">{{ depart.name }}</option>
+      </select>
+    </div>
 
-  <div class="row">
-    <div class="col-md-6 " formGroupName="department">
-                <div class="invalid-feedback">Please select Department Name.</div>
-                <label for="department" class="form-label">Department Name:</label>
-                <select id="department" formControlName="name" class="form-select" required>
-                    <option *ngFor="let dep of departments" [ngValue]="dep.name">{{dep.name}}</option>
-                </select>
+    <div class="col-md-6">
+      <label class="form-label">Designation Title</label>
+      <select formControlName="designation" class="form-select">
+        <option value="">Select Police Station</option>
+        <option *ngFor="let desig of filteredDesignations" [value]="desig.id">{{ desig.designationTitle }}</option>
+      </select>
+    </div>
 
-            </div>
-
-            <div class="col-md-6 " formGroupName="department">
-                <div class="invalid-feedback">Please select Designation Title.</div>
-                <label for="department" class="form-label">Designation Title:</label>
-                <select id="department" formControlName="designationTitle" class="form-select" required>
-                    <option *ngFor="let dep of designations" [ngValue]="dep.designationTitle">{{dep.designationTitle}}</option>
-                </select>
-
-            </div>
-  </div>
-    <div class="row mt-3 text-center">
-            <div class="col-md-6">
-                <button type="submit" class="btn btn-success text-center mb-2"  (click)="addEmp()">Save</button>
-            </div>
-            <div class="col-md-6">
-                <button type="reset" class="btn btn-danger text-center mb-2" >Reset</button>
-            </div>
-        </div>
-</form>
-
+    <div class="col-md-12">
+      <button class="btn btn-success" type="submit" [disabled]="formGroup.invalid">
+        Add Employee
+      </button>
+    </div>
+  </form>
 </div>

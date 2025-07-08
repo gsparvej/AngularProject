@@ -25,44 +25,23 @@
       }
     }
   ],
-  "department": [
-    {
-      "id": "982e",
-      "name": "Cutting",
-      "designation": [
-        {
-          "id": "982e",
-          "designationTitle": "Operator"
-        },
-        {
-          "id": "3cd3",
-          "designationTitle": "Supervisor"
-        }
-      ]
-    },
-    {
-      "id": "76d5",
-      "name": "Sewing",
-      "designationTitle": ""
-    },
-    {
-      "id": "d1de",
-      "name": "Sewing",
-      "designationTitle": ""
-    },
-    {
-      "id": "15ba",
-      "name": "Production"
-    }
-  ],
+  "department": [],
   "designation": [
     {
-      "id": "982e",
+      "id": "d104",
       "designationTitle": "Operator"
     },
     {
-      "id": "3cd3",
+      "id": "978a",
       "designationTitle": "Supervisor"
+    },
+    {
+      "id": "53a2",
+      "designationTitle": "General Manager"
+    },
+    {
+      "id": "16d7",
+      "designationTitle": "Line QC"
     }
   ],
   "attendance": [

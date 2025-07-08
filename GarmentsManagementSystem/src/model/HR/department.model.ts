@@ -4,9 +4,9 @@ export class Department {
 
     id !: string;
     name !: string;
-    designations: Designation[];
+    designations: string[];
     
-    constructor(id: string,name: string,designations: Designation[] = []){
+    constructor(id: string,name: string,designations: string[] = []){
 
         this.id = id;
         this.name = name;
