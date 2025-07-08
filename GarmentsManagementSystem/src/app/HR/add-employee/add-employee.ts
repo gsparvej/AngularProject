@@ -64,6 +64,7 @@ export class AddEmployee implements OnInit{
       alert('Employee Saved Successfully!');
       this.formGroup.reset();
       this.filteredDesignations = [];
+      this.router.navigate(['/viewAllEmp']);
     });
   }
 

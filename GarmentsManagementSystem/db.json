@@ -17,6 +17,24 @@
       "joinDate": "2025-03-07",
       "department": "0781",
       "designation": "978a"
+    },
+    {
+      "id": "638f",
+      "name": "Md. Parvej Hossen",
+      "phoneNumber": "01906-600275",
+      "email": "parvej@gmail.com",
+      "joinDate": "2025-01-02",
+      "department": "3b5a",
+      "designation": "9472"
+    },
+    {
+      "id": "9a10",
+      "name": "Atik",
+      "phoneNumber": "7886970",
+      "email": "atik@gmail.com",
+      "joinDate": "2025-04-03",
+      "department": "0781",
+      "designation": "d104"
     }
   ],
   "department": [
@@ -33,6 +51,23 @@
       "name": "Administration ",
       "designations": [
         "9472"
+      ]
+    },
+    {
+      "id": "649d",
+      "name": "Cutting",
+      "designations": [
+        "d104",
+        "978a"
+      ]
+    },
+    {
+      "id": "cf6d",
+      "name": "Sewing",
+      "designations": [
+        "d104",
+        "978a",
+        "16d7"
       ]
     }
   ],

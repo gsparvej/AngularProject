@@ -45,6 +45,7 @@ private router: Router,
     this.employees = employees;
     this.departments = departments;
     this.designations = designations;
+    this.router.navigate(['/viewAllEmp']);
   },
   error: (err) => {
     console.log('Error loading Data : ',err);
