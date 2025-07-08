@@ -1,42 +1,38 @@
+<div class="container mt-4">
+  <h2 class="mb-4">All Employee List</h2>
 
+  <div class="row">
+    <div class="col-md-4 mb-4" *ngFor="let emp of employees">
+      <div class="card shadow h-100">
+        <div class="card-body">
+          <h5 class="card-title">Name: {{ emp.name }}</h5>
+          <h6 class="card-subtitle mb-2 text-muted">Email: {{ emp.email }}</h6>
 
-<div class="container border rounded my-3">
-    <h1 class="text-center my-3 text-success">All Employee List</h1>
-    <table class="table table-striped">
-<thead>
-    <tr>
-        <th>ID</th>
-        <th>Name</th>
-        <th>Phone Number</th>
-        <th>Email</th>
-        <th>Join Date</th>
-        <th>Department Name</th>
-        <th>Designation Title</th>
-        <th>Action</th>
-        <th>Profile</th>
-    </tr>
-</thead>
-<tbody>
-    <tr *ngFor = "let e of employees | async">
-        <td>{{e.id}}</td>
-        <td>{{e.name}}</td>
-        <td>{{e.phoneNumber}}</td>
-        <td>{{e.email}}</td>
-        <td>{{e.joinDate}}</td>
-        <!-- <td>{{ departmentConverter(e.department) }}</td>  -->
-         <!-- ekhane kaj korte hbe ***  -->
-         <td>{{e.designation}}</td>
-        <td>
-            <button class="btn btn-warning m-1 p-1" (click)="getEmpById(e.id)">Edit</button>
-            <button class="btn btn-danger m-1 p-1" (click)="deleteEmp(e.id)">Delete</button>
-        </td>
-         <td> 
-            <button class="btn btn-border rounded m-1 p-1">View</button>
-             </td>
-    </tr>
-</tbody>
+          <p class="card-text mb-1">
+            <strong>Phone Number:</strong> {{ emp.phoneNumber  }}
+          </p>
+          <p class="card-text mb-1">
+            <strong>Joining Date:</strong> {{ emp.joinDate }}
+          </p>
+          <p class="card-text mb-1">
+            <strong>Department:</strong> {{ getDepartmentName(emp.department) }}
+          </p>
+          <p class="card-text mb-1">
+            <strong>Designation:</strong> {{ getDesignationTitle(emp.designation) }}
+          </p>
+        </div>
+        <div class="card-footer text-end">
+          <a [routerLink]="['/edit-employee', emp.id]" class="btn btn-sm btn-warning me-2">
+            Edit
+          </a>
+          <button class="btn btn-sm btn-danger me-2" (click)="deleteEmp(emp.id)">
+            Delete
+          </button>
+          <button class="btn btn-sm btn-info" (click)="getEmpById(emp.id)">
+            View
+          </button>
+        </div>
 
-
-</table>
-
-</div>
+      </div>
+    </div>
+  </div>

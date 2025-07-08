@@ -5,12 +5,8 @@ export class Employee {
     phoneNumber !: string;
     email !: string;
     joinDate !: string;
-    department !: {
-        id: string;
-        name: string;
-        designationTitle: string;
-    }
-
+   department !: string;
+   designation! : string;
 
 
 }
