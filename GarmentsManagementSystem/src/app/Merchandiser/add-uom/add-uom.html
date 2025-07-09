@@ -5,28 +5,28 @@
  <div class="row">
     <div class="col-md-4">
          <label for="" >Body :</label>
-  <input type="number"  formControlName="body">
+  <input type="number" formControlName="body">
     </div>
 
   <div class="col-md-4">
     <label for="" >Sleeve :</label>
-  <input type="number"  formControlName="sleeve">
+  <input type="number"  [(ngModel)]="sleeve">
   </div>
 
  <div class="col-md-4">
      <label for="n">Pocket :</label>
-  <input type="number"  formControlName ="pocket">
+  <input type="number"  [(ngModel)] ="pocket">
  </div>
 
  </div>
  <div class="row mb-3 mt-3">
      <div class="col-md-6">
         <label for="n">Wastage :</label>
-  <input type="number" formControlName ="wastage">
+  <input type="number" [(ngModel)] ="wastage">
      </div>
   <div class="col-md-6">
     <label for="">Shrinkage :</label>
-  <input type="number"  formControlName ="shrinkage">
+  <input type="number"  [(ngModel)] ="shrinkage">
   </div>
  </div>
 
