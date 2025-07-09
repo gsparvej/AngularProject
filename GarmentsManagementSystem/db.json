@@ -28,13 +28,13 @@
       "designation": "9472"
     },
     {
-      "id": "9a10",
-      "name": "Atik",
-      "phoneNumber": "7886970",
-      "email": "atik@gmail.com",
-      "joinDate": "2025-04-03",
-      "department": "0781",
-      "designation": "d104"
+      "id": "236c",
+      "name": "Reja",
+      "phoneNumber": "5632683",
+      "email": "reja@gmail.com",
+      "joinDate": "2025-04-05",
+      "department": "3b5a",
+      "designation": "9472"
     }
   ],
   "department": [
@@ -145,6 +145,28 @@
       "employees": {
         "id": "764c",
         "name": "Eiasin Prodhan"
+      }
+    },
+    {
+      "id": "92b6",
+      "attDate": "2025-07-09",
+      "atten_status": {
+        "status": "Present"
+      },
+      "employees": {
+        "id": "b527",
+        "name": "Md. Rakib Islam"
+      }
+    },
+    {
+      "id": "8126",
+      "attDate": "2025-07-09",
+      "atten_status": {
+        "status": "Absent"
+      },
+      "employees": {
+        "id": "236c",
+        "name": "Reja"
       }
     }
   ],
@@ -266,14 +288,59 @@
       "role": "user"
     }
   ],
-  "uom":[
+  "uom": [
     {
-      
+      "id": "9a02",
+      "productName": "Shirt",
+      "size": "M",
+      "body": 5,
+      "sleeve": 5,
+      "pocket": 5,
+      "wastage": 5,
+      "shrinkage": 5
+    },
+    {
+      "id": "d129",
+      "productName": "Shirt",
+      "size": "L",
+      "body": 1.4,
+      "sleeve": 0.1,
+      "pocket": 0.15,
+      "wastage": 3,
+      "shrinkage": 2
+    },
+    {
+      "id": "bc4c",
+      "productName": "Shirt",
+      "size": "XL",
+      "body": 24,
+      "sleeve": 5,
+      "pocket": 1,
+      "wastage": 2,
+      "shrinkage": 3
+    },
+    {
+      "id": "83af",
+      "productName": "sw",
+      "size": "M",
+      "body": 2,
+      "sleeve": 4,
+      "pocket": 3,
+      "wastage": 2,
+      "shrinkage": 2,
+      "result": 9.36
+    },
+    {
+      "id": "cd2c",
+      "productName": "Shirt",
+      "size": "XL",
+      "body": 1.52,
+      "sleeve": 0.12,
+      "pocket": 0.15,
+      "wastage": 2,
+      "shrinkage": 3,
+      "result": 1.8795
     }
   ],
-  "consumption": [
-    {
-      
-    }
-  ]
+  "consumption": []
 }

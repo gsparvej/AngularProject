@@ -1,64 +1,62 @@
-<div class="container">
-    <div>
-  <h2>Simple Calculator</h2>
+<div class="container mt-5">
+  <h2 class="mb-4">UOM Calculator</h2>
 
- <div class="row">
-    <div class="col-md-4">
-         <label for="" >Body :</label>
-  <input type="number" formControlName="body">
+  <form [formGroup]="formUom" class="needs-validation">
+
+    <div class="row mb-3">
+      <div class="col-md-4">
+        <label class="form-label">Body :</label>
+        <input type="number" class="form-control" formControlName="body">
+      </div>
+
+      <div class="col-md-4">
+        <label class="form-label">Sleeve :</label>
+        <input type="number" class="form-control" formControlName="sleeve">
+      </div>
+
+      <div class="col-md-4">
+        <label class="form-label">Pocket :</label>
+        <input type="number" class="form-control" formControlName="pocket">
+      </div>
     </div>
 
-  <div class="col-md-4">
-    <label for="" >Sleeve :</label>
-  <input type="number"  [(ngModel)]="sleeve">
-  </div>
+    <div class="row mb-3">
+      <div class="col-md-6">
+        <label class="form-label">Wastage :</label>
+        <input type="number" class="form-control" formControlName="wastage">
+      </div>
 
- <div class="col-md-4">
-     <label for="n">Pocket :</label>
-  <input type="number"  [(ngModel)] ="pocket">
- </div>
+      <div class="col-md-6">
+        <label class="form-label">Shrinkage :</label>
+        <input type="number" class="form-control" formControlName="shrinkage" (blur)="onFocusLost()">
+      </div>
+    </div>
 
- </div>
- <div class="row mb-3 mt-3">
-     <div class="col-md-6">
-        <label for="n">Wastage :</label>
-  <input type="number" [(ngModel)] ="wastage">
-     </div>
-  <div class="col-md-6">
-    <label for="">Shrinkage :</label>
-  <input type="number"  [(ngModel)] ="shrinkage">
-  </div>
- </div>
- <div class="row">
-  <div class="col-md-6">
-        <label for="n">Product Name :</label>
-  <input type="text" formControlName ="productName">
-     </div>
-     <div class="col-md-6">
-        <label for="n">Size :</label>
-  <input type="text" formControlName ="size">
-     </div>
- </div>
+    <div class="row mb-3">
+      <div class="col-md-6">
+        <label class="form-label">Product Name :</label>
+        <input type="text" class="form-control" formControlName="productName">
+      </div>
 
-  
+      <div class="col-md-6">
+        <label class="form-label">Size :</label>
+        <input type="text" class="form-control" formControlName="size">
+      </div>
+    </div>
 
-  <br><br>
+    <div class="mb-3">
+      <!-- <button type="button" class="btn btn-primary me-2" (click)="totalConsumption()">Calculate</button> -->
+      <span class="fw-bold">Total: {{ result }}</span>
+    </div>
 
-  <button (click)="totalConsumption()">Add</button>
-  
+    <div class="row mt-3 text-center">
+      <div class="col-md-6">
+        <button type="button" class="btn btn-success w-100 mb-2" (click)="addUom()">Save</button>
+      </div>
+      <div class="col-md-6">
+        <button type="reset" class="btn btn-danger w-100 mb-2">Reset</button>
+      </div>
+    </div>
 
- 
-
-  <p>Result: {{ result }}</p>
-
-
-   <div class="row mt-3 text-center">
-            <div class="col-md-6">
-                <button type="submit" class="btn btn-success text-center mb-2"  (click)="addUom()">Save</button>
-            </div>
-            <div class="col-md-6">
-                <button type="reset" class="btn btn-danger text-center mb-2" >Reset</button>
-            </div>
-        </div>
-</div>
+  </form>
 </div>

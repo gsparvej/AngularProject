@@ -9,4 +9,5 @@ export class Uom{
     pocket!: number;
     wastage!: number;
     shrinkage!: number;
+    result! : number;
 }

@@ -27,14 +27,37 @@ export class AddUom implements OnInit{
     private merchandiserService: MerchandiserService,
     private router: Router,
     private formBuilder: FormBuilder
-  ){}
+  ){
+
+
+  }
   ngOnInit(): void {
-     this.merchandiserService.getAllConsumption().subscribe(data => this.consumptions = data);
+   this.formUom = this.formBuilder.group({
+
+      productName: [''],
+      size: [''],
+      body: [''],
+      sleeve: [''],
+      pocket: [''],
+      wastage: [''],
+     shrinkage: [''],
+
+        
+
+      
+    });
+    
    
   }
 
+
+
   addUom():void {
-    const uom : Uom = {...this.formUom.value};
+    this.totalConsumption();
+    const uom : Uom = {...this.formUom.value,
+      result : this.result
+
+    };
     this.merchandiserService.saveUom(uom).subscribe({
 
       next: (uom) => {
@@ -70,8 +93,21 @@ totalLossFabric(): void{
 // }
 
 totalConsumption(): void {
+
+  this.body = this.formUom.value.body;
+  this.pocket = this.formUom.value.pocket;
+  this.sleeve = this.formUom.value.sleeve;
+  this.wastage = this.formUom.value.wastage;
+  this.shrinkage = this.formUom.value.shrinkage;
+
   this.result = (this.body+ this.pocket + this.sleeve) + 
   ((this.body+ this.pocket + this.sleeve)*(( this.wastage + this.shrinkage) / 100))
+
+}
+
+onFocusLost() {
+    this.totalConsumption();
+
 }
 
 }
