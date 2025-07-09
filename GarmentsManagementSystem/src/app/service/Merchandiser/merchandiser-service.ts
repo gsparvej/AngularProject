@@ -45,6 +45,19 @@ export class MerchandiserService {
     
     return this.http.post(this.baseUrlUOM,uom);
  }
+ deleteUom(id: string): Observable<any> {
+
+    return this.http.delete(this.baseUrlUOM+'/'+id);
+  }
+
+   getUomById(id: string): Observable<any> {
+
+    return this.http.get(this.baseUrlUOM+'/'+id);
+  }
+   updateManagement(id: string, uom: Uom): Observable<any> {
+  
+     return this.http.put(this.baseUrlUOM+'/'+id,uom);
+    }
 
 
   // UOM add, update , delete , view end

@@ -27,4 +27,30 @@ export class ViewAllUom implements OnInit{
 this.uom = this.merchandiserService.getAllUom();
   }
 
+  getUomById(id:string): void{
+this.merchandiserService.getUomById(id).subscribe({
+next: (res) => {
+    this.uom = res;
+    console.log(res,"Id Get Successfully");
+    this.router.navigate(['/updateUom',id]);    // ekhane kaj baki ase *** 
+},
+error: (err) => {
+console.log('err');
 }
+})
+}
+
+deleteUom(id: string ): void {
+if (confirm('Are You sure ! want to delete this employee?')) {
+  this.merchandiserService.deleteUom(id).subscribe(() => {
+    this.loadAllUom();
+    this.router.navigate(['/viewAllUom'])
+  });
+}
+  }
+      
+}
+
+
+      
+    

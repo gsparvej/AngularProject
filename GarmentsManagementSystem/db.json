@@ -290,47 +290,6 @@
   ],
   "uom": [
     {
-      "id": "9a02",
-      "productName": "Shirt",
-      "size": "M",
-      "body": 5,
-      "sleeve": 5,
-      "pocket": 5,
-      "wastage": 5,
-      "shrinkage": 5
-    },
-    {
-      "id": "d129",
-      "productName": "Shirt",
-      "size": "L",
-      "body": 1.4,
-      "sleeve": 0.1,
-      "pocket": 0.15,
-      "wastage": 3,
-      "shrinkage": 2
-    },
-    {
-      "id": "bc4c",
-      "productName": "Shirt",
-      "size": "XL",
-      "body": 24,
-      "sleeve": 5,
-      "pocket": 1,
-      "wastage": 2,
-      "shrinkage": 3
-    },
-    {
-      "id": "83af",
-      "productName": "sw",
-      "size": "M",
-      "body": 2,
-      "sleeve": 4,
-      "pocket": 3,
-      "wastage": 2,
-      "shrinkage": 2,
-      "result": 9.36
-    },
-    {
       "id": "cd2c",
       "productName": "Shirt",
       "size": "XL",
