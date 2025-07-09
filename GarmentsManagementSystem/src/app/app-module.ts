@@ -26,6 +26,8 @@ import { Logout } from './Auth/logout/logout';
 import { Home } from './home/home';
 import { ViewAllBuyer } from './Merchandiser/view-all-buyer/view-all-buyer';
 import { AddBuyer } from './Merchandiser/add-buyer/add-buyer';
+import { AddUom } from './Merchandiser/add-uom/add-uom';
+import { ViewAllUom } from './Merchandiser/view-all-uom/view-all-uom';
 
 @NgModule({
   declarations: [
@@ -50,7 +52,9 @@ import { AddBuyer } from './Merchandiser/add-buyer/add-buyer';
     Logout,
     Home,
     ViewAllBuyer,
-    AddBuyer
+    AddBuyer,
+    AddUom,
+    ViewAllUom
   ],
   imports: [
     BrowserModule,

@@ -16,6 +16,8 @@ import { AddBuyer } from './Merchandiser/add-buyer/add-buyer';
 import { UserProfile } from './Auth/user-profile/user-profile';
 import { Designation } from '../model/HR/designation.model';
 import { AddDesignation } from './HR/add-designation/add-designation';
+import { AddUom } from './Merchandiser/add-uom/add-uom';
+import { ViewAllUom } from './Merchandiser/view-all-uom/view-all-uom';
 
 const routes: Routes = [
   {path: '', component: Home},
@@ -33,7 +35,9 @@ const routes: Routes = [
   {path: 'login', component: Login},
   {path: 'viewAllBuyer', component: ViewAllBuyer},
   {path: 'addBuyer', component: AddBuyer},
-  {path:'userprofile', component: UserProfile}
+  {path:'userprofile', component: UserProfile},
+  {path: 'addUom', component: AddUom},
+  {path: 'viewAllUom', component: ViewAllUom}
 ];
 
 @NgModule({

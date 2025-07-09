@@ -1,0 +1,54 @@
+<div class="container">
+    <div>
+  <h2>Simple Calculator</h2>
+
+ <div class="row">
+    <div class="col-md-4">
+         <label for="" >Body :</label>
+  <input type="number"  formControlName="body">
+    </div>
+
+  <div class="col-md-4">
+    <label for="" >Sleeve :</label>
+  <input type="number"  formControlName="sleeve">
+  </div>
+
+ <div class="col-md-4">
+     <label for="n">Pocket :</label>
+  <input type="number"  formControlName ="pocket">
+ </div>
+
+ </div>
+ <div class="row mb-3 mt-3">
+     <div class="col-md-6">
+        <label for="n">Wastage :</label>
+  <input type="number" formControlName ="wastage">
+     </div>
+  <div class="col-md-6">
+    <label for="">Shrinkage :</label>
+  <input type="number"  formControlName ="shrinkage">
+  </div>
+ </div>
+
+  
+
+  <br><br>
+
+  <button (click)="totalConsumption()">Add</button>
+  
+
+ 
+
+  <p>Result: {{ result }}</p>
+
+
+   <div class="row mt-3 text-center">
+            <div class="col-md-6">
+                <button type="submit" class="btn btn-success text-center mb-2"  (click)="addUom()">Save</button>
+            </div>
+            <div class="col-md-6">
+                <button type="reset" class="btn btn-danger text-center mb-2" >Reset</button>
+            </div>
+        </div>
+</div>
+</div>
