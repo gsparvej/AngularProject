@@ -1,0 +1,32 @@
+
+
+<div class="container border rounded my-3">
+    <h1 class="my-3 text-success">Bill Of Materials </h1>
+    <table class="table table-striped">
+<thead>
+    <tr>
+        <th>ID</th>
+        <th>Style Code</th>
+        <th>Description</th>
+        <th>BOM</th>
+    </tr>
+</thead>
+<tbody>
+    <tr *ngFor = "let b of bom | async">
+        <td>{{b.id}}</td>
+        <td>{{b.styleCode}}</td>
+        <td>{{b.description}}</td>
+        <!-- <td>
+            <button class="btn btn-warning m-1 p-1">Edit</button>
+            <button class="btn btn-danger m-1 p-1">Delete</button>
+        </td> -->
+         <td> 
+            <button class="btn btn-border rounded m-1 p-1" >View</button>
+             </td>
+    </tr>
+</tbody>
+
+
+</table>
+
+</div>

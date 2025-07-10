@@ -28,6 +28,11 @@ import { ViewAllBuyer } from './Merchandiser/view-all-buyer/view-all-buyer';
 import { AddBuyer } from './Merchandiser/add-buyer/add-buyer';
 import { AddUom } from './Merchandiser/add-uom/add-uom';
 import { ViewAllUom } from './Merchandiser/view-all-uom/view-all-uom';
+import { AddBom } from './Merchandiser/add-bom/add-bom';
+import { ViewAllBom } from './Merchandiser/view-all-bom/view-all-bom';
+import { AddBomView } from './Merchandiser/add-bom-view/add-bom-view';
+import { ViewFullBomView } from './Merchandiser/view-full-bom-view/view-full-bom-view';
+import { CreateOrder } from './Merchandiser/create-order/create-order';
 
 @NgModule({
   declarations: [
@@ -54,7 +59,12 @@ import { ViewAllUom } from './Merchandiser/view-all-uom/view-all-uom';
     ViewAllBuyer,
     AddBuyer,
     AddUom,
-    ViewAllUom
+    ViewAllUom,
+    AddBom,
+    ViewAllBom,
+    AddBomView,
+    ViewFullBomView,
+    CreateOrder
   ],
   imports: [
     BrowserModule,

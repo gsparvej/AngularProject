@@ -299,7 +299,132 @@
       "wastage": 2,
       "shrinkage": 3,
       "result": 1.8795
+    },
+    {
+      "id": "a555",
+      "productName": "Short Sleeve Shirt",
+      "size": "M",
+      "body": 1.3,
+      "sleeve": 0.15,
+      "pocket": 0.1,
+      "wastage": 2,
+      "shrinkage": 3,
+      "result": 1.6275
     }
   ],
-  "consumption": []
+  "bomview": [
+    {
+      "id": "606b",
+      "serial": "1",
+      "material": "Woven knit fabric",
+      "element": "yards",
+      "quantity": "",
+      "unitPrice": "55",
+      "totalCost": "89.5125",
+      "uom": {
+        "result": 1.6275
+      },
+      "bom": {
+        "styleCode": "",
+        "description": ""
+      }
+    },
+    {
+      "id": "0cff",
+      "serial": "2",
+      "material": "Plastic Button",
+      "element": "Cone",
+      "quantity": 9,
+      "unitPrice": 1.5,
+      "totalCost": 13.5,
+      "uom": {
+        "result": 1.8795
+      },
+      "bom": {
+        "styleCode": "",
+        "description": ""
+      }
+    },
+    {
+      "id": "f180",
+      "serial": "3",
+      "material": "Sewing Thread",
+      "element": "Cone",
+      "quantity": 1,
+      "unitPrice": 1.5,
+      "totalCost": 1.5,
+      "uom": {
+        "result": ""
+      },
+      "bom": {
+        "styleCode": "",
+        "description": ""
+      }
+    },
+    {
+      "id": "3bb3",
+      "serial": "4",
+      "material": "Wash care tag",
+      "element": "Roll",
+      "quantity": 1,
+      "unitPrice": 0.25,
+      "totalCost": 0.25,
+      "uom": {
+        "result": ""
+      },
+      "bom": {
+        "styleCode": "",
+        "description": ""
+      }
+    },
+    {
+      "id": "7148",
+      "serial": "5",
+      "material": "Poly Bag",
+      "element": "Box",
+      "quantity": 2,
+      "unitPrice": 1.25,
+      "totalCost": 2.5,
+      "uom": {
+        "result": ""
+      },
+      "bom": {
+        "styleCode": "",
+        "description": ""
+      }
+    },
+    {
+      "id": "e098",
+      "serial": "6",
+      "material": "Light Weight Polyester Fabric",
+      "element": "yards",
+      "quantity": 0.9,
+      "unitPrice": 45,
+      "totalCost": 40.5,
+      "uom": {
+        "result": ""
+      },
+      "bom": {
+        "styleCode": "",
+        "description": ""
+      }
+    }
+  ],
+  "bom": [
+    {
+      "id": "8f9d",
+      "styleCode": "RT123",
+      "description": "Short Sleeve Shirt"
+    },
+    {
+      "id": "eeda",
+      "styleCode": "PE737",
+      "description": "Short Sleeve Shirt"
+    }
+  ],
+  "order":[
+    {
+      
+    }
+  ]
 }

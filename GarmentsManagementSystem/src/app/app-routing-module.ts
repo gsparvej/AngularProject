@@ -18,6 +18,11 @@ import { Designation } from '../model/HR/designation.model';
 import { AddDesignation } from './HR/add-designation/add-designation';
 import { AddUom } from './Merchandiser/add-uom/add-uom';
 import { ViewAllUom } from './Merchandiser/view-all-uom/view-all-uom';
+import { AddBom } from './Merchandiser/add-bom/add-bom';
+import { ViewAllBom } from './Merchandiser/view-all-bom/view-all-bom';
+import { AddBomView } from './Merchandiser/add-bom-view/add-bom-view';
+import { ViewFullBomView } from './Merchandiser/view-full-bom-view/view-full-bom-view';
+import { CreateOrder } from './Merchandiser/create-order/create-order';
 
 const routes: Routes = [
   {path: '', component: Home},
@@ -37,7 +42,12 @@ const routes: Routes = [
   {path: 'addBuyer', component: AddBuyer},
   {path:'userprofile', component: UserProfile},
   {path: 'addUom', component: AddUom},
-  {path: 'viewAllUom', component: ViewAllUom}
+  {path: 'viewAllUom', component: ViewAllUom},
+  {path: 'addBom', component: AddBom},
+  {path: 'viewBom', component: ViewAllBom},
+  {path: 'addBomBomView', component: AddBomView},
+  {path: 'viewBomBomView', component: ViewFullBomView},
+  {path: 'createOrder', component: CreateOrder}
 ];
 
 @NgModule({

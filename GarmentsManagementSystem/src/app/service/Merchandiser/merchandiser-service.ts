@@ -3,6 +3,8 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Buyer } from '../../../model/Merchandiser/buyer.model';
 import { Uom } from '../../../model/Merchandiser/uom.model';
+import { Bom } from '../../../model/Merchandiser/bom.model';
+import { Bomview } from '../../../model/Merchandiser/bomview.model';
 
 @Injectable({
   providedIn: 'root'
@@ -11,8 +13,8 @@ export class MerchandiserService {
 
    baseUrlBuyer: string = "http://localhost:3000/buyer";
    baseUrlUOM: string = "http://localhost:3000/uom";
-   baseUrlCon: string = "http://localhost:3000/consumption";
-
+   baseUrlBomView: string = "http://localhost:3000/bomview";
+   baseUrlBom: string = "http://localhost:3000/bom";
 
 
   constructor(private http: HttpClient) { }
@@ -62,10 +64,32 @@ export class MerchandiserService {
 
   // UOM add, update , delete , view end
 
-  getAllConsumption(): Observable<any>{
+
+
+   // BOM add, update , delete , view start
+
+  getAllBom(): Observable<any>{
   
-    return this.http.get(this.baseUrlCon);
+    return this.http.get(this.baseUrlBom);
   }
 
+  saveBom(bom: Bom) : Observable<any> {
+    
+    return this.http.post(this.baseUrlBom,bom);
+ }
+
+ // BOM add, update , delete , view end
+
+
+
+ getAllBomView(): Observable<any>{
+  
+    return this.http.get(this.baseUrlBomView);
+  }
+
+  saveBomView(bomview: Bomview) : Observable<any> {
+    
+    return this.http.post(this.baseUrlBomView,bomview);
+ }
 
 }
