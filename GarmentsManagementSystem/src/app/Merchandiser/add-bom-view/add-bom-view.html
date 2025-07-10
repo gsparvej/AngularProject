@@ -33,11 +33,12 @@
     </div>
      <div class="col-md-4">
          <label for="" class="form-label">Unit Price</label>
-    <input type="number" class="form-control" id="" formControlName="unitPrice">
+    <input type="number" class="form-control" id="" formControlName="unitPrice" (blur)="onFocusLost()">
     </div>
      <div class="col-md-4">
          <label for="" class="form-label">Total Cost</label>
-    <input type="number" class="form-control" id="" formControlName="totalCost">
+    <!-- <input type="number" class="form-control" id="" formControlName="totalCost"> -->
+    <span class="fw-bold"> {{ totalCost }}</span>
     </div>
   </div>
 

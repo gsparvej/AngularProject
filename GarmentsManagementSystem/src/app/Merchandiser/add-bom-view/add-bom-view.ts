@@ -145,16 +145,22 @@ export class AddBomView implements OnInit{
   }
   totalCostingPerRow(): void {
 
-    this.formBomView.get('uom')?.get('result')?.valueChanges.subscribe(result => {
-    const selectedStatus= this.uom.find(s => s.result === result);
-    if(selectedStatus) {
-
-      this.formBomView.patchValue({atten_status: selectedStatus});
-      this.formBomView.patchValue({temp: selectedStatus});
+  //   this.formBomView.get('uom')?.get('result')?.valueChanges.subscribe(result => {
+  //   const selectedStatus= this.uom.find(s => s.result === result);
+  //   if(selectedStatus) {
+  //     this.formBomView.patchValue({temp: selectedStatus});
       
-    }
-   });
+  //   }
+  //  });
+
+  this.quantity = this.formBomView.value.quantity;
+  this.unitPrice = this.formBomView.value.unitPrice;
+
+  this.totalCost = this.quantity * this.unitPrice ;
     
+  }
+  onFocusLost(){
+    this.totalCostingPerRow();
   }
 
 }

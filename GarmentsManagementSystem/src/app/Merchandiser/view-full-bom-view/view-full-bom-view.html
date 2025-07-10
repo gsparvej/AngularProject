@@ -5,7 +5,7 @@
       <div class="card shadow rounded-3">
         <div class="card-body text-center">
           <h6>Style Code</h6>
-          <p class="card-text"><strong>JT123</strong></p>
+          <p class="card-text"><strong>{{styleCode}}</strong></p>
         </div>
       </div>
     </div>
@@ -50,7 +50,7 @@
         <td>{{a.serial}}</td>
         <td>{{a.material}}</td>
          <td>{{a.element}}</td>
-        <td>{{a.uom?.result}}</td> // kaj baki asse 
+        <td>{{a.uom?.result}}</td>
         <td>{{a.quantity}}</td>
         <td>{{a.unitPrice}}</td>
         <td>{{a.totalCost}}</td>
@@ -58,6 +58,15 @@
             <button class="btn btn-warning m-1 p-1">Edit</button>
             <button class="btn btn-danger m-1 p-1">Delete</button>
         </td> -->
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+         <td></td>
+        <td></td>
+        <td></td>
+        <td>Total: </td>
+        <td>{{total}}</td>
     </tr>
 </tbody>
 

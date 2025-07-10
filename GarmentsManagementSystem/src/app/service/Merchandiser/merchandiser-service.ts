@@ -92,4 +92,8 @@ export class MerchandiserService {
     return this.http.post(this.baseUrlBomView,bomview);
  }
 
+ getBomByStyle(styleCode: string): Observable<any>{
+  return this.http.get(this.baseUrlBomView + "?bom.styleCode=" + styleCode);
+ }
+
 }
