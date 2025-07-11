@@ -511,7 +511,47 @@
   ],
   "order": [
     {
-      "id": "e05b"
+      "id": "85fd",
+      "buyerOrganization": "ghgh",
+      "shippingAddress": "UK",
+      "orderDate": "2025-07-01",
+      "deliveryDate": "2025-08-09",
+      "smallSize": 54,
+      "sPrice": 65,
+      "mediumSize": 65,
+      "mPrice": 5645,
+      "largeSize": 5645,
+      "lPrice": 565,
+      "subTotal": 454,
+      "vat": 645,
+      "paidAmount": 645,
+      "dueAmount": 565,
+      "total": 6540,
+      "remarks": "ngng",
+      "bom": {
+        "styleCode": "RT123"
+      },
+      "orderStatus": {
+        "status": "Pending"
+      }
+    }
+  ],
+  "orderStatus": [
+    {
+      "id": "1",
+      "status": "Pending"
+    },
+    {
+      "id": "2",
+      "status": "Confirmed"
+    },
+    {
+      "id": "3",
+      "status": "Shipped"
+    },
+    {
+      "id": "4",
+      "status": "Completed"
     }
   ]
 }

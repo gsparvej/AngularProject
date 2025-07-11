@@ -5,6 +5,7 @@ import { Buyer } from '../../../model/Merchandiser/buyer.model';
 import { Uom } from '../../../model/Merchandiser/uom.model';
 import { Bom } from '../../../model/Merchandiser/bom.model';
 import { Bomview } from '../../../model/Merchandiser/bomview.model';
+import { Order } from '../../../model/Merchandiser/order.model';
 
 @Injectable({
   providedIn: 'root'
@@ -15,6 +16,8 @@ export class MerchandiserService {
    baseUrlUOM: string = "http://localhost:3000/uom";
    baseUrlBomView: string = "http://localhost:3000/bomview";
    baseUrlBom: string = "http://localhost:3000/bom";
+   baseUrlOrder: string = "http://localhost:3000/order";
+   baseUrlOrderStatus: string = "http://localhost:3000/orderStatus";
 
 
   constructor(private http: HttpClient) { }
@@ -80,7 +83,7 @@ export class MerchandiserService {
 
  // BOM add, update , delete , view end
 
-
+// BOMBOMVIEW add, update , delete , view start
 
  getAllBomView(): Observable<any>{
   
@@ -95,5 +98,30 @@ export class MerchandiserService {
  getBomByStyle(styleCode: string): Observable<any>{
   return this.http.get(this.baseUrlBomView + "?bom.styleCode=" + styleCode);
  }
+
+ // BOMBOMVIEW add, update , delete , view end
+
+ // Order add, update, delete, view start
+
+
+ getAllOrder(): Observable<any> {
+  return this.http.get(this.baseUrlOrder);
+ }
+ saveOder(order: Order): Observable<any> {
+  return this.http.post(this.baseUrlOrder, order);
+ }
+
+
+
+  // Order add, update, delete, view end
+getAllOrderStatus(): Observable<any> {
+  return this.http.get(this.baseUrlOrderStatus);
+}
+
+   // OrderStatus add, update, delete, view start
+
+
+
+   // OrderStatus add, update, delete, view end
 
 }
