@@ -33,6 +33,7 @@ import { ViewAllBom } from './Merchandiser/view-all-bom/view-all-bom';
 import { AddBomView } from './Merchandiser/add-bom-view/add-bom-view';
 import { ViewFullBomView } from './Merchandiser/view-full-bom-view/view-full-bom-view';
 import { CreateOrder } from './Merchandiser/create-order/create-order';
+import { HalfViewOrder } from './Merchandiser/half-view-order/half-view-order';
 
 @NgModule({
   declarations: [
@@ -64,7 +65,8 @@ import { CreateOrder } from './Merchandiser/create-order/create-order';
     ViewAllBom,
     AddBomView,
     ViewFullBomView,
-    CreateOrder
+    CreateOrder,
+    HalfViewOrder
   ],
   imports: [
     BrowserModule,

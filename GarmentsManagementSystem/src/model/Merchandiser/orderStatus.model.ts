@@ -1,5 +1,5 @@
 export class OrderStatus{
 
-    id!: number;
+    id!: string;
     status!: string;
 }

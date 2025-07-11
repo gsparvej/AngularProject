@@ -101,7 +101,7 @@
 
                 <!-- Calculate Button -->
                 <div class="col-12 text-center mt-3">
-                  <button type="button" class="btn btn-outline-primary rounded-pill px-5 shadow">Calculate</button>
+                  <button type="button" class="btn btn-outline-primary rounded-pill px-5 shadow" (click)="subTotalCalculation()">Calculate</button>
                 </div>
 
               </div>
@@ -117,7 +117,7 @@
 
               <div class="mb-3">
                 <label class="form-label">Subtotal</label>
-                <input type="number" class="form-control rounded-pill" formControlName="subTotal" placeholder="0.00">
+                <input type="number" class="form-control rounded-pill" [value]="subTotal" formControlName="subTotal" placeholder="0.00">
               </div>
               <div class="mb-3">
                 <label class="form-label">VAT</label>
@@ -125,15 +125,15 @@
               </div>
               <div class="mb-3">
                 <label class="form-label">Paid Amount</label>
-                <input type="number" class="form-control rounded-pill" formControlName="paidAmount" placeholder="0.00">
+                <input type="number" class="form-control rounded-pill" formControlName="paidAmount" placeholder="0.00" (blur)="onFocusLost()">
               </div>
               <div class="mb-3">
                 <label class="form-label">Due Amount</label>
-                <input type="number" class="form-control rounded-pill" formControlName="dueAmount" placeholder="0.00">
+                <input type="number" class="form-control rounded-pill" [value]="dueAmount" formControlName="dueAmount" placeholder="0.00">
               </div>
               <div class="mb-3">
                 <label class="form-label fw-bold">Total</label>
-                <input type="number" class="form-control rounded-pill fw-bold fs-5 text-end" formControlName="total" placeholder="0.00">
+                <input type="number" class="form-control rounded-pill fw-bold fs-5 text-end" [value]="subTotal" formControlName="total" placeholder="0.00">
               </div>
             </div>
 

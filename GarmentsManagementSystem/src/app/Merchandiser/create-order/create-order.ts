@@ -12,8 +12,27 @@ import { Order } from '../../../model/Merchandiser/order.model';
   templateUrl: './create-order.html',
   styleUrl: './create-order.css'
 })
-export class CreateOrder implements OnInit{
-styleCode: Bom[] = [];
+export class CreateOrder implements OnInit {
+
+  buyerOrganization!: string;
+    shippingAddress!: string;
+    orderDate!: Date;
+    deliveryDate!: Date;
+    smallSize!: number;
+    sPrice!: number;
+    mediumSize!: number;
+    mPrice!: number;
+    largeSize!: number;
+    lPrice!: number;
+    subTotal!:number;
+    vat!: number;
+    paidAmount!: number;
+    dueAmount!: number;
+    total!: number;
+    remarks!: string;
+
+
+  styleCode: Bom[] = [];
   status: OrderStatus[] = [];
 
   orderForm!: FormGroup;
@@ -31,17 +50,17 @@ styleCode: Bom[] = [];
       shippingAddress: ['', Validators.required],
       orderDate: ['', Validators.required],
       deliveryDate: ['', Validators.required],
-      smallSize: [0],
-      sPrice: [0],
-      mediumSize: [0],
-      mPrice: [0],
-      largeSize: [0],
-      lPrice: [0],
-      subTotal: [0],
-      vat: [0],
-      paidAmount: [0],
-      dueAmount: [0],
-      total: [0],
+      smallSize: [''],
+      sPrice: [''],
+      mediumSize: [''],
+      mPrice: [''],
+      largeSize: [''],
+      lPrice: [''],
+      subTotal: [''],
+      vat: [''],
+      paidAmount: [''],
+      dueAmount: [''],
+      total: [''],
       remarks: [''],
 
       bom: this.formBuilder.group({
@@ -82,7 +101,6 @@ styleCode: Bom[] = [];
     }
 
     const order: Order = { ...this.orderForm.value };
-
     this.merchandiserService.saveOder(order).subscribe({
       next: (savedOrder) => {
         console.log(savedOrder, 'Order Successfully Saved!');
@@ -119,5 +137,38 @@ styleCode: Bom[] = [];
         console.log(err);
       }
     });
+  }
+
+
+
+  subTotalCalculation(): void{
+    this.smallSize = this.orderForm.value.smallSize;
+    this.sPrice = this.orderForm.value.sPrice;
+    this.mediumSize = this.orderForm.value.mediumSize;
+    this.mPrice = this.orderForm.value.mPrice;
+    this.largeSize = this.orderForm.value.largeSize;
+    this.lPrice = this.orderForm.value.lPrice;
+
+    this.subTotal = (this.smallSize* this.sPrice) + (this.mediumSize* this.mPrice )+ (this.largeSize* this.lPrice);
+    
+
+  }
+  dueAmountCalculation(){
+    
+    this.smallSize = this.orderForm.value.smallSize;
+    this.sPrice = this.orderForm.value.sPrice;
+    this.mediumSize = this.orderForm.value.mediumSize;
+    this.mPrice = this.orderForm.value.mPrice;
+    this.largeSize = this.orderForm.value.largeSize;
+    this.lPrice = this.orderForm.value.lPrice;
+
+    this.subTotal = (this.smallSize* this.sPrice) + (this.mediumSize* this.mPrice )+ (this.largeSize* this.lPrice);
+    this.vat = this.orderForm.value.vat;
+    this.paidAmount = this.orderForm.value.paidAmount;
+
+    this.dueAmount = this.subTotal+ (this.vat/100) - this.paidAmount;
+  }
+  onFocusLost(){
+    this.dueAmountCalculation();
   }
 }
