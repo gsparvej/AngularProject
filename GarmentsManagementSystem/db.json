@@ -495,6 +495,22 @@
         "styleCode": "PE737",
         "description": ""
       }
+    },
+    {
+      "id": "709e",
+      "serial": "1",
+      "material": "Woven Knit Fabric",
+      "element": "yards",
+      "quantity": 1.8795,
+      "unitPrice": 100,
+      "totalCost": "",
+      "uom": {
+        "result": 1.8795
+      },
+      "bom": {
+        "styleCode": "",
+        "description": ""
+      }
     }
   ],
   "bom": [
