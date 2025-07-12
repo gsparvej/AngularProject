@@ -1,37 +1,30 @@
-<div class="container mt-4">
-  <h2 class="mb-4">All Order List</h2>
 
-  <div class="row">
-    <div class="col-md-4 mb-4" *ngFor="let emp  order">
-      <div class="card shadow h-100">
-        <div class="card-body">
-          <h6 class="card-subtitle mb-2 text-muted">Email: {{ emp.email }}</h6>
 
-          <p class="card-text mb-1">
-            <strong>Phone Number:</strong> {{ emp.phoneNumber  }}
-          </p>
-          <p class="card-text mb-1">
-            <strong>Joining Date:</strong> {{ emp.joinDate }}
-          </p>
-          <p class="card-text mb-1">
-            <strong>Style Code:</strong> {{ getStyleCode(emp.style) }}
-          </p>
-          <p class="card-text mb-1">
-            <strong>Status:</strong> {{ getOrderStatus(emp.status) }}
-          </p>
-        </div>
-        <div class="card-footer text-end">
-          <a class="btn btn-sm btn-warning me-2">
-            Edit
-          </a>
-          <button class="btn btn-sm btn-danger me-2">
-            Delete
-          </button>
-          <button class="btn btn-sm btn-info">
-            View
-          </button>
-        </div>
+<div class="container border rounded my-3">
+    <h1 class="text-center my-3 text-success">All Order List</h1>
+    <table class="table table-striped">
+<thead>
+    <tr>
+        <th>Buyer Organization</th>
+        <th>Style Code</th>
+        <th>Delivery Date</th>
+        <th>Status</th>
+        <th>Action</th>
+    </tr>
+</thead>
+<tbody>
+    <tr *ngFor = "let l of orders ">
+        <td>{{l.buyerOrganization}}</td>
+        <td>{{l.style.styleCode}}</td>
+         <td>{{l.deliveryDate}}</td>
+          <td>{{l.status.status}}</td>
+        <td>
+            <button class="btn btn-warning m-1 p-1">View</button>
+        </td>
+    </tr>
+</tbody>
 
-      </div>
-    </div>
-  </div>
+
+</table>
+
+</div>

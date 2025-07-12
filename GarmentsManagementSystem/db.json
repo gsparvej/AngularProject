@@ -12,7 +12,7 @@
     {
       "id": "b527",
       "name": "Md. Rakib Islam",
-      "phoneNumber": "9789678698",
+      "phoneNumber": "978",
       "email": "rakib@gmail.com",
       "joinDate": "2025-03-07",
       "department": "0781",
@@ -21,7 +21,7 @@
     {
       "id": "638f",
       "name": "Md. Parvej Hossen",
-      "phoneNumber": "01906-600275",
+      "phoneNumber": "01906",
       "email": "parvej@gmail.com",
       "joinDate": "2025-01-02",
       "department": "3b5a",
@@ -301,6 +301,17 @@
       "wastage": 2,
       "shrinkage": 3,
       "result": 1.6275
+    },
+    {
+      "id": "86b5",
+      "productName": "Short Shirt",
+      "size": "S",
+      "body": 1.4,
+      "sleeve": 0.1,
+      "pocket": 0.15,
+      "wastage": 2,
+      "shrinkage": 3,
+      "result": 1.7325
     }
   ],
   "bomview": [
@@ -559,6 +570,310 @@
         "styleCode": "gfdsgdsfg",
         "description": ""
       }
+    },
+    {
+      "id": "9c04",
+      "serial": "1",
+      "material": "Woven Fabric",
+      "element": "yards",
+      "quantity": 1.7325,
+      "unitPrice": 60,
+      "totalCost": "",
+      "uom": {
+        "result": 1.7325
+      },
+      "bom": {
+        "styleCode": "P007",
+        "description": ""
+      }
+    },
+    {
+      "id": "c93b",
+      "serial": "1",
+      "material": "jytj",
+      "element": "kj",
+      "quantity": 52,
+      "unitPrice": 100,
+      "totalCost": "",
+      "uom": {
+        "result": 1.8795
+      },
+      "bom": {
+        "styleCode": "",
+        "description": ""
+      }
+    },
+    {
+      "id": "6be5",
+      "serial": "1",
+      "material": "1",
+      "element": "1",
+      "quantity": 100,
+      "unitPrice": 50,
+      "totalCost": "",
+      "uom": {
+        "result": 1.8795
+      },
+      "bom": {
+        "styleCode": "",
+        "description": ""
+      }
+    },
+    {
+      "id": "6e31",
+      "serial": "1",
+      "material": "1",
+      "element": "1",
+      "quantity": 100,
+      "unitPrice": 100,
+      "totalCost": "",
+      "uom": {
+        "result": 1.6275
+      },
+      "bom": {
+        "styleCode": "",
+        "description": ""
+      }
+    },
+    {
+      "id": "6ac1",
+      "serial": "1",
+      "material": "1",
+      "element": "1",
+      "quantity": 100,
+      "unitPrice": 100,
+      "totalCost": "",
+      "uom": {
+        "result": 1.8795
+      },
+      "bom": {
+        "styleCode": "",
+        "description": ""
+      }
+    },
+    {
+      "id": "9265",
+      "serial": "1",
+      "material": "1",
+      "element": "1",
+      "quantity": 100,
+      "unitPrice": 100,
+      "totalCost": "10000",
+      "uom": {
+        "result": 1.8795
+      },
+      "bom": {
+        "styleCode": "",
+        "description": ""
+      }
+    },
+    {
+      "id": "a967",
+      "serial": "1",
+      "material": "1",
+      "element": "1",
+      "quantity": 1000,
+      "unitPrice": 1000,
+      "totalCost": "",
+      "uom": {
+        "result": 1.6275
+      },
+      "bom": {
+        "styleCode": "",
+        "description": ""
+      }
+    },
+    {
+      "id": "79da",
+      "serial": "1",
+      "material": "100",
+      "element": "100",
+      "quantity": 100,
+      "unitPrice": 100,
+      "totalCost": "",
+      "uom": {
+        "result": 1.8795
+      },
+      "bom": {
+        "styleCode": "",
+        "description": ""
+      }
+    },
+    {
+      "id": "39ff",
+      "serial": "10",
+      "material": "100",
+      "element": "100",
+      "quantity": 100,
+      "unitPrice": 100,
+      "totalCost": "",
+      "uom": {
+        "result": 1.8795
+      },
+      "bom": {
+        "styleCode": "",
+        "description": ""
+      }
+    },
+    {
+      "id": "de95",
+      "serial": "1",
+      "material": "1",
+      "element": "1",
+      "quantity": 100,
+      "unitPrice": 100,
+      "totalCost": 0,
+      "uom": {
+        "result": 1.8795
+      },
+      "bom": {
+        "styleCode": "",
+        "description": ""
+      }
+    },
+    {
+      "id": "7fd7",
+      "serial": "1",
+      "material": "1",
+      "element": "1",
+      "quantity": 100,
+      "unitPrice": 100,
+      "totalCost": 0,
+      "uom": {
+        "result": 1.8795
+      },
+      "bom": {
+        "styleCode": "",
+        "description": ""
+      }
+    },
+    {
+      "id": "7a21",
+      "serial": "1",
+      "material": "1",
+      "element": "1",
+      "quantity": 100,
+      "unitPrice": 100,
+      "totalCost": 0,
+      "uom": {
+        "result": 1.8795
+      },
+      "bom": {
+        "styleCode": "",
+        "description": ""
+      }
+    },
+    {
+      "id": "f36c",
+      "serial": "1",
+      "material": "1",
+      "element": "10",
+      "quantity": 100,
+      "unitPrice": 100,
+      "totalCost": 0,
+      "uom": {
+        "result": 1.8795
+      },
+      "bom": {
+        "styleCode": "",
+        "description": ""
+      }
+    },
+    {
+      "id": "b434",
+      "serial": "",
+      "material": "1",
+      "element": "1",
+      "quantity": 100,
+      "unitPrice": 100,
+      "totalCost": 0,
+      "uom": {
+        "result": 1.8795
+      },
+      "bom": {
+        "styleCode": "",
+        "description": ""
+      }
+    },
+    {
+      "id": "b877",
+      "serial": "1",
+      "material": "1",
+      "element": "1",
+      "quantity": 100,
+      "unitPrice": 100,
+      "totalCost": 0,
+      "uom": {
+        "result": 1.8795
+      },
+      "bom": {
+        "styleCode": "",
+        "description": ""
+      }
+    },
+    {
+      "id": "9965",
+      "serial": "1",
+      "material": "11",
+      "element": "1",
+      "quantity": 1000,
+      "unitPrice": 1000,
+      "totalCost": "",
+      "uom": {
+        "result": 1.8795
+      },
+      "bom": {
+        "styleCode": "",
+        "description": ""
+      }
+    },
+    {
+      "id": "b8e4",
+      "serial": "1",
+      "material": "11",
+      "element": "1",
+      "quantity": 100,
+      "unitPrice": 100,
+      "totalCost": 10000,
+      "uom": {
+        "result": 1.8795
+      },
+      "bom": {
+        "styleCode": "",
+        "description": ""
+      }
+    },
+    {
+      "id": "3fcc",
+      "serial": "1",
+      "material": "1",
+      "element": "1",
+      "quantity": 100,
+      "unitPrice": 100,
+      "totalCost": 10000,
+      "uom": {
+        "result": 1.8795
+      },
+      "bom": {
+        "styleCode": "",
+        "description": ""
+      }
+    },
+    {
+      "id": "671e",
+      "serial": "dgdsfgdsf",
+      "material": "gdsfgsdfgd",
+      "element": "gdsgdsgsdfg",
+      "quantity": 5010,
+      "unitPrice": 50010,
+      "totalCost": 250550100,
+      "uom": {
+        "result": 1.8795
+      },
+      "bom": {
+        "styleCode": "",
+        "description": ""
+      }
     }
   ],
   "bom": [
@@ -576,6 +891,11 @@
       "id": "c85d",
       "styleCode": "gfdsgdsfg",
       "description": "sgdsf"
+    },
+    {
+      "id": "e370",
+      "styleCode": "P007",
+      "description": "Short Shirt"
     }
   ],
   "order": [
@@ -597,11 +917,36 @@
       "dueAmount": 565,
       "total": 6540,
       "remarks": "ngng",
-      "bom": {
+      "style": {
         "styleCode": "RT123"
       },
-      "orderStatus": {
+      "status": {
         "status": "Pending"
+      }
+    },
+    {
+      "id": "3314",
+      "buyerOrganization": "thtyhy",
+      "shippingAddress": "England",
+      "orderDate": "2025-07-01",
+      "deliveryDate": "2025-08-09",
+      "smallSize": 52,
+      "sPrice": 60,
+      "mediumSize": 54,
+      "mPrice": 60,
+      "largeSize": 60,
+      "lPrice": 80,
+      "subTotal": "",
+      "vat": 5,
+      "paidAmount": 2000,
+      "dueAmount": "",
+      "total": "",
+      "remarks": "Finall",
+      "style": {
+        "styleCode": "PE737"
+      },
+      "status": {
+        "status": "Confirmed"
       }
     }
   ],

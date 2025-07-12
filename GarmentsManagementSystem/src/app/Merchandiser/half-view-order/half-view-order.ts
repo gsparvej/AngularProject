@@ -18,7 +18,6 @@ export class HalfViewOrder implements OnInit{
 
   orders: Order[ ] = [];
   boms: Bom[] = [];
-  orderStatuses: OrderStatus[] = [];
 
 
   constructor(
@@ -36,13 +35,11 @@ this.loadAllOrder();
   
     orders: this.merchandiserService.getAllOrder(),
     boms: this.merchandiserService.getAllBom(),
-    orderStatuses: this.merchandiserService.getAllOrderStatus()
   
   }).subscribe({
-    next: ({ orders, boms, orderStatuses }) => {
+    next: ({ orders, boms }) => {
       this.orders = orders;
       this.boms = boms;
-      this.orderStatuses = orderStatuses;
       this.router.navigate(['/viewHalfOrder']);
     },
     error: (err) => {
@@ -55,11 +52,5 @@ this.loadAllOrder();
   
     }
 
-    getStyleCode(id: string): string {
-    return this.boms.find(b => b.id == id)?.styleCode || '';
-  }
 
-  getOrderStatus(id: string): string {
-    return this.orderStatuses.find(or => or.id == id)?.status || '';
-  }
 }
