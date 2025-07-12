@@ -511,6 +511,54 @@
         "styleCode": "",
         "description": ""
       }
+    },
+    {
+      "id": "9bfd",
+      "serial": "1",
+      "material": "Woven Fabric",
+      "element": "Yerds",
+      "quantity": 1.8795,
+      "unitPrice": 500,
+      "totalCost": "",
+      "uom": {
+        "result": 1.8795
+      },
+      "bom": {
+        "styleCode": "gfdsgdsfg",
+        "description": ""
+      }
+    },
+    {
+      "id": "de1c",
+      "serial": "",
+      "material": "",
+      "element": "",
+      "quantity": "",
+      "unitPrice": "",
+      "totalCost": "",
+      "uom": {
+        "result": 1.8795
+      },
+      "bom": {
+        "styleCode": "",
+        "description": ""
+      }
+    },
+    {
+      "id": "2a62",
+      "serial": "asfsaf",
+      "material": "safsadfsda",
+      "element": "asfsafs",
+      "quantity": 4564645,
+      "unitPrice": 645645645,
+      "totalCost": "",
+      "uom": {
+        "result": 1.8795
+      },
+      "bom": {
+        "styleCode": "gfdsgdsfg",
+        "description": ""
+      }
     }
   ],
   "bom": [
@@ -523,6 +571,11 @@
       "id": "eeda",
       "styleCode": "PE737",
       "description": "Short Sleeve Shirt"
+    },
+    {
+      "id": "c85d",
+      "styleCode": "gfdsgdsfg",
+      "description": "sgdsf"
     }
   ],
   "order": [

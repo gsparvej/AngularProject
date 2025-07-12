@@ -46,7 +46,7 @@ saveEmployee(emp: Employee) : Observable<any> {
 
     return this.http.get(this.baseUrlEmp+'/'+id);
   }
-  updateManagement(id: string, emp: Employee): Observable<any> {
+  updateEmployee(id: string, emp: Employee): Observable<any> {
 
    return this.http.put(this.baseUrlEmp+'/'+id,emp);
   }

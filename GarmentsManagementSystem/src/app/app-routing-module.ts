@@ -24,6 +24,7 @@ import { AddBomView } from './Merchandiser/add-bom-view/add-bom-view';
 import { ViewFullBomView } from './Merchandiser/view-full-bom-view/view-full-bom-view';
 import { CreateOrder } from './Merchandiser/create-order/create-order';
 import { HalfViewOrder } from './Merchandiser/half-view-order/half-view-order';
+import { UpdateEmployee } from './HR/update-employee/update-employee';
 
 const routes: Routes = [
   {path: '', component: Home},
@@ -48,8 +49,10 @@ const routes: Routes = [
   {path: 'viewBom', component: ViewAllBom},
   {path: 'addBomBomView', component: AddBomView},
   {path: 'viewBomBomView/:id', component: ViewFullBomView},
+  {path: 'viewBomBomView', component: ViewFullBomView},
   {path: 'createOrder', component: CreateOrder},
-  {path: 'viewHalfOrder', component: HalfViewOrder}
+  {path: 'viewHalfOrder', component: HalfViewOrder},
+  {path: 'updateEmp/:id', component: UpdateEmployee}
 ];
 
 @NgModule({

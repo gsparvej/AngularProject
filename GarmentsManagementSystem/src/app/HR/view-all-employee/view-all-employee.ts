@@ -66,27 +66,9 @@ private router: Router,
 
 
   getEmpById(id:string): void{
-
-      this.hrService.getEmployeeById(id).subscribe({
-
-      next: (res) => {
-        this.emp = res;
-      console.log(res,"Id Get Successfully");
-      this.router.navigate(['/updateEmployee',id]);    // ekhane kaj baki ase *** 
-
-                    },
-      error: (err) => {
-      console.log(err);
-
-
+      this.router.navigate(['/updateEmp',id]); 
   }
 
-
-});
-
-
-  
-  }
 
 deleteEmp(id: string ): void {
 if (confirm('Are You sure ! want to delete this employee?')) {
