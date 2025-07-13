@@ -38,6 +38,7 @@ import { FullOrderView } from './Merchandiser/full-order-view/full-order-view';
 import { AddVendor } from './Purchase/add-vendor/add-vendor';
 import { ViewAllVendor } from './Purchase/view-all-vendor/view-all-vendor';
 import { ViewVendorPro } from './Purchase/view-vendor-pro/view-vendor-pro';
+import { ViewEmpProfile } from './HR/view-emp-profile/view-emp-profile';
 
 @NgModule({
   declarations: [
@@ -74,7 +75,8 @@ import { ViewVendorPro } from './Purchase/view-vendor-pro/view-vendor-pro';
     FullOrderView,
     AddVendor,
     ViewAllVendor,
-    ViewVendorPro
+    ViewVendorPro,
+    ViewEmpProfile
   ],
   imports: [
     BrowserModule,

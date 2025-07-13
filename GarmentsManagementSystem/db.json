@@ -973,6 +973,31 @@
       "orderStatus": {
         "status": "Confirmed"
       }
+    },
+    {
+      "id": "a18e",
+      "buyerOrganization": "nghn",
+      "shippingAddress": "gjygj",
+      "orderDate": "2025-07-01",
+      "deliveryDate": "2025-07-09",
+      "smallSize": 125,
+      "sPrice": 14,
+      "mediumSize": 424,
+      "mPrice": 54,
+      "largeSize": 45,
+      "lPrice": 45,
+      "subTotal": "",
+      "vat": 20,
+      "paidAmount": 10000,
+      "dueAmount": "",
+      "total": "",
+      "remarks": "htfh",
+      "bom": {
+        "styleCode": "PE737"
+      },
+      "orderStatus": {
+        "status": "Confirmed"
+      }
     }
   ],
   "orderStatus": [

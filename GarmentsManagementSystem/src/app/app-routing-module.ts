@@ -29,6 +29,7 @@ import { FullOrderView } from './Merchandiser/full-order-view/full-order-view';
 import { AddVendor } from './Purchase/add-vendor/add-vendor';
 import { ViewAllVendor } from './Purchase/view-all-vendor/view-all-vendor';
 import { ViewVendorPro } from './Purchase/view-vendor-pro/view-vendor-pro';
+import { ViewEmpProfile } from './HR/view-emp-profile/view-emp-profile';
 
 const routes: Routes = [
   {path: '', component: Home},
@@ -60,7 +61,8 @@ const routes: Routes = [
   {path: 'fullOrderView/:id', component: FullOrderView},
   {path: 'addVendor', component: AddVendor},
   {path: 'viewAllVendor', component: ViewAllVendor},
-  {path: 'viewVendorPro/:id', component: ViewVendorPro}
+  {path: 'viewVendorPro/:id', component: ViewVendorPro},
+  {path: 'viewProfile/:id', component: ViewEmpProfile}
 ];
 
 @NgModule({

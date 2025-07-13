@@ -78,6 +78,10 @@ if (confirm('Are You sure ! want to delete this employee?')) {
   });
 }
   }
+  gotoViewProfile(id: string): void{
+    this.router.navigate(['/viewProfile',id]);
+
+  }
 
 
 }
