@@ -948,6 +948,31 @@
       "status": {
         "status": "Confirmed"
       }
+    },
+    {
+      "id": "516e",
+      "buyerOrganization": "German Garments Ltd.",
+      "shippingAddress": "Chittagong, Bangladesh",
+      "orderDate": "2025-07-12",
+      "deliveryDate": "2025-08-09",
+      "smallSize": 1500,
+      "sPrice": 290,
+      "mediumSize": 1500,
+      "mPrice": 310,
+      "largeSize": 1500,
+      "lPrice": 340,
+      "subTotal": "",
+      "vat": 15,
+      "paidAmount": 300000,
+      "dueAmount": "",
+      "total": "",
+      "remarks": "Necessary",
+      "bom": {
+        "styleCode": "P007"
+      },
+      "orderStatus": {
+        "status": "Confirmed"
+      }
     }
   ],
   "orderStatus": [
@@ -966,6 +991,20 @@
     {
       "id": "4",
       "status": "Completed"
+    }
+  ],
+  "vendor": [
+    {
+      "id": "77d6",
+      "vendorName": "parvej",
+      "companyName": "Badshah Fabric Mills",
+      "contactPerson": "parvej",
+      "email": "badshahfabric@gmail.com",
+      "phone": "7878788",
+      "address": "Mymensingh, Bangladesh",
+      "tin": "",
+      "bin": "",
+      "vat": "67678"
     }
   ]
 }

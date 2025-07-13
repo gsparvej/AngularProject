@@ -124,4 +124,8 @@ getAllOrderStatus(): Observable<any> {
 
    // OrderStatus add, update, delete, view end
 
+
+    viewFullOrder(id: string): Observable<any> {
+    return this.http.get(this.baseUrlOrder+'/'+id);
+  }
 }

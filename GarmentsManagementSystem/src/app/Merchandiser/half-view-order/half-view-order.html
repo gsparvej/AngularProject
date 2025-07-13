@@ -19,7 +19,7 @@
          <td>{{l.deliveryDate}}</td>
           <td>{{l.status.status}}</td>
         <td>
-            <button class="btn btn-warning m-1 p-1">View</button>
+            <button class="btn btn-warning m-1 p-1" (click)="getOrderById(l.id)">View</button>
         </td>
     </tr>
 </tbody>

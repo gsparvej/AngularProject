@@ -52,5 +52,9 @@ this.loadAllOrder();
   
     }
 
+    getOrderById(id:string): void{
+      this.router.navigate(['/fullOrderView',id]); 
+  }
+
 
 }
