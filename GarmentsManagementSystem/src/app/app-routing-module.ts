@@ -28,6 +28,7 @@ import { UpdateEmployee } from './HR/update-employee/update-employee';
 import { FullOrderView } from './Merchandiser/full-order-view/full-order-view';
 import { AddVendor } from './Purchase/add-vendor/add-vendor';
 import { ViewAllVendor } from './Purchase/view-all-vendor/view-all-vendor';
+import { ViewVendorPro } from './Purchase/view-vendor-pro/view-vendor-pro';
 
 const routes: Routes = [
   {path: '', component: Home},
@@ -58,7 +59,8 @@ const routes: Routes = [
   {path: 'updateEmp/:id', component: UpdateEmployee},
   {path: 'fullOrderView/:id', component: FullOrderView},
   {path: 'addVendor', component: AddVendor},
-  {path: 'viewAllVendor', component: ViewAllVendor}
+  {path: 'viewAllVendor', component: ViewAllVendor},
+  {path: 'viewVendorPro/:id', component: ViewVendorPro}
 ];
 
 @NgModule({

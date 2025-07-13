@@ -22,5 +22,9 @@ export class VendorService {
       
           return this.http.post(this.baseUrlVendor,ven);
         }
+
+   viewVendorProfile(id: string): Observable<any> {
+    return this.http.get(this.baseUrlVendor+'/'+id);
+  }
   
 }

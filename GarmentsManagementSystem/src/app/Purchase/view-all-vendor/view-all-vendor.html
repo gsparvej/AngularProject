@@ -22,8 +22,7 @@
                 <td>{{ vendor.phone }}</td>
                 <td>{{ vendor.companyName }}</td>
                 <td>
-                  <button class="btn btn-outline-primary btn-sm" >
-                    <i class="bi bi-eye"></i> View
+                  <button class="btn btn-outline-primary btn-sm" (click)="getVendorById(vendor.id)">View
                   </button>
                 </td>
               </tr>

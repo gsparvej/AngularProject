@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Vendor } from '../../../model/Purchase/vendor.model';
 import { VendorService } from '../../service/Purchase/vendor-service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-view-all-vendor',
@@ -13,7 +14,8 @@ export class ViewAllVendor implements OnInit{
   vendor!: any;
 
   constructor(
-    private vs: VendorService
+    private vs: VendorService,
+    private router: Router
   ){}
 
   ngOnInit(): void {
@@ -24,6 +26,10 @@ export class ViewAllVendor implements OnInit{
 this.vendor = this.vs.getAllVendor();
 
 
+  }
+
+   getVendorById(id:string): void{
+      this.router.navigate(['/viewVendorPro',id]); 
   }
 
 }
