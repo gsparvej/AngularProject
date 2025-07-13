@@ -31,7 +31,7 @@ export class ViewVendorPro implements OnInit{
   viewVendor(): void {
     this.vs.viewVendorProfile(this.id).subscribe({
       next: (data) => {
-        this.ven = data;
+        this.ven = data ;
         console.log(data);
         this.cdr.markForCheck();
       },
