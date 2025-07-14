@@ -1,0 +1,26 @@
+<div class="container py-5">
+  <div class="row justify-content-center">
+    <div class="col-lg-8">
+      <div class="card p-4">
+        <h3 class="mb-4 text-center text-primary">Add Item Information</h3>
+        <form [formGroup]="formItem" method="post">
+          <div class="row mb-3">
+            <div class="col-md-6">
+              <label for="categoryName" class="form-label">Category Name</label>
+              <input type="text" class="form-control" id="categoryName" formControlName="categoryName" placeholder="Enter Category Name ">
+            </div>
+            <div class="col-md-6">
+              <label for="unit" class="form-label">Unit </label>
+              <input type="text" class="form-control" id="unit" formControlName="unit" placeholder="Enter unit">
+            </div>
+          </div>
+          <div class="text-end mt-4">
+            <button type="reset" class="btn btn-secondary">Reset</button>
+            <button type="submit" class="btn btn-primary" (click)="addItem()">Add Item</button>
+            
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

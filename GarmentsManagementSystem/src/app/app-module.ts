@@ -39,6 +39,8 @@ import { AddVendor } from './Purchase/add-vendor/add-vendor';
 import { ViewAllVendor } from './Purchase/view-all-vendor/view-all-vendor';
 import { ViewVendorPro } from './Purchase/view-vendor-pro/view-vendor-pro';
 import { ViewEmpProfile } from './HR/view-emp-profile/view-emp-profile';
+import { AddItemList } from './Purchase/add-item-list/add-item-list';
+import { ViewAllItem } from './Purchase/view-all-item/view-all-item';
 
 @NgModule({
   declarations: [
@@ -76,7 +78,9 @@ import { ViewEmpProfile } from './HR/view-emp-profile/view-emp-profile';
     AddVendor,
     ViewAllVendor,
     ViewVendorPro,
-    ViewEmpProfile
+    ViewEmpProfile,
+    AddItemList,
+    ViewAllItem
   ],
   imports: [
     BrowserModule,

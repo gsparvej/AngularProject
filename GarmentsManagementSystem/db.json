@@ -960,5 +960,12 @@
       "bin": "",
       "vat": "67678"
     }
+  ],
+  "item": [
+    {
+      "id": "11c1",
+      "categoryName": "Woven knit Fabric",
+      "unit": "yards"
+    }
   ]
 }

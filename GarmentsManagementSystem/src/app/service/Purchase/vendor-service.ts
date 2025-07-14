@@ -7,7 +7,7 @@ import { Vendor } from '../../../model/Purchase/vendor.model';
   providedIn: 'root'
 })
 export class VendorService {
-  baseUrlVendor: string = "http://localhost:3000/vendor";
+baseUrlVendor: string = "http://localhost:3000/vendor";
 
   constructor(private http: HttpClient) { }
 
@@ -27,4 +27,6 @@ export class VendorService {
     return this.http.get(this.baseUrlVendor+'/'+id);
   }
   
+
+
 }
