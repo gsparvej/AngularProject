@@ -44,7 +44,7 @@ export class CreateOrder implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    // ✅ Reactive Form Structure
+  
     this.orderForm = this.formBuilder.group({
       buyerOrganization: ['', Validators.required],
       shippingAddress: ['', Validators.required],
@@ -100,7 +100,12 @@ export class CreateOrder implements OnInit {
       return;
     }
 
-    const order: Order = { ...this.orderForm.value };
+    const order: Order = { ...this.orderForm.value,
+
+      subTotal: this.subTotal,
+      total: this.total,
+      dueAmount: this.dueAmount
+     };
     this.merchandiserService.saveOder(order).subscribe({
       next: (savedOrder) => {
         console.log(savedOrder, 'Order Successfully Saved!');

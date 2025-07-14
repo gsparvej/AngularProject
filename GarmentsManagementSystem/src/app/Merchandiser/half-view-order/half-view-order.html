@@ -15,11 +15,11 @@
 <tbody>
     <tr *ngFor = "let l of orders ">
         <td>{{l.buyerOrganization}}</td>
-        <td>{{l.style.styleCode}}</td>
+        <td>{{l.bom.styleCode}}</td>
          <td>{{l.deliveryDate}}</td>
-          <td>{{l.status.status}}</td>
+          <td>{{l.orderStatus.status}}</td>
         <td>
-            <button class="btn btn-warning m-1 p-1" (click)="getOrderById(l.id)">View</button>
+            <button class="btn btn-warning m-1 p-1" (click)="getOrderById(l.id!)">View</button>
         </td>
     </tr>
 </tbody>

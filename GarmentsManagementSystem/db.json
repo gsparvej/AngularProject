@@ -896,107 +896,36 @@
       "id": "e370",
       "styleCode": "P007",
       "description": "Short Shirt"
+    },
+    {
+      "id": "fbd6",
+      "styleCode": "hgyughigshirt",
+      "description": "shirt"
     }
   ],
   "order": [
     {
-      "id": "85fd",
-      "buyerOrganization": "ghgh",
-      "shippingAddress": "UK",
-      "orderDate": "2025-07-01",
-      "deliveryDate": "2025-08-09",
-      "smallSize": 54,
-      "sPrice": 65,
-      "mediumSize": 65,
-      "mPrice": 5645,
-      "largeSize": 5645,
-      "lPrice": 565,
-      "subTotal": 454,
-      "vat": 645,
-      "paidAmount": 645,
-      "dueAmount": 565,
-      "total": 6540,
-      "remarks": "ngng",
-      "style": {
+      "id": "bb52",
+      "buyerOrganization": "hjmhj",
+      "shippingAddress": "jhmjh",
+      "orderDate": "2025-07-02",
+      "deliveryDate": "2025-07-05",
+      "smallSize": 141,
+      "sPrice": 144,
+      "mediumSize": 14,
+      "mPrice": 14,
+      "largeSize": 14,
+      "lPrice": 14,
+      "subTotal": 20696,
+      "vat": 20,
+      "paidAmount": 20000,
+      "dueAmount": 696.2000000000007,
+      "remarks": "uik",
+      "bom": {
         "styleCode": "RT123"
       },
-      "status": {
+      "orderStatus": {
         "status": "Pending"
-      }
-    },
-    {
-      "id": "3314",
-      "buyerOrganization": "thtyhy",
-      "shippingAddress": "England",
-      "orderDate": "2025-07-01",
-      "deliveryDate": "2025-08-09",
-      "smallSize": 52,
-      "sPrice": 60,
-      "mediumSize": 54,
-      "mPrice": 60,
-      "largeSize": 60,
-      "lPrice": 80,
-      "subTotal": "",
-      "vat": 5,
-      "paidAmount": 2000,
-      "dueAmount": "",
-      "total": "",
-      "remarks": "Finall",
-      "style": {
-        "styleCode": "PE737"
-      },
-      "status": {
-        "status": "Confirmed"
-      }
-    },
-    {
-      "id": "516e",
-      "buyerOrganization": "German Garments Ltd.",
-      "shippingAddress": "Chittagong, Bangladesh",
-      "orderDate": "2025-07-12",
-      "deliveryDate": "2025-08-09",
-      "smallSize": 1500,
-      "sPrice": 290,
-      "mediumSize": 1500,
-      "mPrice": 310,
-      "largeSize": 1500,
-      "lPrice": 340,
-      "subTotal": "",
-      "vat": 15,
-      "paidAmount": 300000,
-      "dueAmount": "",
-      "total": "",
-      "remarks": "Necessary",
-      "bom": {
-        "styleCode": "P007"
-      },
-      "orderStatus": {
-        "status": "Confirmed"
-      }
-    },
-    {
-      "id": "a18e",
-      "buyerOrganization": "nghn",
-      "shippingAddress": "gjygj",
-      "orderDate": "2025-07-01",
-      "deliveryDate": "2025-07-09",
-      "smallSize": 125,
-      "sPrice": 14,
-      "mediumSize": 424,
-      "mPrice": 54,
-      "largeSize": 45,
-      "lPrice": 45,
-      "subTotal": "",
-      "vat": 20,
-      "paidAmount": 10000,
-      "dueAmount": "",
-      "total": "",
-      "remarks": "htfh",
-      "bom": {
-        "styleCode": "PE737"
-      },
-      "orderStatus": {
-        "status": "Confirmed"
       }
     }
   ],

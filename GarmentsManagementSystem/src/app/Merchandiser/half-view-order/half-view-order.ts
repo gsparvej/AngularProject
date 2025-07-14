@@ -14,46 +14,39 @@ import { forkJoin } from 'rxjs';
 })
 export class HalfViewOrder implements OnInit{
 
-  order! : Order;
-
-  orders: Order[ ] = [];
-  boms: Bom[] = [];
-
+   orders: Order[] = [];
+ 
 
   constructor(
     private merchandiserService: MerchandiserService,
     private router: Router
-  ){}
+  ) {}
 
   ngOnInit(): void {
-this.loadAllOrder();
-   
+    this.loadAllOrders();
   }
 
-  loadAllOrder(){
-       forkJoin({
-  
-    orders: this.merchandiserService.getAllOrder(),
-    boms: this.merchandiserService.getAllBom(),
-  
-  }).subscribe({
-    next: ({ orders, boms }) => {
-      this.orders = orders;
-      this.boms = boms;
-      this.router.navigate(['/viewHalfOrder']);
-    },
-    error: (err) => {
-      console.log('Error loading Data : ',err);
-      alert('Failed to load employees or lookup data ');
-  
-    }
-  });
-  
-  
-    }
+  loadAllOrders(): void {
+   
+      orders: this.merchandiserService.getAllOrder().subscribe({
+      next: (result) => {
+        this.orders = result;     
 
-    getOrderById(id:string): void{
-      this.router.navigate(['/fullOrderView',id]); 
+        console.log('Orders:', this.orders);
+
+
+        // ⚠️ Don't navigate here unless needed
+        // this.router.navigate(['/viewHalfOrder']);
+      },
+      error: (err) => {
+        console.error('Error loading data:', err);
+        alert('Failed to load orders or BOM data');
+      }
+    });
+  }
+
+  getOrderById(id: string): void {
+    this.router.navigate(['/fullOrderView', id]);
   }
 
 
