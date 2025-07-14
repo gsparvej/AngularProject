@@ -966,6 +966,31 @@
       "id": "11c1",
       "categoryName": "Woven knit Fabric",
       "unit": "yards"
+    },
+    {
+      "id": "0ec8",
+      "categoryName": "Plastic Button",
+      "unit": "1 Gross = 144 pcs"
+    },
+    {
+      "id": "af5a",
+      "categoryName": "Sewing Thread",
+      "unit": "Cone"
+    },
+    {
+      "id": "4361",
+      "categoryName": "Wash care tag",
+      "unit": "Roll"
+    },
+    {
+      "id": "cde8",
+      "categoryName": "Poly Bag",
+      "unit": "Box"
+    },
+    {
+      "id": "b063",
+      "categoryName": "Light Weight Polyester Fabric",
+      "unit": "yards"
     }
   ]
 }
