@@ -1,0 +1,9 @@
+
+.card-header.bg-gradient {
+  background: linear-gradient(90deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.btn-outline-primary:hover i {
+  transform: translateX(-2px);
+  transition: transform 0.3s ease;
+}

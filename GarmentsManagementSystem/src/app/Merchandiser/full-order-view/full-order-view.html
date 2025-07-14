@@ -1,82 +1,72 @@
-<div class="container py-4">
-  <!-- Project Details Card -->
-  <div class="card shadow rounded-4">
+<div class="container py-5">
+  <div class="card border-0 shadow-lg rounded-5 overflow-hidden bg-white">
     
-    <!-- Card Header -->
-    <div class="row card-header flex-column flex-md-row border-bottom mx-0 px-3 bg-light">
-      <div class="col-md-auto me-auto d-md-flex align-items-center">
-        <h5 class="card-title mb-0 text-md-start text-center fw-semibold">Order Details</h5>
-      </div>
-      <div class="col-md-auto d-flex justify-content-end align-items-center">
-        <button type="button" class="btn btn-outline-primary btn-sm" onclick="history.back()">
-          <i class="fa-solid fa-arrow-left me-1"></i>Return
-        </button>
-      </div>
+    <!-- Header -->
+    <div class="card-header bg-gradient bg-light border-0 px-4 py-3 d-flex justify-content-between align-items-center flex-wrap">
+      <h4 class="mb-0 fw-bold text-primary">📦 Order Details</h4>
+      <button class="btn btn-outline-primary btn-sm d-flex align-items-center" onclick="history.back()">
+        <i class="fa-solid fa-arrow-left me-2"></i> Return
+      </button>
     </div>
 
-    <!-- Card Body -->
-    <div class="card-body">
-      <div class="row g-3">
+    <!-- Body -->
+    <div class="card-body px-4 py-4">
+      <div class="row gy-4">
 
-        <!-- Style Code and Buyer -->
+        <!-- Left Column Items -->
         <div class="col-md-6">
-          <label class="form-label fw-bold">Style Code</label>
-          <div class="text-muted">{{ order.bom.styleCode }}</div>
+          <label class="form-label fw-semibold text-dark">Style Code</label>
+          <div class="text-secondary">{{ order.bom.styleCode }}</div>
         </div>
         <div class="col-md-6">
-          <label class="form-label fw-bold">Buyer Organization</label>
-          <div class="text-muted">{{ order.buyerOrganization }}</div>
+          <label class="form-label fw-semibold text-dark">Buyer Organization</label>
+          <div class="text-secondary">{{ order.buyerOrganization }}</div>
         </div>
-
-        <!-- Shipping -->
+        
         <div class="col-md-6">
-          <label class="form-label fw-bold">Shipping Address</label>
-          <div class="text-muted">{{ order.shippingAddress }}</div>
-        </div>
-
-        <!-- Dates -->
-        <div class="col-md-6">
-          <label class="form-label fw-bold">Start Date</label>
-          <div class="text-muted">{{ order.orderDate }}</div>
+          <label class="form-label fw-semibold text-dark">Shipping Address</label>
+          <div class="text-secondary">{{ order.shippingAddress }}</div>
         </div>
         <div class="col-md-6">
-          <label class="form-label fw-bold">End Date</label>
-          <div class="text-muted">{{ order.deliveryDate }}</div>
+          <label class="form-label fw-semibold text-dark">Start Date</label>
+          <div class="text-secondary">{{ order.orderDate }}</div>
+        </div>
+        <div class="col-md-6">
+          <label class="form-label fw-semibold text-dark">End Date</label>
+          <div class="text-secondary">{{ order.deliveryDate }}</div>
         </div>
 
-        <!-- Size & Price Info -->
+        <!-- Size & Price -->
         <div class="col-md-6">
-          <label class="form-label fw-bold">S Size (Qty)</label>
+          <label class="form-label fw-semibold">S Size (Qty)</label>
           <div class="text-muted">{{ order.smallSize }}</div>
         </div>
         <div class="col-md-6">
-          <label class="form-label fw-bold">S Size Price</label>
+          <label class="form-label fw-semibold">S Size Price</label>
           <div class="text-muted">{{ order.sPrice }}</div>
         </div>
-
         <div class="col-md-6">
-          <label class="form-label fw-bold">M Size (Qty)</label>
+          <label class="form-label fw-semibold">M Size (Qty)</label>
           <div class="text-muted">{{ order.mediumSize }}</div>
         </div>
         <div class="col-md-6">
-          <label class="form-label fw-bold">M Size Price</label>
+          <label class="form-label fw-semibold">M Size Price</label>
           <div class="text-muted">{{ order.mPrice }}</div>
         </div>
-
         <div class="col-md-6">
-          <label class="form-label fw-bold">L Size (Qty)</label>
+          <label class="form-label fw-semibold">L Size (Qty)</label>
           <div class="text-muted">{{ order.largeSize }}</div>
         </div>
         <div class="col-md-6">
-          <label class="form-label fw-bold">L Size Price</label>
+          <label class="form-label fw-semibold">L Size Price</label>
           <div class="text-muted">{{ order.lPrice }}</div>
         </div>
 
         <!-- Status -->
         <div class="col-md-6">
-          <label class="form-label fw-bold">Status</label>
+          <label class="form-label fw-semibold">Status</label>
           <div>
-            <span class="badge bg-success rounded-pill px-3 py-2">
+            <span class="badge bg-gradient bg-success bg-opacity-75 text-white rounded-pill px-3 py-2">
               {{ order.orderStatus.status }}
             </span>
           </div>
@@ -84,32 +74,31 @@
 
         <!-- Remarks -->
         <div class="col-md-6">
-          <label class="form-label fw-bold">Remarks</label>
+          <label class="form-label fw-semibold">Remarks</label>
           <div class="text-muted">{{ order.remarks }}</div>
         </div>
 
-        <!-- Calculations -->
+        <!-- Financial Info -->
         <div class="col-md-6">
-          <label class="form-label fw-bold">Sub Total</label>
+          <label class="form-label fw-semibold">Sub Total</label>
           <div class="text-muted">{{ order.subTotal }}</div>
         </div>
         <div class="col-md-6">
-          <label class="form-label fw-bold">VAT</label>
+          <label class="form-label fw-semibold">VAT</label>
           <div class="text-muted">{{ order.vat }}</div>
         </div>
         <div class="col-md-6">
-          <label class="form-label fw-bold">Paid Amount</label>
+          <label class="form-label fw-semibold">Paid Amount</label>
           <div class="text-muted">{{ order.paidAmount }}</div>
         </div>
         <div class="col-md-6">
-          <label class="form-label fw-bold">Due Amount</label>
+          <label class="form-label fw-semibold">Due Amount</label>
           <div class="text-muted">{{ order.dueAmount }}</div>
         </div>
         <div class="col-md-6">
-          <label class="form-label fw-bold">Total</label>
-          <div class="text-muted fw-semibold fs-5">{{ order.total }}</div>
+          <label class="form-label fw-bold text-dark">Total</label>
+          <div class="text-primary fs-5 fw-bold">{{ order.total }}</div>
         </div>
-
       </div>
     </div>
   </div>
