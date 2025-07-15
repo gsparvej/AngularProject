@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { InventoryModel } from '../../../model/Purchase/inventory.model';
 import { StockInModel } from '../../../model/Purchase/stockIn.model';
+import { StockOutModel } from '../../../model/Purchase/stockOut.model';
 
 
 @Injectable({
@@ -55,6 +56,15 @@ export class InventoryService {
   }
 
   updateQuantity(id: string, inventory: InventoryModel): Observable<any> {
-    return this.http.put(this.baseUrlInventory, inventory)
+    return this.http.put(`${this.baseUrlInventory}/${id}`, inventory);
   }
+
+  saveStockOut(stockOut: StockOutModel): Observable<StockOutModel> {
+  return this.http.post<StockOutModel>('http://localhost:3000/stockOut', stockOut);
+}
+
+getAllStockOut(): Observable<StockOutModel[]> {
+  return this.http.get<StockOutModel[]>('http://localhost:3000/stockOut');
+}
+  
 }

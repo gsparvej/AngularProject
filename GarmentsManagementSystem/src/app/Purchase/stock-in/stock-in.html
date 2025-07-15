@@ -6,22 +6,38 @@
 
         <form [formGroup]="formStockIn" (ngSubmit)="addStockIn()">
           <!-- Item Dropdown -->
-         <div class="mb-3">
-  <label for="itemId" class="form-label">Select Item</label>
-  <select class="form-select" formControlName="ltw1" (change)="onItemSelect($event)">
-    <option value="">-- Select Item --</option>
-    <option *ngFor="let i of items" [value]="i.id">
-      {{ i.categoryName }} ({{ i.quantity }})
-    </option>
-  </select>
-</div>
-
+          <div class="mb-3">
+            <label for="itemId" class="form-label">Select Item</label>
+            <select
+              class="form-select"
+              formControlName="itemId"
+              (change)="onItemSelect($event)"
+              id="itemId"
+            >
+              <option value="">-- Select Item --</option>
+              <option *ngFor="let i of inventory" [value]="i.id">
+                {{ i.categoryName }} ({{ i.quantity }})
+              </option>
+            </select>
+          </div>
 
           <!-- Quantity Input -->
           <div class="mb-3">
             <label for="quantity" class="form-label">Quantity</label>
-            <input type="number" class="form-control" id="quantity" formControlName="quantity" min="1" />
-            <div class="text-danger" *ngIf="formStockIn.get('quantity')?.touched && formStockIn.get('quantity')?.invalid">
+            <input
+              type="number"
+              class="form-control"
+              id="quantity"
+              formControlName="quantity"
+              min="1"
+            />
+            <div
+              class="text-danger"
+              *ngIf="
+                formStockIn.get('quantity')?.touched &&
+                formStockIn.get('quantity')?.invalid
+              "
+            >
               Quantity must be at least 1
             </div>
           </div>
@@ -39,7 +55,11 @@
 
           <!-- Submit Button -->
           <div class="text-end">
-            <button type="submit" class="btn btn-success" [disabled]="formStockIn.invalid">
+            <button
+              type="submit"
+              class="btn btn-success"
+              [disabled]="formStockIn.invalid"
+            >
               Add Stock
             </button>
           </div>

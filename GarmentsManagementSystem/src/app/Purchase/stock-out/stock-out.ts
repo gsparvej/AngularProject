@@ -1,11 +1,12 @@
 import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { Item } from '../../../model/Purchase/item.model';
 import { InventoryModel } from '../../../model/Purchase/inventory.model';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { InventoryService } from '../../service/Purchase/inventory-service';
 import { ItemService } from '../../service/Purchase/item-service';
 import { Router } from '@angular/router';
 import { StockInModel } from '../../../model/Purchase/stockIn.model';
+import { StockOutModel } from '../../../model/Purchase/stockOut.model';
 
 @Component({
   selector: 'app-stock-out',
@@ -16,103 +17,73 @@ import { StockInModel } from '../../../model/Purchase/stockIn.model';
 export class StockOut implements OnInit {
 
 
-  item: Item[] = [];
   inventory: InventoryModel[] = [];
-
   formStockOut!: FormGroup;
+  selectedItem!: InventoryModel | undefined;
 
   constructor(
+    private fb: FormBuilder,
     private inventoryService: InventoryService,
-    private itemService: ItemService,
     private cdr: ChangeDetectorRef,
-    private router: Router,
-    private formBuilder: FormBuilder,
-  ) { }
+    private router: Router
+  ) {}
 
   ngOnInit(): void {
-    this.formStockOut = this.formBuilder.group({
+    this.formStockOut = this.fb.group({
+      itemId: ['', Validators.required],
+      quantity: ['', [Validators.required, Validators.min(1)]],
+      transactionDate: [this.getTodayDate(), Validators.required]
+    });
 
-
-      item: this.formBuilder.group({
-        categoryName: [''],
-      }),
-      inventory: this.formBuilder.group({
-
-        quantity: [''],
-      })
-
-    })
     this.loadInventory();
-    this.loadItem();
-
-
-    this.formStockOut.get('item')?.get('categoryName')?.valueChanges.subscribe(categoryName => {
-      const selectedStatus = this.item.find(s => s.categoryName === categoryName);
-      if (selectedStatus) {
-
-        this.formStockOut.patchValue({ atten_status: selectedStatus });
-      }
-    });
   }
 
-
-  addStockOut(): void {
-
-    const stock: StockInModel = { ...this.formStockOut.value };
-    this.inventoryService.saveStockIn(stock).subscribe({
-
-      next: (inven) => {
-        console.log(inven, 'add Successfully ! ');
-        this.loadItem();
-        this.loadInventory();
-        this.formStockOut.reset();
-        this.router.navigate(['']);
-      },
-      error: (err) => {
-        console.log(err);
-      }
-
-
-    })
-
-
+  getTodayDate(): string {
+    return new Date().toISOString().split('T')[0];
   }
-
-
-  loadItem(): void {
-
-    this.itemService.getAllItem().subscribe({
-
-      next: (item) => {
-        this.item = item;
-        this.cdr.markForCheck();
-
-      },
-      error: (err) => {
-
-        console.log(err);
-      }
-
-    });
-
-  }
-
 
   loadInventory(): void {
-
     this.inventoryService.getInventories().subscribe({
-
-      next: (inven) => {
-        this.inventory = inven;
-
+      next: (data) => {
+        this.inventory = data;
+        this.cdr.detectChanges();
       },
-      error: (err) => {
-
-        console.log(err);
-      }
-
+      error: (err) => console.error('Error loading inventory:', err)
     });
+  }
 
+  onItemSelect(event: any): void {
+    const id = event.target.value;
+    this.selectedItem = this.inventory.find(i => i.id === id);
+    console.log('Selected for Stock Out:', this.selectedItem);
+  }
+
+  addStockOut(): void {
+    if (this.formStockOut.invalid || !this.selectedItem) {
+      this.formStockOut.markAllAsTouched();
+      return;
+    }
+
+    const outQty = this.formStockOut.value.quantity;
+    if (outQty > this.selectedItem.quantity) {
+      alert('Not enough stock!');
+      return;
+    }
+
+    const stockOut: StockOutModel = this.formStockOut.value;
+
+    this.inventoryService.saveStockOut(stockOut).subscribe({
+      next: () => {
+        const newQty = this.selectedItem!.quantity - outQty;
+        const updatedInventory = new InventoryModel(newQty, this.selectedItem!.categoryName);
+        this.inventoryService.updateQuantity(this.selectedItem?.id!, updatedInventory).subscribe(() => {
+          this.loadInventory();
+          this.formStockOut.reset({ transactionDate: this.getTodayDate() });
+          this.router.navigate(['']); // Optional
+        });
+      },
+      error: (err) => console.error('Error on stock out:', err)
+    });
   }
 
 

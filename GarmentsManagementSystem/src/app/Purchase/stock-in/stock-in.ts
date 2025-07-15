@@ -18,18 +18,15 @@ import { ItemService } from '../../service/Purchase/item-service';
 export class StockIn implements OnInit {
 
   inventory: InventoryModel[] = [];
-
   formStockIn!: FormGroup;
-
-  selectedItem!: any;
+  selectedItem!: InventoryModel | undefined;
 
   constructor(
     private inventoryService: InventoryService,
-    private itemService: ItemService,
     private cdr: ChangeDetectorRef,
     private router: Router,
-    private formBuilder: FormBuilder,
-  ) { }
+    private formBuilder: FormBuilder
+  ) {}
 
   ngOnInit(): void {
     this.formStockIn = this.formBuilder.group({
@@ -38,12 +35,11 @@ export class StockIn implements OnInit {
       receivedTransactionDate: [this.getTodayDate(), Validators.required]
     });
 
-    this.loadItems();
     this.loadInventory();
   }
 
   getTodayDate(): string {
-    return new Date().toISOString().split('T')[0]; // 'YYYY-MM-DD'
+    return new Date().toISOString().split('T')[0];
   }
 
   addStockIn(): void {
@@ -52,23 +48,20 @@ export class StockIn implements OnInit {
       return;
     }
 
-    const stock: StockInModel = {
-      ...this.formStockIn.value
-    };
+    const stock: StockInModel = this.formStockIn.value;
 
     this.inventoryService.saveStockIn(stock).subscribe({
-      next: (inven) => {
-        console.log(inven);
-        const id = this.formStockIn.value.itemId;
-        const quantity = this.formStockIn.value.quantity + this.selectedItem?.quantity;
-        const categoryName = this.selectedItem.categoryName;
-        const invent = new InventoryModel(quantity, categoryName);
-        this.updateInventory(id, invent);
-        console.log(inven, 'Added Successfully!');
-        this.loadItems();
-        this.loadInventory();
-        this.formStockIn.reset({ receivedTransactionDate: this.getTodayDate() });
-        this.router.navigate(['']); // Adjust as needed
+      next: () => {
+        const id = stock.itemId;
+        const quantity = Number(stock.quantity) + (this.selectedItem?.quantity || 0);
+        const categoryName = this.selectedItem?.categoryName || '';
+
+        const updatedInventory = new InventoryModel(quantity, categoryName);
+        this.inventoryService.updateQuantity(id, updatedInventory).subscribe(() => {
+          this.loadInventory();
+          this.formStockIn.reset({ receivedTransactionDate: this.getTodayDate() });
+          this.router.navigate(['']); // Optional: redirect
+        });
       },
       error: (err) => {
         console.error('Error adding stock:', err);
@@ -76,29 +69,15 @@ export class StockIn implements OnInit {
     });
   }
 
-  loadItems(): void {
-    this.inventoryService.getInventories().subscribe({
-      next: (data) => this.inventory = data,
-      error: (err) => console.error('Error loading items:', err)
-    });
-  }
-
   loadInventory(): void {
     this.inventoryService.getInventories().subscribe({
-      next: (data) => this.inventory = data,
+      next: (data) => {
+        this.inventory = data;
+        this.cdr.detectChanges();
+      },
       error: (err) => console.error('Error loading inventory:', err)
     });
   }
-
-  getItemName(itemId: string): string {
-    const found = this.inventory.find(i => i.id === itemId);
-    return found ? found.categoryName : 'Unknown';
-  }
-
-  updateInventory(id:string, invernt: InventoryModel) {
-    this.inventoryService.updateQuantity(id, invernt);
-  }
-
 
   onItemSelect(event: any): void {
     const selectedId = event.target.value;

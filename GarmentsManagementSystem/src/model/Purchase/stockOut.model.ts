@@ -1,9 +1,5 @@
-
-
-export class StockOut{
-    
-    id!: string;
-    stockOutDate!: Date;
-    item!: string;
-    inventory!: string;
+export class StockOutModel {
+  itemId!: string;
+  quantity!: number;
+  transactionDate!: Date;
 }

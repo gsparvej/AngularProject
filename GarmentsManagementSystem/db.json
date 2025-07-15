@@ -1066,14 +1066,56 @@
       "itemId": "11c1",
       "quantity": 2342,
       "receivedTransactionDate": "2025-07-15"
+    },
+    {
+      "id": "09dc",
+      "itemId": "11c1",
+      "quantity": 50,
+      "receivedTransactionDate": "2025-07-15"
+    },
+    {
+      "id": "c47b",
+      "itemId": "af5a",
+      "quantity": 234,
+      "receivedTransactionDate": "2025-07-15"
+    },
+    {
+      "id": "11c7",
+      "itemId": "0ec8",
+      "quantity": 500,
+      "receivedTransactionDate": "2025-07-15"
+    },
+    {
+      "id": "b5d0",
+      "itemId": "0ec8",
+      "quantity": 34234,
+      "receivedTransactionDate": "2025-07-15"
+    },
+    {
+      "id": "76ea",
+      "itemId": "0ec8",
+      "quantity": 123,
+      "receivedTransactionDate": "2025-07-15"
+    },
+    {
+      "id": "c3da",
+      "itemId": "11c1",
+      "quantity": 100,
+      "receivedTransactionDate": "2025-07-15"
+    },
+    {
+      "id": "464e",
+      "itemId": "11c1",
+      "quantity": 12,
+      "receivedTransactionDate": "2025-07-15"
     }
   ],
   "issueProduct": [],
   "inventories": [
     {
-      "id": "11c1",
+      "quantity": 0,
       "categoryName": "Woven knit Fabric",
-      "quantity": 0
+      "id": "11c1"
     },
     {
       "id": "0ec8",
@@ -1099,6 +1141,14 @@
       "id": "b063",
       "categoryName": "Light Weight Polyester Fabric",
       "quantity": 0
+    }
+  ],
+  "stockOut": [
+    {
+      "id": "b4d4",
+      "itemId": "11c1",
+      "quantity": 112,
+      "transactionDate": "2025-07-15"
     }
   ]
 }
