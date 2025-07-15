@@ -994,7 +994,7 @@
     }
   ],
   "inventoryView": [],
-  "addProduct": [
+  "stokIn": [
     {
       "id": "40ce",
       "item": {
@@ -1015,6 +1015,15 @@
     },
     {
       "id": "4c8e",
+      "item": {
+        "categoryName": ""
+      },
+      "inventory": {
+        "quantity": ""
+      }
+    },
+    {
+      "id": "1da1",
       "item": {
         "categoryName": ""
       },

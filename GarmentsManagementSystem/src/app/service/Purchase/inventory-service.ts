@@ -2,7 +2,8 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { InventoryModel } from '../../../model/Purchase/inventory.model';
-import { StockIn } from '../../Purchase/stock-in/stock-in';
+import { StockInModel } from '../../../model/Purchase/stockIn.model';
+
 
 @Injectable({
   providedIn: 'root'
@@ -10,7 +11,7 @@ import { StockIn } from '../../Purchase/stock-in/stock-in';
 export class InventoryService {
 
   baseUrlInventory: string = "http://localhost:3000/inventories";
-  baseUrlAddInvenProduct: string = "http://localhost:3000/addProduct";
+  baseUrlStockIn: string = "http://localhost:3000/stokIn";
 
   constructor(private http: HttpClient) { }
 
@@ -30,15 +31,15 @@ export class InventoryService {
 
 
 
-  getAllAddProduct(): Observable<any> {
+  getAllStockIn(): Observable<any> {
 
-    return this.http.get(this.baseUrlAddInvenProduct);
+    return this.http.get(this.baseUrlStockIn);
 
   }
 
-  saveProduct(product: StockIn): Observable<any> {
+  saveStockIn(stockin: StockInModel): Observable<any> {
 
-    return this.http.post(this.baseUrlAddInvenProduct, product);
+    return this.http.post(this.baseUrlStockIn, stockin);
   }
 
   saveInventories(data: InventoryModel): Observable<InventoryModel> {
