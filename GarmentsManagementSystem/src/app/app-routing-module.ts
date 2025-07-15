@@ -32,6 +32,7 @@ import { ViewVendorPro } from './Purchase/view-vendor-pro/view-vendor-pro';
 import { ViewEmpProfile } from './HR/view-emp-profile/view-emp-profile';
 import { AddItemList } from './Purchase/add-item-list/add-item-list';
 import { ViewAllItem } from './Purchase/view-all-item/view-all-item';
+import { AddProduct } from './Purchase/add-product/add-product';
 
 const routes: Routes = [
   {path: '', component: Home},
@@ -66,7 +67,8 @@ const routes: Routes = [
   {path: 'viewVendorPro/:id', component: ViewVendorPro},
   {path: 'viewProfile/:id', component: ViewEmpProfile},
   {path: 'addItem', component: AddItemList},
-  {path: 'viewAllItem', component: ViewAllItem}
+  {path: 'viewAllItem', component: ViewAllItem},
+  {path: 'addProduct', component: AddProduct}
 ];
 
 @NgModule({

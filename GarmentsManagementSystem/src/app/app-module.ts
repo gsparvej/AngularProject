@@ -41,6 +41,8 @@ import { ViewVendorPro } from './Purchase/view-vendor-pro/view-vendor-pro';
 import { ViewEmpProfile } from './HR/view-emp-profile/view-emp-profile';
 import { AddItemList } from './Purchase/add-item-list/add-item-list';
 import { ViewAllItem } from './Purchase/view-all-item/view-all-item';
+import { InventoryView } from './Purchase/inventory-view/inventory-view';
+import { AddProduct } from './Purchase/add-product/add-product';
 
 @NgModule({
   declarations: [
@@ -80,7 +82,9 @@ import { ViewAllItem } from './Purchase/view-all-item/view-all-item';
     ViewVendorPro,
     ViewEmpProfile,
     AddItemList,
-    ViewAllItem
+    ViewAllItem,
+    InventoryView,
+    AddProduct,
   ],
   imports: [
     BrowserModule,

@@ -992,5 +992,18 @@
       "categoryName": "Light Weight Polyester Fabric",
       "unit": "yards"
     }
-  ]
+  ],
+  "inventoryView": [],
+  "addProduct": [
+    {
+      "id": "40ce",
+      "item": {
+        "categoryName": ""
+      },
+      "inventory": {
+        "quantity": ""
+      }
+    }
+  ],
+  "issueProduct": []
 }
