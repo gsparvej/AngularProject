@@ -1108,6 +1108,18 @@
       "itemId": "11c1",
       "quantity": 12,
       "receivedTransactionDate": "2025-07-15"
+    },
+    {
+      "id": "50c0",
+      "itemId": "af5a",
+      "quantity": 100,
+      "receivedTransactionDate": "2025-07-15"
+    },
+    {
+      "id": "2add",
+      "itemId": "cde8",
+      "quantity": 50,
+      "receivedTransactionDate": "2025-07-15"
     }
   ],
   "issueProduct": [],
@@ -1123,9 +1135,9 @@
       "quantity": 0
     },
     {
-      "id": "af5a",
+      "quantity": 100,
       "categoryName": "Sewing Thread",
-      "quantity": 0
+      "id": "af5a"
     },
     {
       "id": "4361",
@@ -1133,9 +1145,9 @@
       "quantity": 0
     },
     {
-      "id": "cde8",
+      "quantity": 20,
       "categoryName": "Poly Bag",
-      "quantity": 0
+      "id": "cde8"
     },
     {
       "id": "b063",
@@ -1148,6 +1160,12 @@
       "id": "b4d4",
       "itemId": "11c1",
       "quantity": 112,
+      "transactionDate": "2025-07-15"
+    },
+    {
+      "id": "3fe7",
+      "itemId": "cde8",
+      "quantity": 30,
       "transactionDate": "2025-07-15"
     }
   ]
