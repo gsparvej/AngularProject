@@ -1,11 +1,13 @@
 import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
-import { Item } from '../../../model/Purchase/item.model';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+
 import { InventoryModel } from '../../../model/Purchase/inventory.model';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { Item } from '../../../model/Purchase/item.model';
+import { StockInModel } from '../../../model/Purchase/stockIn.model';
+
 import { InventoryService } from '../../service/Purchase/inventory-service';
 import { ItemService } from '../../service/Purchase/item-service';
-import { Router } from '@angular/router';
-import { StockInModel } from '../../../model/Purchase/stockIn.model';
 
 @Component({
   selector: 'app-stock-in',
@@ -15,10 +17,11 @@ import { StockInModel } from '../../../model/Purchase/stockIn.model';
 })
 export class StockIn implements OnInit {
 
-  item: Item[] = [];
   inventory: InventoryModel[] = [];
 
   formStockIn!: FormGroup;
+
+  selectedItem!: any;
 
   constructor(
     private inventoryService: InventoryService,
@@ -30,88 +33,77 @@ export class StockIn implements OnInit {
 
   ngOnInit(): void {
     this.formStockIn = this.formBuilder.group({
-
-
-      item: this.formBuilder.group({
-        categoryName: [''],
-      }),
-      inventory: this.formBuilder.group({
-
-        quantity: [''],
-      })
-
-    })
-    this.loadInventory();
-    this.loadItem();
-
-
-    this.formStockIn.get('item')?.get('categoryName')?.valueChanges.subscribe(categoryName => {
-      const selectedStatus = this.item.find(s => s.categoryName === categoryName);
-      if (selectedStatus) {
-
-        this.formStockIn.patchValue({ atten_status: selectedStatus });
-      }
+      itemId: ['', Validators.required],
+      quantity: ['', [Validators.required, Validators.min(1)]],
+      receivedTransactionDate: [this.getTodayDate(), Validators.required]
     });
+
+    this.loadItems();
+    this.loadInventory();
   }
 
+  getTodayDate(): string {
+    return new Date().toISOString().split('T')[0]; // 'YYYY-MM-DD'
+  }
 
   addStockIn(): void {
+    if (this.formStockIn.invalid) {
+      this.formStockIn.markAllAsTouched();
+      return;
+    }
 
-    const stock: StockInModel = { ...this.formStockIn.value };
+    const stock: StockInModel = {
+      ...this.formStockIn.value
+    };
+
     this.inventoryService.saveStockIn(stock).subscribe({
-
       next: (inven) => {
-        console.log(inven, 'add Successfully ! ');
-        this.loadItem();
+        console.log(inven);
+        const id = this.formStockIn.value.itemId;
+        const quantity = this.formStockIn.value.quantity + this.selectedItem?.quantity;
+        const categoryName = this.selectedItem.categoryName;
+        const invent = new InventoryModel(quantity, categoryName);
+        this.updateInventory(id, invent);
+        console.log(inven, 'Added Successfully!');
+        this.loadItems();
         this.loadInventory();
-        this.formStockIn.reset();
-        this.router.navigate(['']);
+        this.formStockIn.reset({ receivedTransactionDate: this.getTodayDate() });
+        this.router.navigate(['']); // Adjust as needed
       },
       error: (err) => {
-        console.log(err);
+        console.error('Error adding stock:', err);
       }
-
-
-    })
-
-
-  }
-
-
-  loadItem(): void {
-
-    this.itemService.getAllItem().subscribe({
-
-      next: (item) => {
-        this.item = item;
-
-      },
-      error: (err) => {
-
-        console.log(err);
-      }
-
     });
-
   }
 
+  loadItems(): void {
+    this.inventoryService.getInventories().subscribe({
+      next: (data) => this.inventory = data,
+      error: (err) => console.error('Error loading items:', err)
+    });
+  }
 
   loadInventory(): void {
-
-    this.inventoryService.getAllInventory().subscribe({
-
-      next: (inven) => {
-        this.inventory = inven;
-
-      },
-      error: (err) => {
-
-        console.log(err);
-      }
-
+    this.inventoryService.getInventories().subscribe({
+      next: (data) => this.inventory = data,
+      error: (err) => console.error('Error loading inventory:', err)
     });
-
   }
 
+  getItemName(itemId: string): string {
+    const found = this.inventory.find(i => i.id === itemId);
+    return found ? found.categoryName : 'Unknown';
+  }
+
+  updateInventory(id:string, invernt: InventoryModel) {
+    this.inventoryService.updateQuantity(id, invernt);
+  }
+
+
+  onItemSelect(event: any): void {
+    const selectedId = event.target.value;
+    this.selectedItem = this.inventory.find(i => i.id === selectedId);
+    console.log('Selected Item:', this.selectedItem);
+  }
 
 }

@@ -1030,8 +1030,75 @@
       "inventory": {
         "quantity": ""
       }
+    },
+    {
+      "id": "391e",
+      "itemId": "11c1",
+      "quantity": 100,
+      "receivedTransactionDate": "2025-07-15"
+    },
+    {
+      "id": "26e0",
+      "itemId": "0ec8",
+      "quantity": 100,
+      "receivedTransactionDate": "2025-07-15"
+    },
+    {
+      "id": "3177",
+      "itemId": "0ec8",
+      "quantity": 100,
+      "receivedTransactionDate": "2025-07-15"
+    },
+    {
+      "id": "bd5e",
+      "itemId": "11c1",
+      "quantity": 100,
+      "receivedTransactionDate": "2025-07-15"
+    },
+    {
+      "id": "b064",
+      "itemId": "11c1",
+      "quantity": 123,
+      "receivedTransactionDate": "2025-07-15"
+    },
+    {
+      "id": "63d4",
+      "itemId": "11c1",
+      "quantity": 2342,
+      "receivedTransactionDate": "2025-07-15"
     }
   ],
   "issueProduct": [],
-  "inventories": []
+  "inventories": [
+    {
+      "id": "11c1",
+      "categoryName": "Woven knit Fabric",
+      "quantity": 0
+    },
+    {
+      "id": "0ec8",
+      "categoryName": "Plastic Button",
+      "quantity": 0
+    },
+    {
+      "id": "af5a",
+      "categoryName": "Sewing Thread",
+      "quantity": 0
+    },
+    {
+      "id": "4361",
+      "categoryName": "Wash care tag",
+      "quantity": 0
+    },
+    {
+      "id": "cde8",
+      "categoryName": "Poly Bag",
+      "quantity": 0
+    },
+    {
+      "id": "b063",
+      "categoryName": "Light Weight Polyester Fabric",
+      "quantity": 0
+    }
+  ]
 }

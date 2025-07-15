@@ -34,6 +34,7 @@ import { AddItemList } from './Purchase/add-item-list/add-item-list';
 import { ViewAllItem } from './Purchase/view-all-item/view-all-item';
 import { Inventory } from './Purchase/inventory/inventory';
 import { StockIn } from './Purchase/stock-in/stock-in';
+import { StockOut } from './Purchase/stock-out/stock-out';
 
 const routes: Routes = [
   { path: '', component: Home },
@@ -69,8 +70,9 @@ const routes: Routes = [
   { path: 'viewProfile/:id', component: ViewEmpProfile },
   { path: 'addItem', component: AddItemList },
   { path: 'viewAllItem', component: ViewAllItem },
-  { path: 'addinventory', component: Inventory },
-  {path: 'stockIn' ,component: StockIn}
+  { path: 'inventory', component: Inventory },
+  {path: 'stockIn' ,component: StockIn},
+  {path: 'stockOut', component: StockOut}
 ];
 
 @NgModule({

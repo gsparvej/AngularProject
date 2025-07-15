@@ -2,7 +2,7 @@
 
 export class StockInModel{
     id!: string;
-     receivedTransactionDate!: Date;
-    inventory!: string;
-    item!: string;
+    receivedTransactionDate!: Date;
+    itemId!: string;
+    quantity!:number;
 }

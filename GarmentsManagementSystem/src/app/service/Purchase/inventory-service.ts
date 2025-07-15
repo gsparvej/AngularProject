@@ -18,16 +18,16 @@ export class InventoryService {
 
 
 
-  getAllInventory(): Observable<any> {
+  // getAllInventory(): Observable<any> {
 
-    return this.http.get(this.baseUrlInventory);
+  //   return this.http.get(this.baseUrlInventory);
 
-  }
+  // }
 
-  saveInventory(inevn: InventoryModel): Observable<any> {
+  // saveInventory(inevn: InventoryModel): Observable<any> {
 
-    return this.http.post(this.baseUrlInventory, inevn);
-  }
+  //   return this.http.post(this.baseUrlInventory, inevn);
+  // }
 
 
 
@@ -52,5 +52,9 @@ export class InventoryService {
 
   deleteInventory(id: string): Observable<void> {
     return this.http.delete<void>(`${this.baseUrlInventory}/${id}`);
+  }
+
+  updateQuantity(id: string, inventory: InventoryModel): Observable<any> {
+    return this.http.put(this.baseUrlInventory, inventory)
   }
 }

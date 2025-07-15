@@ -1,1 +1,50 @@
-<p>stock-out works!</p>
+<!-- Bootstrap CSS & Icons -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+<div class="container border rounded p-4 my-4 shadow-sm" style="max-width: 700px;">
+  <h1 class="text-center text-success mb-4">Stock In </h1>
+
+  <form [formGroup]="formStockOut" method="post" (ngSubmit)="addStockOut()" novalidate>
+
+
+    <div class="row g-4">
+
+      <div class="col-md-6" formGroupName="item">
+        <label for="employees" class="form-label fw-semibold">Category Name</label>
+        <select id="item" formControlName="id" class="form-select" aria-label="Select Category Name" required>
+          <option value="" disabled selected>Select Category Name</option>
+          <option *ngFor="let it of item" [value]="it.id">{{ it.categoryName }}</option>
+        </select>
+      </div>
+
+
+
+      <div class="col-md-6">
+        <label for="attDate" class="form-label fw-semibold">Received Transaction Date</label>
+        <input type="datetime-local" class="form-control" id="receivedTransactionDate"
+          formControlName="receivedTransactionDate" required />
+      </div>
+      <div class="row">
+        <label for="quantity" class="form-label fw-semibold">Quantity</label>
+        <input type="number" class="form-control" id="number" formControlName="number" placeholder="Enter quantity">
+      </div>
+
+
+
+    </div>
+
+    <!-- Buttons -->
+    <div class="row mt-4">
+      <div class="col-md-6 d-grid">
+        <button type="submit" class="btn btn-success" [disabled]="formStockOut.invalid">
+          Save
+        </button>
+      </div>
+      <div class="col-md-6 d-grid">
+        <button type="reset" class="btn btn-danger">
+          Reset
+        </button>
+      </div>
+    </div>
+  </form>
+</div>
