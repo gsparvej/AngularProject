@@ -1,4 +1,4 @@
-export class AddInventoryProduct{
+export class StockIn{
     id!: string;
     inventory!: string;
     item!: string;

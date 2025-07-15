@@ -5,7 +5,7 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 import { InventoryService } from '../../service/Purchase/inventory-service';
 import { Router } from '@angular/router';
 import { ItemService } from '../../service/Purchase/item-service';
-import { AddInventoryProduct } from '../../../model/Purchase/addInventoryProduct.model';
+import { AddInventoryProduct } from '../../../model/Purchase/stockIn.model';
 
 @Component({
   selector: 'app-add-product',

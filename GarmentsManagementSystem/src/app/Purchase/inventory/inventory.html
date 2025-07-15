@@ -1,0 +1,24 @@
+<div class="container py-5">
+  <div class="row justify-content-center">
+    <div class="col-lg-8">
+      <!-- Add Inventory Form -->
+      <div class="card p-4 shadow-sm mb-4">
+        <h3 class="mb-3 text-center text-primary">Add Inventory Entry</h3>
+        <form [formGroup]="inventoryForm" (ngSubmit)="onSubmit()">
+          <div class="mb-3">
+            <label for="item" class="form-label">Item</label>
+            <input type="text" id="item" class="form-control" formControlName="item" />
+          </div>
+          <div class="mb-3">
+            <label for="quantity" class="form-label">Quantity</label>
+            <input type="number" id="quantity" class="form-control" formControlName="quantity" />
+          </div>
+          <div class="mb-3">
+            <label for="receivedTransactionDate" class="form-label">Received Date</label>
+            <input type="date" id="receivedTransactionDate" class="form-control" formControlName="receivedTransactionDate" />
+          </div>
+          <button type="submit" class="btn btn-success w-100">Save Inventory</button>
+        </form>
+      </div>
+  </div>
+</div>

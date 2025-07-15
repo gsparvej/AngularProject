@@ -1003,7 +1003,26 @@
       "inventory": {
         "quantity": ""
       }
+    },
+    {
+      "id": "ea1c",
+      "item": {
+        "categoryName": ""
+      },
+      "inventory": {
+        "quantity": ""
+      }
+    },
+    {
+      "id": "4c8e",
+      "item": {
+        "categoryName": ""
+      },
+      "inventory": {
+        "quantity": ""
+      }
     }
   ],
-  "issueProduct": []
+  "issueProduct": [],
+  "inventories": []
 }
