@@ -1120,6 +1120,12 @@
       "itemId": "cde8",
       "quantity": 50,
       "receivedTransactionDate": "2025-07-15"
+    },
+    {
+      "id": "ed98",
+      "itemId": "4361",
+      "quantity": 5,
+      "receivedTransactionDate": "2025-07-16"
     }
   ],
   "issueProduct": [],
@@ -1140,9 +1146,9 @@
       "id": "af5a"
     },
     {
-      "id": "4361",
+      "quantity": 5,
       "categoryName": "Wash care tag",
-      "quantity": 0
+      "id": "4361"
     },
     {
       "quantity": 20,
