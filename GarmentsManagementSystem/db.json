@@ -947,6 +947,22 @@
       "status": "Completed"
     }
   ],
+  "prStatus":[
+    {
+      "id": "1",
+      "status": "Requesting"
+    },
+    {
+      "id": "2",
+      "status": "Pending"
+    },
+    {
+      "id": "3",
+      "status": "Approved"
+    }
+
+  ],
+  "requsition":[],
   "vendor": [
     {
       "id": "77d6",
@@ -993,7 +1009,6 @@
       "unit": "yards"
     }
   ],
-  "inventoryView": [],
   "stokIn": [
     {
       "id": "40ce",
@@ -1128,7 +1143,6 @@
       "receivedTransactionDate": "2025-07-16"
     }
   ],
-  "issueProduct": [],
   "inventories": [
     {
       "quantity": 0,

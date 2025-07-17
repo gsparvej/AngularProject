@@ -5,6 +5,7 @@
     <table class="table table-striped">
 <thead>
     <tr>
+         <th>Order ID</th>
         <th>Buyer Organization</th>
         <th>Style Code</th>
         <th>Delivery Date</th>
@@ -14,6 +15,7 @@
 </thead>
 <tbody>
     <tr *ngFor = "let l of orders ">
+        <td>{{l.id}}</td>
         <td>{{l.buyerOrganization}}</td>
         <td>{{l.bom.styleCode}}</td>
          <td>{{l.deliveryDate}}</td>
