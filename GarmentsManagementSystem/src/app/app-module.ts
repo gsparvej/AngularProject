@@ -45,6 +45,9 @@ import { Inventory } from './Purchase/inventory/inventory';
 import { StockOut } from './Purchase/stock-out/stock-out';
 import { StockIn } from './Purchase/stock-in/stock-in';
 import { CreateRequisition } from './Purchase/create-requisition/create-requisition';
+import { CreatePO } from './Purchase/create-po/create-po';
+import { ViewAllPO } from './Purchase/view-all-po/view-all-po';
+import { ViewPODetails } from './Purchase/view-podetails/view-podetails';
 
 @NgModule({
   declarations: [
@@ -89,6 +92,9 @@ import { CreateRequisition } from './Purchase/create-requisition/create-requisit
     StockOut,
     StockIn,
     CreateRequisition,
+    CreatePO,
+    ViewAllPO,
+    ViewPODetails,
   ],
   imports: [
     BrowserModule,

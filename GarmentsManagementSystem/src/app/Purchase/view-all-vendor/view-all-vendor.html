@@ -11,16 +11,14 @@
                 <th>ID</th>
                 <th>Vendor Name</th>
                 <th>Contact Number</th>
-                <th>Company Name</th>
                 <th>Action</th>
               </tr>
             </thead>
             <tbody>
               <tr *ngFor="let vendor of vendor |async">
                 <td>{{ vendor.id }}</td>
-                <td>{{ vendor.vendorName }}</td>
+                 <td>{{ vendor.companyName }}</td>
                 <td>{{ vendor.phone }}</td>
-                <td>{{ vendor.companyName }}</td>
                 <td>
                   <button class="btn btn-outline-primary btn-sm" (click)="getVendorById(vendor.id)">View
                   </button>

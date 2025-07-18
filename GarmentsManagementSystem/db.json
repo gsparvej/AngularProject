@@ -961,115 +961,39 @@
       "status": "Approved"
     }
   ],
-  "requsition": [
+  "po": [
     {
-      "id": "",
-      "prDate": "2025-07-12",
-      "requestedBy": "parvej",
-      "quantity": 45,
-      "approxUnitPrice": 45,
-      "totalEstPrice": 2025,
-      "department": {
-        "name": "Administration "
-      },
-      "item": {
-        "categoryName": "Sewing Thread"
-      },
-      "order": {
-        "id": "bb52"
-      },
-      "prStatus": {
-        "status": "Pending"
-      }
-    },
-    {
-      "id": "",
-      "prDate": "2025-07-16",
-      "requestedBy": "rakib",
-      "quantity": 50,
-      "approxUnitPrice": 100,
-      "totalEstPrice": 5000,
-      "department": {
-        "name": "Cutting"
+      "id": "d1cf",
+      "poNumber": "Po-0909",
+      "poDate": "2025-07-15",
+      "quantity": 1000,
+      "rate": 90,
+      "tax": 5.5,
+      "deliveryDate": "2025-08-05",
+      "termsAndCondition": "1. All goods must be delivered by the specified date.\n2. Payment will be made within 30 days of delivery & invoice receipt.\n3. Defective items must be replaced within 7 working days.\n4. The PO number must be mentioned on all delivery challans and invoices",
+      "subTotal": 90000,
+      "totalAmount": 94950,
+      "vendor": {
+        "id": "77d6",
+        "companyName": "Badshah Fabric Mills",
+        "contactPerson": "parvej",
+        "phone": "7878788"
       },
       "item": {
         "categoryName": "Woven knit Fabric"
-      },
-      "order": {
-        "id": "bb52"
-      },
-      "prStatus": {
-        "status": "Requesting"
       }
-    },
+    }
+  ],
+  "requsition": [
     {
-      "id": "",
-      "prDate": "2025-07-16",
-      "requestedBy": "eiasin",
-      "quantity": 20,
-      "approxUnitPrice": 1.5,
-      "totalEstPrice": 30,
+      "id": "d72e",
+      "prDate": "2025-07-17",
+      "requestedBy": "Parvej",
+      "quantity": 100,
+      "approxUnitPrice": 3,
+      "totalEstPrice": 300,
       "department": {
         "name": "Sewing"
-      },
-      "item": {
-        "categoryName": "Poly Bag"
-      },
-      "order": {
-        "id": "bb52"
-      },
-      "prStatus": {
-        "status": "Approved"
-      }
-    },
-    {
-      "id": "",
-      "prDate": "2025-07-17",
-      "requestedBy": "ffhjhj",
-      "quantity": 5,
-      "approxUnitPrice": 68,
-      "totalEstPrice": 340,
-      "department": {
-        "name": "Administration "
-      },
-      "item": {
-        "categoryName": "Light Weight Polyester Fabric"
-      },
-      "order": {
-        "id": "bb52"
-      },
-      "prStatus": {
-        "status": "Requesting"
-      }
-    },
-    {
-      "id": "",
-      "prDate": "2025-07-16",
-      "requestedBy": "khkhk",
-      "quantity": 6,
-      "approxUnitPrice": 5,
-      "totalEstPrice": 30,
-      "department": {
-        "name": "Cutting"
-      },
-      "item": {
-        "categoryName": "Wash care tag"
-      },
-      "order": {
-        "id": "bb52"
-      },
-      "prStatus": {
-        "status": "Approved"
-      }
-    },
-    {
-      "id": "",
-      "prDate": "2025-07-15",
-      "requestedBy": "ffg",
-      "quantity": 34,
-      "approxUnitPrice": 34,
-      "department": {
-        "name": "Cutting"
       },
       "item": {
         "categoryName": "Sewing Thread"
@@ -1094,6 +1018,18 @@
       "tin": "",
       "bin": "",
       "vat": "67678"
+    },
+    {
+      "id": "2048",
+      "vendorName": "",
+      "companyName": "M&N Textiles",
+      "contactPerson": "Rakib",
+      "email": "mandn@gmail.com",
+      "phone": "897897897",
+      "address": "Chittagong",
+      "tin": "",
+      "bin": "",
+      "vat": "07452"
     }
   ],
   "item": [

@@ -45,12 +45,11 @@ export class CreateRequisition implements OnInit{
 
   ngOnInit(): void {
      this.formPR = this.formBuilder.group({
-      id: [''],
       prDate: ['', Validators.required],
       requestedBy: ['', Validators.required],
-      quantity: [0, [Validators.required, Validators.min(1)]],
-      approxUnitPrice: [0, [Validators.required, Validators.min(0.01)]],
-      totalEstPrice: [{ value: 0, disabled: true }],
+      quantity: [ , [Validators.required, Validators.min(1)]],
+      approxUnitPrice: [ , [Validators.required, Validators.min(0.01)]],
+      totalEstPrice: [{  disabled: true }],
       department: this.formBuilder.group({
         name: ['', Validators.required]
       }),

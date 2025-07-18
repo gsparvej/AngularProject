@@ -36,6 +36,9 @@ import { Inventory } from './Purchase/inventory/inventory';
 import { StockIn } from './Purchase/stock-in/stock-in';
 import { StockOut } from './Purchase/stock-out/stock-out';
 import { CreateRequisition } from './Purchase/create-requisition/create-requisition';
+import { CreatePO } from './Purchase/create-po/create-po';
+import { ViewAllPO } from './Purchase/view-all-po/view-all-po';
+import { ViewPODetails } from './Purchase/view-podetails/view-podetails';
 
 const routes: Routes = [
   { path: '', component: Home },
@@ -74,7 +77,10 @@ const routes: Routes = [
   { path: 'inventory', component: Inventory },
   {path: 'stockIn' ,component: StockIn},
   {path: 'stockOut', component: StockOut},
-  {path: 'createRequisition', component: CreateRequisition}
+  {path: 'createRequisition', component: CreateRequisition},
+  {path: 'createPO', component: CreatePO},
+  {path: 'viewPO' , component: ViewAllPO},
+  {path: 'viewPODetails/:id', component: ViewPODetails}
 ];
 
 @NgModule({

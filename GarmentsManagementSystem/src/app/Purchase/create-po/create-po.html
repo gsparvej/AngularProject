@@ -1,0 +1,106 @@
+<div class="container my-5">
+  <div class="card shadow p-4">
+    <h3 class="text-center text-primary mb-4">Create Purchase Order</h3>
+
+    <form [formGroup]="formPO" (ngSubmit)="addPO()">
+      <div class="row">
+        <!-- PO Number -->
+        <div class="col-md-4 mb-3">
+          <label class="form-label">PO Number</label>
+          <input type="text" class="form-control" formControlName="poNumber" placeholder="Enter PO Number" />
+        </div>
+
+        <!-- PO Date -->
+        <div class="col-md-4 mb-3">
+          <label class="form-label">PO Date</label>
+          <input type="date" class="form-control" formControlName="poDate" />
+        </div>
+        <div class="col-md-4 mb-3">
+          <label class="form-label">Delivery Date</label>
+          <input type="date" class="form-control" formControlName="deliveryDate" />
+        </div>
+         <h5 class="text-secondary mt-4 mb-3">Item Information</h5>
+      <div formGroupName="item" class="row">
+        <div class="col-md-6 mb-3">
+          <label class="form-label">Item Category</label>
+          <select class="form-select" formControlName="id">
+            <option *ngFor="let i of item" [value]="i.id">{{ i.categoryName }}</option>
+          </select>
+        </div>
+         <div class="col-md-6 mb-3">
+          <label class="form-label">Product Unit</label>
+          <input type="text" class="form-control" formControlName="unit" readonly />
+        </div>
+      </div>
+        <div class="col-md-6 mb-3">
+          <label class="form-label">Quantity</label>
+          <input type="number" class="form-control" formControlName="quantity" (input)="calculateTotalPrice()" />
+        </div>
+
+        <!-- Rate -->
+        <div class="col-md-6 mb-3">
+          <label class="form-label">Rate</label>
+          <input type="number" class="form-control" formControlName="rate" (input)="calculateTotalPrice()" />
+        </div>
+
+        <!-- Tax -->
+        <div class="col-md-6 mb-3">
+          <label class="form-label">Tax (%)</label>
+          <input type="number" class="form-control" formControlName="tax" (input)="calculateTotalPrice()" />
+        </div>
+
+        <!-- Delivery Date -->
+        
+
+        <!-- Subtotal -->
+        <div class="col-md-6 mb-3">
+          <label class="form-label">Subtotal</label>
+          <input type="number" class="form-control" formControlName="subTotal" readonly />
+        </div>
+
+        <!-- Total Amount -->
+        <div class="col-md-6 mb-3">
+          <label class="form-label">Total Amount</label>
+          <input type="number" class="form-control" formControlName="totalAmount" readonly />
+        </div>
+
+        <!-- Terms and Conditions -->
+        <div class="col-12 mb-3">
+          <label class="form-label">Terms and Conditions</label>
+          <textarea class="form-control" rows="3" formControlName="termsAndCondition"></textarea>
+        </div>
+      </div>
+
+      <hr class="my-4" />
+
+      <!-- Vendor Section -->
+      <h5 class="text-secondary mb-3">Vendor Information</h5>
+      <div formGroupName="vendor" class="row">
+        <div class="col-md-3 mb-3">
+          <label class="form-label">Vendor Name</label>
+          <select class="form-select" formControlName="id">
+            <option *ngFor="let v of vendor" [value]="v.id">{{ v.companyName }}</option>
+          </select>
+        </div>
+
+       
+        <div class="col-md-3 mb-3">
+          <label class="form-label">Contact Person</label>
+          <input type="text" class="form-control" formControlName="contactPerson" readonly />
+        </div>
+
+        <div class="col-md-3 mb-3">
+          <label class="form-label">Phone</label>
+          <input type="text" class="form-control" formControlName="phone" readonly />
+        </div>
+      </div>
+
+      <!-- Item Section -->
+      
+
+      <div class="text-end mt-4">
+        <button type="submit" class="btn btn-primary" [disabled]="formPO.invalid">Submit Purchase Order</button>
+      </div>
+    </form>
+  </div>
+</div>
