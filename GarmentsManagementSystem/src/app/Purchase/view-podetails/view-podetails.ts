@@ -15,7 +15,6 @@ export class ViewPODetails implements OnInit{
 
   id!: string;
   po!: PurchaseOrder;
-  item!: Item;
 
   constructor(
     private poService: PoService,
