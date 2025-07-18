@@ -48,6 +48,8 @@ import { CreateRequisition } from './Purchase/create-requisition/create-requisit
 import { CreatePO } from './Purchase/create-po/create-po';
 import { ViewAllPO } from './Purchase/view-all-po/view-all-po';
 import { ViewPODetails } from './Purchase/view-podetails/view-podetails';
+import { ViewAllRequ } from './Purchase/view-all-requ/view-all-requ';
+import { ViewRequDetails } from './Purchase/view-requ-details/view-requ-details';
 
 @NgModule({
   declarations: [
@@ -95,6 +97,8 @@ import { ViewPODetails } from './Purchase/view-podetails/view-podetails';
     CreatePO,
     ViewAllPO,
     ViewPODetails,
+    ViewAllRequ,
+    ViewRequDetails,
   ],
   imports: [
     BrowserModule,

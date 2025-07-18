@@ -18,6 +18,11 @@ baseUrlPRstatus: string = "http://localhost:3000/prStatus";
     return this.http.post(this.baseUrlRequision, pr);
   }
 
+    getAllRequisition(): Observable<any>{
+      
+  return this.http.get(this.baseUrlRequision);
+}
+
   
 
    getAllPRstatus(): Observable<any>{
