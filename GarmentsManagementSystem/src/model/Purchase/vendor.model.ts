@@ -1,5 +1,5 @@
 
-export class Vendor{
+export class VendorModel{
     id!: string;
     vendorName!: string;
     companyName!: string;

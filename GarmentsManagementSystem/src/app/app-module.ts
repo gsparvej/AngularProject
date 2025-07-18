@@ -44,6 +44,7 @@ import { ViewAllItem } from './Purchase/view-all-item/view-all-item';
 import { Inventory } from './Purchase/inventory/inventory';
 import { StockOut } from './Purchase/stock-out/stock-out';
 import { StockIn } from './Purchase/stock-in/stock-in';
+import { CreateRequisition } from './Purchase/create-requisition/create-requisition';
 
 @NgModule({
   declarations: [
@@ -87,6 +88,7 @@ import { StockIn } from './Purchase/stock-in/stock-in';
     Inventory,
     StockOut,
     StockIn,
+    CreateRequisition,
   ],
   imports: [
     BrowserModule,

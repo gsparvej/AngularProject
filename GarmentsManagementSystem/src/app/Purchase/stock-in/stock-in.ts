@@ -2,12 +2,11 @@ import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
-import { InventoryModel } from '../../../model/Purchase/inventory.model';
-import { Item } from '../../../model/Purchase/item.model';
-import { StockInModel } from '../../../model/Purchase/stockIn.model';
 
 import { InventoryService } from '../../service/Purchase/inventory-service';
 import { ItemService } from '../../service/Purchase/item-service';
+import { InventoryModel } from '../../../model/Purchase/inventory.model';
+import { StockInModel } from '../../../model/Purchase/stockIn.model';
 
 @Component({
   selector: 'app-stock-in',

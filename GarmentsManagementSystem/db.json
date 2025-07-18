@@ -947,7 +947,7 @@
       "status": "Completed"
     }
   ],
-  "prStatus":[
+  "prStatus": [
     {
       "id": "1",
       "status": "Requesting"
@@ -960,9 +960,128 @@
       "id": "3",
       "status": "Approved"
     }
-
   ],
-  "requsition":[],
+  "requsition": [
+    {
+      "id": "",
+      "prDate": "2025-07-12",
+      "requestedBy": "parvej",
+      "quantity": 45,
+      "approxUnitPrice": 45,
+      "totalEstPrice": 2025,
+      "department": {
+        "name": "Administration "
+      },
+      "item": {
+        "categoryName": "Sewing Thread"
+      },
+      "order": {
+        "id": "bb52"
+      },
+      "prStatus": {
+        "status": "Pending"
+      }
+    },
+    {
+      "id": "",
+      "prDate": "2025-07-16",
+      "requestedBy": "rakib",
+      "quantity": 50,
+      "approxUnitPrice": 100,
+      "totalEstPrice": 5000,
+      "department": {
+        "name": "Cutting"
+      },
+      "item": {
+        "categoryName": "Woven knit Fabric"
+      },
+      "order": {
+        "id": "bb52"
+      },
+      "prStatus": {
+        "status": "Requesting"
+      }
+    },
+    {
+      "id": "",
+      "prDate": "2025-07-16",
+      "requestedBy": "eiasin",
+      "quantity": 20,
+      "approxUnitPrice": 1.5,
+      "totalEstPrice": 30,
+      "department": {
+        "name": "Sewing"
+      },
+      "item": {
+        "categoryName": "Poly Bag"
+      },
+      "order": {
+        "id": "bb52"
+      },
+      "prStatus": {
+        "status": "Approved"
+      }
+    },
+    {
+      "id": "",
+      "prDate": "2025-07-17",
+      "requestedBy": "ffhjhj",
+      "quantity": 5,
+      "approxUnitPrice": 68,
+      "totalEstPrice": 340,
+      "department": {
+        "name": "Administration "
+      },
+      "item": {
+        "categoryName": "Light Weight Polyester Fabric"
+      },
+      "order": {
+        "id": "bb52"
+      },
+      "prStatus": {
+        "status": "Requesting"
+      }
+    },
+    {
+      "id": "",
+      "prDate": "2025-07-16",
+      "requestedBy": "khkhk",
+      "quantity": 6,
+      "approxUnitPrice": 5,
+      "totalEstPrice": 30,
+      "department": {
+        "name": "Cutting"
+      },
+      "item": {
+        "categoryName": "Wash care tag"
+      },
+      "order": {
+        "id": "bb52"
+      },
+      "prStatus": {
+        "status": "Approved"
+      }
+    },
+    {
+      "id": "",
+      "prDate": "2025-07-15",
+      "requestedBy": "ffg",
+      "quantity": 34,
+      "approxUnitPrice": 34,
+      "department": {
+        "name": "Cutting"
+      },
+      "item": {
+        "categoryName": "Sewing Thread"
+      },
+      "order": {
+        "id": "bb52"
+      },
+      "prStatus": {
+        "status": "Requesting"
+      }
+    }
+  ],
   "vendor": [
     {
       "id": "77d6",
@@ -1141,6 +1260,12 @@
       "itemId": "4361",
       "quantity": 5,
       "receivedTransactionDate": "2025-07-16"
+    },
+    {
+      "id": "48a7",
+      "itemId": "0ec8",
+      "quantity": 10,
+      "receivedTransactionDate": "2025-07-18"
     }
   ],
   "inventories": [
@@ -1150,9 +1275,9 @@
       "id": "11c1"
     },
     {
-      "id": "0ec8",
+      "quantity": 10,
       "categoryName": "Plastic Button",
-      "quantity": 0
+      "id": "0ec8"
     },
     {
       "quantity": 50,

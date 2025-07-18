@@ -1,7 +1,8 @@
 import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
-import { Vendor } from '../../../model/Purchase/vendor.model';
+
 import { VendorService } from '../../service/Purchase/vendor-service';
 import { ActivatedRoute, Router } from '@angular/router';
+import { VendorModel } from '../../../model/Purchase/vendor.model';
 
 @Component({
   selector: 'app-view-vendor-pro',
@@ -12,8 +13,8 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class ViewVendorPro implements OnInit{
 
   id!: string;
-  ven!: Vendor;
-  vendor: Vendor[] = [];
+  ven!: VendorModel;
+  vendor: VendorModel[] = [];
 
    constructor(
     private vs: VendorService,

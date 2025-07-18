@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { VendorService } from '../../service/Purchase/vendor-service';
-import { Vendor } from '../../../model/Purchase/vendor.model';
+import { VendorModel } from '../../../model/Purchase/vendor.model';
+
 
 @Component({
   selector: 'app-add-vendor',
@@ -38,7 +39,7 @@ export class AddVendor implements OnInit{
 
 
   addVendor(): void {
-        const vendor : Vendor = {...this.formVendor.value};
+        const vendor : VendorModel = {...this.formVendor.value};
         this.vs.saveVendor(vendor).subscribe({
       
           next: (res) => {

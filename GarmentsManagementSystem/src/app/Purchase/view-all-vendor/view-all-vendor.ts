@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Vendor } from '../../../model/Purchase/vendor.model';
 import { VendorService } from '../../service/Purchase/vendor-service';
 import { Router } from '@angular/router';
 

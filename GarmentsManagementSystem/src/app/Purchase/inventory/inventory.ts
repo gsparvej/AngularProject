@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { InventoryService } from '../../service/Purchase/inventory-service';
-import { InventoryModel } from '../../../model/Purchase/inventory.model';
+
 
 @Component({
   selector: 'app-inventory',

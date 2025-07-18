@@ -72,7 +72,7 @@ export class CreateOrder implements OnInit {
       })
     });
 
-    // ✅ Subscribe for Style Code Changes
+    //  Subscribe for Style Code Changes
     this.orderForm.get('bom')?.get('styleCode')?.valueChanges.subscribe(styleCode => {
       const selectedDescription = this.styleCode.find(b => b.styleCode === styleCode);
       if (selectedDescription) {
@@ -80,7 +80,7 @@ export class CreateOrder implements OnInit {
       }
     });
 
-    // ✅ Subscribe for Order Status Changes
+    //  Subscribe for Order Status Changes
     this.orderForm.get('orderStatus')?.get('status')?.valueChanges.subscribe(statusValue => {
       const selectedStatus = this.status.find(s => s.status === statusValue);
       if (selectedStatus) {
@@ -88,12 +88,12 @@ export class CreateOrder implements OnInit {
       }
     });
 
-    // ✅ Load Initial Data
+    //  Load Initial Data
     this.loadOrderStatus();
     this.loadStyle();
   }
 
-  // ✅ Add Order Method
+  //  Add Order Method
   addOrder(): void {
     if (this.orderForm.invalid) {
       console.log('Form Invalid');
@@ -112,7 +112,7 @@ export class CreateOrder implements OnInit {
         this.loadOrderStatus();
         this.loadStyle();
         this.orderForm.reset();
-        this.router.navigate(['']);  // ✅ Redirect after save
+        this.router.navigate(['']);  // Redirect after save
       },
       error: (err) => {
         console.log(err);
@@ -120,7 +120,7 @@ export class CreateOrder implements OnInit {
     });
   }
 
-  // ✅ Load Order Status List
+  //  Load Order Status List
   loadOrderStatus(): void {
     this.merchandiserService.getAllOrderStatus().subscribe({
       next: (statusList) => {
@@ -132,7 +132,7 @@ export class CreateOrder implements OnInit {
     });
   }
 
-  // ✅ Load BOM Styles List
+  //  Load BOM Styles List
   loadStyle(): void {
     this.merchandiserService.getAllBom().subscribe({
       next: (styleList) => {

@@ -1,7 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Vendor } from '../../../model/Purchase/vendor.model';
+import { VendorModel } from '../../../model/Purchase/vendor.model';
+
 
 @Injectable({
   providedIn: 'root'
@@ -18,7 +19,7 @@ baseUrlVendor: string = "http://localhost:3000/vendor";
     
       }
     
-      saveVendor(ven: Vendor) : Observable<any> {
+      saveVendor(ven: VendorModel) : Observable<any> {
       
           return this.http.post(this.baseUrlVendor,ven);
         }

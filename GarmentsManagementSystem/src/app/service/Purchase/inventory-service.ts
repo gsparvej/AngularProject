@@ -1,9 +1,10 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { InventoryModel } from '../../../model/Purchase/inventory.model';
 import { StockInModel } from '../../../model/Purchase/stockIn.model';
+import { InventoryModel } from '../../../model/Purchase/inventory.model';
 import { StockOutModel } from '../../../model/Purchase/stockOut.model';
+
 
 
 @Injectable({

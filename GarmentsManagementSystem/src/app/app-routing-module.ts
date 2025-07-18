@@ -35,6 +35,7 @@ import { ViewAllItem } from './Purchase/view-all-item/view-all-item';
 import { Inventory } from './Purchase/inventory/inventory';
 import { StockIn } from './Purchase/stock-in/stock-in';
 import { StockOut } from './Purchase/stock-out/stock-out';
+import { CreateRequisition } from './Purchase/create-requisition/create-requisition';
 
 const routes: Routes = [
   { path: '', component: Home },
@@ -72,7 +73,8 @@ const routes: Routes = [
   { path: 'viewAllItem', component: ViewAllItem },
   { path: 'inventory', component: Inventory },
   {path: 'stockIn' ,component: StockIn},
-  {path: 'stockOut', component: StockOut}
+  {path: 'stockOut', component: StockOut},
+  {path: 'createRequisition', component: CreateRequisition}
 ];
 
 @NgModule({
