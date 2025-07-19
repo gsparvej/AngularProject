@@ -1004,6 +1004,115 @@
       "prStatus": {
         "status": "Requesting"
       }
+    },
+    {
+      "id": "3f2c",
+      "prDate": "2025-07-19",
+      "requestedBy": "gnghn",
+      "quantity": 34,
+      "approxUnitPrice": 45,
+      "totalEstPrice": 1530,
+      "department": {
+        "name": "Cutting"
+      },
+      "item": {
+        "categoryName": [
+          "Woven knit Fabric",
+          "Plastic Button",
+          "Sewing Thread"
+        ]
+      },
+      "order": {
+        "id": "bb52"
+      },
+      "prStatus": {
+        "status": "Requesting"
+      }
+    },
+    {
+      "id": "575e",
+      "prDate": "2025-07-19",
+      "requestedBy": "ujgjgyj",
+      "department": {
+        "name": "Cutting"
+      },
+      "item": {
+        "categoryName": [
+          "Sewing Thread"
+        ]
+      },
+      "order": {
+        "id": "bb52"
+      },
+      "prStatus": {
+        "status": "Requesting"
+      },
+      "categoryDetails": {
+        "Sewing Thread": {
+          "quantity": 0,
+          "unitPrice": 0,
+          "total": 0
+        }
+      },
+      "finalTotal": 0
+    },
+    {
+      "id": "b2b7",
+      "prDate": "2025-07-26",
+      "requestedBy": "tfhtyh",
+      "department": {
+        "name": "Sewing"
+      },
+      "item": {
+        "categoryName": [
+          "Sewing Thread"
+        ]
+      },
+      "order": {
+        "id": "bb52"
+      },
+      "prStatus": {
+        "status": "Pending"
+      },
+      "items": [
+        {
+          "categoryName": "Sewing Thread",
+          "unit": "Cone",
+          "quantity": 0,
+          "approxUnitPrice": 0,
+          "total": 0
+        }
+      ],
+      "totalEstPrice": 0
+    },
+    {
+      "id": "04ce",
+      "prDate": "2025-07-22",
+      "requestedBy": "habijabi",
+      "department": {
+        "name": "Administration "
+      },
+      "item": {
+        "categoryName": [
+          "Wash care tag"
+        ]
+      },
+      "order": {
+        "id": "bb52"
+      },
+      "prStatus": {
+        "status": "Requesting"
+      },
+      "items": [
+        {
+          "categoryName": "Wash care tag",
+          "unit": "Roll",
+          "quantity": 1,
+          "approxUnitPrice": 0,
+          "total": 0
+        }
+      ],
+      "totalEstPrice": 0
     }
   ],
   "vendor": [

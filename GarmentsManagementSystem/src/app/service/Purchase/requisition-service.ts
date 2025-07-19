@@ -23,6 +23,10 @@ baseUrlPRstatus: string = "http://localhost:3000/prStatus";
   return this.http.get(this.baseUrlRequision);
 }
 
+viewPRDetails(id: string): Observable<any> {
+    return this.http.get(this.baseUrlRequision+'/'+id);
+  }
+
   
 
    getAllPRstatus(): Observable<any>{
