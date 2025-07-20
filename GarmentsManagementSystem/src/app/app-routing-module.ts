@@ -43,12 +43,15 @@ import { ViewAllRequ } from './Purchase/view-all-requ/view-all-requ';
 import { ViewRequDetails } from './Purchase/view-requ-details/view-requ-details';
 import { UpdateBuyer } from './Merchandiser/update-buyer/update-buyer';
 import { UpdateLeave } from './HR/update-leave/update-leave';
+import { UserGuard } from './Guards/user-guard';
+import { AdminGuard } from './Guards/admin-guard';
 
 const routes: Routes = [
   { path: '', component: Home },
+  { path: 'reg', component: Registration },
   { path: 'login', component: Login },
-  { path: 'viewAllEmp', component: ViewAllEmployee },
-  { path: 'addEmp', component: AddEmployee },
+  { path: 'viewAllEmp', component: ViewAllEmployee, canActivate:[UserGuard] },
+  { path: 'addEmp', component: AddEmployee, canActivate:[AdminGuard] },
   { path: 'viewAllDepart', component: ViewAllDepartment },
   { path: 'addDesig', component: AddDesignation },
   { path: 'addDepart', component: AddDepartment },
@@ -57,8 +60,6 @@ const routes: Routes = [
   { path: 'viewAllLeave', component: ViewAllLeave },
   { path: 'addLeave', component: AddLeave },
   {path: 'updateLeave/:id', component: UpdateLeave},
-  { path: 'reg', component: Registration },
-  { path: 'login', component: Login },
   { path: 'viewAllBuyer', component: ViewAllBuyer },
   {path: 'updateBuy/:id', component: UpdateBuyer},
   { path: 'addBuyer', component: AddBuyer },
@@ -70,7 +71,7 @@ const routes: Routes = [
   { path: 'addBomBomView', component: AddBomView },
   { path: 'viewBomBomView/:id', component: ViewFullBomView },
   { path: 'viewBomBomView', component: ViewFullBomView },
-  { path: 'createOrder', component: CreateOrder },
+  { path: 'createOrder', component: CreateOrder, canActivate:[AdminGuard] },
   { path: 'viewHalfOrder', component: HalfViewOrder },
   { path: 'updateEmp/:id', component: UpdateEmployee },
   { path: 'fullOrderView/:id', component: FullOrderView },

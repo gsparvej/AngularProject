@@ -34,4 +34,14 @@ this.leave = this.hrService.getAllLeave();
       this.router.navigate(['/updateLeave',id]); 
   }
 
+  addLeave() {
+  // Navigate to attendance form or open modal
+  this.router.navigate(['/addLeave']);
+}
+
+goBack() {
+  // Navigate to previous or dashboard
+  this.router.navigate(['']);
+}
+
 }

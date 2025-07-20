@@ -1,7 +1,24 @@
 
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+
 
 <div class="container border rounded my-3">
     <h1 class="text-center my-3 text-success">All Leave List</h1>
+
+
+      <!-- Buttons Row -->
+<div class="d-flex justify-content-between mb-3">
+  <button class="btn btn-secondary" (click)="goBack()" title="Return">
+    <i class="fa-solid fa-arrow-left"></i> Return
+  </button>
+  
+  <button class="btn btn-success" (click)="addLeave()" title="Add Leave">
+    <i class="fa-solid fa-plus"></i> Add Leave
+  </button>
+</div>
+
+
+
     <table class="table table-striped">
 <thead>
     <tr>

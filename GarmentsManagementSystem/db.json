@@ -86,48 +86,6 @@
   ],
   "attendance": [
     {
-      "id": "1",
-      "attDate": "01-03-2025",
-      "employees": {
-        "id": "1494"
-      },
-      "atten_status": {
-        "id": "1",
-        "status": "Present"
-      }
-    },
-    {
-      "id": "6cb4",
-      "attDate": "2025-07-06",
-      "atten_status": {
-        "status": "Present"
-      },
-      "employees": {
-        "id": "764c"
-      }
-    },
-    {
-      "id": "5dda",
-      "attDate": "2025-07-06",
-      "atten_status": {
-        "status": "Absent"
-      },
-      "employees": {
-        "id": "1494"
-      }
-    },
-    {
-      "id": "fe18",
-      "attDate": "2025-07-06",
-      "atten_status": {
-        "status": "Late"
-      },
-      "employees": {
-        "id": "1494",
-        "name": "Eiasin"
-      }
-    },
-    {
       "id": "5df0",
       "attDate": "2025-07-06T17:10",
       "atten_status": {
@@ -158,6 +116,17 @@
       "employees": {
         "id": "236c",
         "name": "Reja"
+      }
+    },
+    {
+      "id": "08f0",
+      "attDate": "2025-07-21T00:15",
+      "atten_status": {
+        "status": "Absent"
+      },
+      "employees": {
+        "id": "638f",
+        "name": "Md. Parvej Hossen"
       }
     }
   ],
@@ -315,6 +284,14 @@
       "email": "eiasin@gmail.com",
       "password": "12345",
       "photo": "https://avatars.githubusercontent.com/u/196037667?v=4",
+      "role": "admin"
+    },
+    {
+      "id": "e64b",
+      "name": "Rahmatullah",
+      "email": "rahmat@gmail.com",
+      "password": "12345",
+      "photo": "https://avatars.githubusercontent.com/u/108518708?v=4",
       "role": "user"
     }
   ],

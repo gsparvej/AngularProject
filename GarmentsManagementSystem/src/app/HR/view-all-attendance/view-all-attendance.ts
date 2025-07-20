@@ -72,4 +72,15 @@ this.hrService.deleteAttendance(id).subscribe({
 
   }
 
+  addAttendance() {
+  // Navigate to attendance form or open modal
+  this.router.navigate(['/addAtten']);
+}
+
+goBack() {
+  // Navigate to previous or dashboard
+  this.router.navigate(['']);
+}
+
+
 }
