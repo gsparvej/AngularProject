@@ -45,6 +45,7 @@ import { UpdateBuyer } from './Merchandiser/update-buyer/update-buyer';
 import { UpdateLeave } from './HR/update-leave/update-leave';
 import { UserGuard } from './Guards/user-guard';
 import { AdminGuard } from './Guards/admin-guard';
+import { Logout } from './Auth/logout/logout';
 
 const routes: Routes = [
   { path: '', component: Home },
