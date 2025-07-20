@@ -30,10 +30,21 @@ export class MerchandiserService {
   
     }
   
-    saveBuyer(buy: Buyer) : Observable<any> {
+ saveBuyer(buy: Buyer) : Observable<any> {
     
-        return this.http.post(this.baseUrlBuyer,buy);
-      }
+  return this.http.post(this.baseUrlBuyer,buy);
+  }
+
+
+
+  getBuyerById(id: string): Observable<any> {
+  
+      return this.http.get(this.baseUrlBuyer+'/'+id);
+    }
+    updateBuyer(id: string, buy: Buyer): Observable<any> {
+  
+     return this.http.put(this.baseUrlBuyer+'/'+id,buy);
+    }
 
 
 

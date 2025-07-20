@@ -51,6 +51,7 @@
     <div class="col-md-6 col-lg-4 mb-4" *ngFor="let emp of employees">
       <div class="card shadow h-100 employee-card">
         <div class="card-body">
+          <h5 class="card-title"><i class="bi bi-person-circle me-1"></i> {{ emp.id }}</h5>
           <h5 class="card-title"><i class="bi bi-person-circle me-1"></i> {{ emp.name }}</h5>
           <h6 class="card-subtitle mb-2 text-muted"><i class="bi bi-envelope"></i> {{ emp.email }}</h6>
 

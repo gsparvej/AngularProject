@@ -30,4 +30,8 @@ this.leave = this.hrService.getAllLeave();
 
   }
 
+    getLeaveById(id:string): void{
+      this.router.navigate(['/updateLeave',id]); 
+  }
+
 }

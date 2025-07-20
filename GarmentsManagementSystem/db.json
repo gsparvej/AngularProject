@@ -178,7 +178,7 @@
   "leave": [
     {
       "id": "1",
-      "leaveType": "Casual",
+      "leaveType": "Cas",
       "fromDate": "01-06-2025",
       "toDate": "03-06-2025",
       "employees": {
@@ -206,7 +206,7 @@
     {
       "id": "ca37",
       "leaveType": "Casual",
-      "fromDate": "2025-07-01",
+      "fromDate": "2025-07-02",
       "toDate": "2025-07-05",
       "leave_status": {
         "status": "Rejected"
@@ -214,6 +214,45 @@
       "employees": {
         "id": "764c",
         "name": "Eiasin Prodhan"
+      },
+      "employee": {
+        "id": "b527",
+        "name": "Md. Rakib Islam",
+        "phoneNumber": "978",
+        "email": "rakib@gmail.com",
+        "joinDate": "2025-03-07",
+        "department": "0781",
+        "designation": "978a"
+      },
+      "status": {
+        "id": "2",
+        "status": "Approve"
+      }
+    },
+    {
+      "id": "40a1",
+      "leaveType": "ggjgj",
+      "fromDate": "2025-07-20",
+      "toDate": "2025-07-24",
+      "leave_status": {
+        "status": "Pending"
+      },
+      "employees": {
+        "id": "b527",
+        "name": "Md. Rakib Islam"
+      },
+      "employee": {
+        "id": "455a",
+        "name": "Md. Eiasin Prodhan",
+        "phoneNumber": "8789707097",
+        "email": "eiasin@gmail.com",
+        "joinDate": "2024-09-08",
+        "department": "3b5a",
+        "designation": "9472"
+      },
+      "status": {
+        "id": "2",
+        "status": "Approve"
       }
     }
   ],
@@ -254,8 +293,8 @@
       "id": "5df0",
       "name": "L&M Industries Ltd.",
       "country": "England",
-      "contactperson": "Parvej",
-      "phone": "878967989",
+      "contactperson": "Parvej Hossen",
+      "phone": "8789090",
       "email": "rakib@gmail.com",
       "address": "London"
     },

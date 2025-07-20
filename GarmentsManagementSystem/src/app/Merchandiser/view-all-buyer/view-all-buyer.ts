@@ -28,4 +28,9 @@ this.buyer = this.merchandiserService.getAllBuyer();
 
   }
 
+   getBuyById(id:string): void{
+      this.router.navigate(['/updateBuy',id]); 
+  }
+
+
 }

@@ -13,7 +13,6 @@
          <th>Email</th>
         <th>Address</th>
         <th>Action</th>
-        <th>Profile</th>
     </tr>
 </thead>
 <tbody>
@@ -26,12 +25,9 @@
         <td>{{b.email}}</td>
         <td>{{b.address}}</td>
         <td>
-            <button class="btn btn-warning m-1 p-1">Edit</button>
+            <button class="btn btn-warning m-1 p-1" (click)="getBuyById(b.id)">Edit</button>
             <button class="btn btn-danger m-1 p-1">Delete</button>
         </td>
-         <td> 
-            <button class="btn btn-border rounded m-1 p-1">View</button>
-             </td>
     </tr>
 </tbody>
 

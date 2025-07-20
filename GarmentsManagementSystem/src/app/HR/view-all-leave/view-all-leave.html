@@ -25,7 +25,7 @@
         <td>{{l.toDate}}</td>
         <td>{{l.leave_status?.status}}</td>
         <td>
-            <button class="btn btn-warning m-1 p-1">Edit</button>
+            <button class="btn btn-warning m-1 p-1" (click)="getLeaveById(l.id)">Edit</button>
             <button class="btn btn-danger m-1 p-1">Delete</button>
         </td>
     </tr>

@@ -50,6 +50,8 @@ import { ViewAllPO } from './Purchase/view-all-po/view-all-po';
 import { ViewPODetails } from './Purchase/view-podetails/view-podetails';
 import { ViewAllRequ } from './Purchase/view-all-requ/view-all-requ';
 import { ViewRequDetails } from './Purchase/view-requ-details/view-requ-details';
+import { UpdateBuyer } from './Merchandiser/update-buyer/update-buyer';
+import { UpdateLeave } from './HR/update-leave/update-leave';
 
 @NgModule({
   declarations: [
@@ -99,6 +101,8 @@ import { ViewRequDetails } from './Purchase/view-requ-details/view-requ-details'
     ViewPODetails,
     ViewAllRequ,
     ViewRequDetails,
+    UpdateBuyer,
+    UpdateLeave,
   ],
   imports: [
     BrowserModule,

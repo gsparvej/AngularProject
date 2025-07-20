@@ -41,6 +41,8 @@ import { ViewAllPO } from './Purchase/view-all-po/view-all-po';
 import { ViewPODetails } from './Purchase/view-podetails/view-podetails';
 import { ViewAllRequ } from './Purchase/view-all-requ/view-all-requ';
 import { ViewRequDetails } from './Purchase/view-requ-details/view-requ-details';
+import { UpdateBuyer } from './Merchandiser/update-buyer/update-buyer';
+import { UpdateLeave } from './HR/update-leave/update-leave';
 
 const routes: Routes = [
   { path: '', component: Home },
@@ -54,9 +56,11 @@ const routes: Routes = [
   { path: 'addAtten', component: AddAttendance },
   { path: 'viewAllLeave', component: ViewAllLeave },
   { path: 'addLeave', component: AddLeave },
+  {path: 'updateLeave/:id', component: UpdateLeave},
   { path: 'reg', component: Registration },
   { path: 'login', component: Login },
   { path: 'viewAllBuyer', component: ViewAllBuyer },
+  {path: 'updateBuy/:id', component: UpdateBuyer},
   { path: 'addBuyer', component: AddBuyer },
   { path: 'userprofile', component: UserProfile },
   { path: 'addUom', component: AddUom },
