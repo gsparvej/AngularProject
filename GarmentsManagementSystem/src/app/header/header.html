@@ -1,100 +1,120 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow sticky-top">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <a class="navbar-brand fw-bold text-success" routerLink="/">
+      <i class="fas fa-tshirt me-2"></i>RMG System
+    </a>
+
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
       <span class="navbar-toggler-icon"></span>
     </button>
+
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="home">Home</a>
-        </li>
 
+        <!-- Home -->
         <li class="nav-item">
-          <a class="nav-link" href="addEmp">Add Employee</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="addDepart">Add Department</a>
-        </li>
-        
-        <li class="nav-item">
-          <a class="nav-link" href="viewAllEmp">View All Employee</a>
-        </li>
-         <li class="nav-item">
-          <a class="nav-link" href="viewAllDepart">View All Department</a>
-        </li>
-         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Attendance
+          <a class="nav-link active" routerLink="/home">
+            <i class="fas fa-home me-1"></i> Home
           </a>
-          <ul class="dropdown-menu">
-            <!-- <li><a class="dropdown-item" href="addAtten">Add Attendance</a></li>
-             <li><a class="dropdown-item" href="addLeave">Add Leave</a></li> -->
-            <li><a class="dropdown-item" href="viewAllAtten">View Attendance</a></li>
-             <li><a class="dropdown-item" href="viewAllLeave">View Leave</a></li>
-          </ul>
         </li>
 
+        <!-- Employee -->
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/addEmp">
+            <i class="fas fa-user-plus me-1"></i> Add Employee
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/viewAllEmp">
+            <i class="fas fa-users me-1"></i> View All Employees
+          </a>
+        </li>
 
-
+        <!-- Attendance Dropdown -->
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Merchandise
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+            <i class="fas fa-calendar-check me-1"></i> Attendance
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="addBuyer">Add Buyer</a></li>
-            <li><a class="dropdown-item" href="addUom">Add UOM</a></li>
-            <li><a class="dropdown-item" href="addBom">Add Bill Of Materials (BOM)</a></li>
-             <li><a class="dropdown-item" href="createOrder">Create Order</a></li>
-             <li><a class="dropdown-item" href="addBomBomView">Add Bom Bom Of Materials (BOM)</a></li>
-            <li><a class="dropdown-item" href="viewAllBuyer">View Buyer</a></li>
-            <li><a class="dropdown-item" href="viewAllUom">View UOM</a></li>
-            <li><a class="dropdown-item" href="viewBom">View Bill Of Materials</a></li>
-             <li><a class="dropdown-item" href="viewBomBomView">View Bom Bom Of Materials (BOM)</a></li>
-             <li><a class="dropdown-item" href="viewHalfOrder">View Order(Half)</a></li>
+            <li><a class="dropdown-item" routerLink="/viewAllAtten"><i class="fas fa-eye me-1"></i> View Attendance</a></li>
+            <li><a class="dropdown-item" routerLink="/viewAllLeave"><i class="fas fa-plane-departure me-1"></i> View Leave</a></li>
           </ul>
         </li>
 
-         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Purchase
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="addVendor">Add Vendor</a></li>
-            <li><a class="dropdown-item" href="addItem">Add Item</a></li>
-            <li><a class="dropdown-item" href="stockIn"> Stock In</a></li>
-            <li><a class="dropdown-item" href="stockOut"> Stock Out</a></li>
-            <li><a class="dropdown-item" href="createRequisition"> Create Requisition Latter </a></li>
-            <li><a class="dropdown-item" href="createPO"> Create PO </a></li>
-            <li><a class="dropdown-item" href="viewPO"> View POs </a></li>
-             <li><a class="dropdown-item" href="viewAllRequ"> View Requisition Latter </a></li>
-            <li><a class="dropdown-item" href="inventory"> Inventory</a></li>
-             <li><a class="dropdown-item" href="viewAllVendor">View Vendor</a></li>
-             <li><a class="dropdown-item" href="viewAllItem">View All Item</a></li>
-          </ul>
-        </li>
-
-
-
-
-
+        <!-- Merchandise Dropdown -->
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Department
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+            <i class="fas fa-tags me-1"></i> Merchandise
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="addDesig">Add Designation</a></li>
-            <li><a class="dropdown-item" href="viewAllUser">View Users</a></li>
-            <li><a class="dropdown-item" href="#">Department</a></li>
+            <li><a class="dropdown-item" routerLink="/addBuyer"><i class="fas fa-user-tie me-1"></i> Add Buyer</a></li>
+            <li><a class="dropdown-item" routerLink="/addUom"><i class="fas fa-ruler me-1"></i> Add UOM</a></li>
+            <li><a class="dropdown-item" routerLink="/addBom"><i class="fas fa-file-invoice me-1"></i> Add BOM</a></li>
+            <li><a class="dropdown-item" routerLink="/createOrder"><i class="fas fa-plus-square me-1"></i> Create Order</a></li>
+            <li><a class="dropdown-item" routerLink="/addBomBomView"><i class="fas fa-file-code me-1"></i> Add BOM View</a></li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
+            <li><a class="dropdown-item" routerLink="/viewAllBuyer"><i class="fas fa-eye me-1"></i> View Buyer</a></li>
+            <li><a class="dropdown-item" routerLink="/viewAllUom"><i class="fas fa-balance-scale me-1"></i> View UOM</a></li>
+            <li><a class="dropdown-item" routerLink="/viewBom"><i class="fas fa-eye me-1"></i> View BOM</a></li>
+            <li><a class="dropdown-item" routerLink="/viewBomBomView"><i class="fas fa-eye me-1"></i> View BOM View</a></li>
+            <li><a class="dropdown-item" routerLink="/viewHalfOrder"><i class="fas fa-list me-1"></i> View Half Order</a></li>
+          </ul>
+        </li>
+
+        <!-- Purchase Dropdown -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+            <i class="fas fa-shopping-cart me-1"></i> Purchase
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" routerLink="/addVendor"><i class="fas fa-truck me-1"></i> Add Vendor</a></li>
+            <li><a class="dropdown-item" routerLink="/addItem"><i class="fas fa-box-open me-1"></i> Add Item</a></li>
+            <li><a class="dropdown-item" routerLink="/stockIn"><i class="fas fa-arrow-down me-1"></i> Stock In</a></li>
+            <li><a class="dropdown-item" routerLink="/stockOut"><i class="fas fa-arrow-up me-1"></i> Stock Out</a></li>
+            <li><a class="dropdown-item" routerLink="/createRequisition"><i class="fas fa-file-alt me-1"></i> Create Requisition</a></li>
+            <li><a class="dropdown-item" routerLink="/createPO"><i class="fas fa-file-signature me-1"></i> Create PO</a></li>
+            <li><a class="dropdown-item" routerLink="/viewPO"><i class="fas fa-file-invoice-dollar me-1"></i> View PO</a></li>
+            <li><a class="dropdown-item" routerLink="/viewAllRequ"><i class="fas fa-eye me-1"></i> View Requisitions</a></li>
+            <li><a class="dropdown-item" routerLink="/inventory"><i class="fas fa-warehouse me-1"></i> Inventory</a></li>
+            <li><a class="dropdown-item" routerLink="/viewAllVendor"><i class="fas fa-eye me-1"></i> View Vendor</a></li>
+            <li><a class="dropdown-item" routerLink="/viewAllItem"><i class="fas fa-cubes me-1"></i> View Items</a></li>
+          </ul>
+        </li>
+
+        <!-- Department Dropdown -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+            <i class="fas fa-building me-1"></i> Department
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" routerLink="/addDepart"><i class="fas fa-plus me-1"></i> Add Department</a></li>
+            <li><a class="dropdown-item" routerLink="/addDesig"><i class="fas fa-briefcase me-1"></i> Add Designation</a></li>
+            <li><a class="dropdown-item" routerLink="/viewAllUser"><i class="fas fa-user-friends me-1"></i> View Users</a></li>
+            <li><a class="dropdown-item" routerLink="/viewAllDepart"><i class="fas fa-eye me-1"></i> View Departments</a></li>
           </ul>
         </li>
       </ul>
-     
-        <button class="btn btn-outline-success me-2" type="submit" routerLink="login">Logout</button>
-        <button class="btn btn-outline-success me-2" type="submit" routerLink="login">Login</button>
-    
+
+      <!-- Auth Buttons -->
+      <div class="d-flex">
+        <button class="btn btn-outline-light me-2" routerLink="/login">
+          <i class="fas fa-sign-in-alt me-1"></i> Login
+        </button>
+        <button class="btn btn-outline-warning" routerLink="/login">
+          <i class="fas fa-sign-out-alt me-1"></i> Logout
+        </button>
+      </div>
     </div>
   </div>
 </nav>

@@ -24,6 +24,7 @@ export class UpdateUsers implements OnInit {
   ngOnInit(): void {
     this.id = this.route.snapshot.params['id'];
     this.loadUserById();
+    
    
   }
 
@@ -31,6 +32,7 @@ export class UpdateUsers implements OnInit {
   loadUserById(): void {
     this.userService.getUserById(this.id).subscribe(data => {
       this.user = data;
+      this.cdr.detectChanges();
     });
   }
 
