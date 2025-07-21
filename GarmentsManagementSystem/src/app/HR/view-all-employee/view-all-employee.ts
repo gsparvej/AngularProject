@@ -46,6 +46,7 @@ private router: Router,
     this.departments = departments;
     this.designations = designations;
     this.router.navigate(['/viewAllEmp']);
+    this.cdr.detectChanges();
   },
   error: (err) => {
     console.log('Error loading Data : ',err);

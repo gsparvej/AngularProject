@@ -101,6 +101,7 @@ export class AddLeave implements OnInit{
 
       next: (emp) => {
         this.employee = emp;
+        this.cdr.detectChanges();
 
       },
       error: (err) => {
@@ -119,6 +120,7 @@ export class AddLeave implements OnInit{
 
       next: (s) => {
         this.status = s;
+         this.cdr.detectChanges();
 
       },
       error: (err) => {

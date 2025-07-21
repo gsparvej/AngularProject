@@ -97,6 +97,7 @@ this.hrService.saveAttendance(atten).subscribe({
 
       next: (emp) => {
         this.employee = emp;
+        this.cdr.detectChanges();
 
       },
       error: (err) => {
@@ -114,6 +115,7 @@ this.hrService.saveAttendance(atten).subscribe({
 
       next: (s) => {
         this.status = s;
+        this.cdr.detectChanges();
 
       },
       error: (err) => {

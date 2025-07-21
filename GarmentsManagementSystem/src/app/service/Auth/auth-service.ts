@@ -4,6 +4,7 @@ import { User } from '../../../model/Auth/user.model';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { isPlatformBrowser } from '@angular/common';
 import { AuthResponse } from '../../../model/Auth/authResponse';
+import { AdminModel } from '../../../model/Auth/admin.model';
 
 @Injectable({
   providedIn: 'root'
@@ -146,6 +147,17 @@ storeToken(token: string): void {
     }
     return null;
   }
+
+
+  getAdminProfileFromStorage(): AdminModel | null {
+    if (this.isBrowser()) {
+      const userProfile = localStorage.getItem('currentUser');
+      console.log('User Profile is: ', userProfile);
+      return userProfile ? JSON.parse(userProfile) : null;
+    }
+    return null;
+  }
+
 
    isAdmin(): boolean {
     return this.getUserRole() === 'admin';

@@ -52,6 +52,9 @@ import { ViewAllRequ } from './Purchase/view-all-requ/view-all-requ';
 import { ViewRequDetails } from './Purchase/view-requ-details/view-requ-details';
 import { UpdateBuyer } from './Merchandiser/update-buyer/update-buyer';
 import { UpdateLeave } from './HR/update-leave/update-leave';
+import { AdminProfile } from './Auth/admin-profile/admin-profile';
+import { ViewUsers } from './User/view-users/view-users';
+import { UpdateUsers } from './User/update-users/update-users';
 
 @NgModule({
   declarations: [
@@ -103,6 +106,9 @@ import { UpdateLeave } from './HR/update-leave/update-leave';
     ViewRequDetails,
     UpdateBuyer,
     UpdateLeave,
+    AdminProfile,
+    ViewUsers,
+    UpdateUsers,
   ],
   imports: [
     BrowserModule,

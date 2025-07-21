@@ -21,9 +21,27 @@ export class UserService {
   }
 
 
-    updateUserProfile(user: User): Observable<User> {
+ updateUserProfile(user: User): Observable<User> {
     localStorage.setItem('userProfile', JSON.stringify(user));
     return this.http.put<User>(`${this.baseUrl}/${user.id}`, user);
   }
+
+  getAllUser(): Observable<any>{
+      
+          return this.http.get(this.baseUrl);
+      
+        }
+     viewUserProfile(id: string): Observable<any> {
+      return this.http.get(this.baseUrl+'/'+id);
+    }
+   getUserById(id: string): Observable<any> {
+  
+      return this.http.get(this.baseUrl+'/'+id);
+    }
+    updateUser(id: string, user: User): Observable<any> {
+  
+     return this.http.put(this.baseUrl+'/'+id,user);
+    }
+  
   
 }

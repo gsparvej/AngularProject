@@ -1,11 +1,10 @@
-
-export class User {
+export class AdminModel {
 
     id!: string;
     name!: string;
     email!: string;
     password!: string;
-    role!: 'admin' | 'user' ;
+    role!: string;
     photo!: string;
 
 }

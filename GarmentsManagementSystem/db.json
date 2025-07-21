@@ -29,7 +29,7 @@
     }
   ],
   "department": [
-        {
+    {
       "id": "0781",
       "name": "Production",
       "designations": [
@@ -292,6 +292,14 @@
       "email": "rahmat@gmail.com",
       "password": "12345",
       "photo": "https://avatars.githubusercontent.com/u/108518708?v=4",
+      "role": "user"
+    },
+    {
+      "id": "399f",
+      "name": "Md. Rakib Islam",
+      "email": "rakib@gmail.com",
+      "password": "12345",
+      "photo": "https://avatars.githubusercontent.com/u/196038058?v=4",
       "role": "user"
     }
   ],

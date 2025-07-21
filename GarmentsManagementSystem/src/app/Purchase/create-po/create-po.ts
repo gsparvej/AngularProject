@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { VendorModel } from '../../../model/Purchase/vendor.model';
 import { Item } from '../../../model/Purchase/item.model';
@@ -37,7 +37,8 @@ export class CreatePO implements OnInit{
       private itemService: ItemService,
       private vendorService: VendorService,
       private router: Router,
-      private formBuilder: FormBuilder
+      private formBuilder: FormBuilder,
+      private cdr: ChangeDetectorRef
     ){}
 
 
@@ -129,15 +130,24 @@ export class CreatePO implements OnInit{
 
   private loadVendor(): void {
     this.vendorService.getAllVendor().subscribe({
-      next: vendor => (this.vendor = vendor),
+      next: vendor => {
+        this.vendor = vendor;
+        this.cdr.detectChanges();
+      },
       error: err => console.error(err)
+     
     });
   }
 
 
    private loadCategoryName(): void {
     this.itemService.getAllItem().subscribe({
-      next: data => (this.item = data),
+      next: data => {
+        this.item = data;
+        this.cdr.detectChanges();
+      
+      },
+      
       error: err => console.error(err)
     });
   }

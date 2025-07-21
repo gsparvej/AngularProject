@@ -46,13 +46,16 @@ import { UpdateLeave } from './HR/update-leave/update-leave';
 import { UserGuard } from './Guards/user-guard';
 import { AdminGuard } from './Guards/admin-guard';
 import { Logout } from './Auth/logout/logout';
+import { AdminProfile } from './Auth/admin-profile/admin-profile';
+import { ViewUsers } from './User/view-users/view-users';
+import { UpdateUsers } from './User/update-users/update-users';
 
 const routes: Routes = [
   { path: '', component: Home },
   { path: 'reg', component: Registration },
   { path: 'login', component: Login },
-  { path: 'viewAllEmp', component: ViewAllEmployee, canActivate:[UserGuard] },
-  { path: 'addEmp', component: AddEmployee, canActivate:[AdminGuard] },
+  { path: 'viewAllEmp', component: ViewAllEmployee },
+  { path: 'addEmp', component: AddEmployee },
   { path: 'viewAllDepart', component: ViewAllDepartment },
   { path: 'addDesig', component: AddDesignation },
   { path: 'addDepart', component: AddDepartment },
@@ -64,7 +67,12 @@ const routes: Routes = [
   { path: 'viewAllBuyer', component: ViewAllBuyer },
   {path: 'updateBuy/:id', component: UpdateBuyer},
   { path: 'addBuyer', component: AddBuyer },
-  { path: 'userprofile', component: UserProfile },
+  {path: 'viewAllUser', component: ViewUsers},
+  {path: 'updateUser/:id', component: UpdateUsers},
+
+  {path: 'userprofile', component: UserProfile },
+  {path: 'adminprofile', component: AdminProfile},
+
   { path: 'addUom', component: AddUom },
   { path: 'viewAllUom', component: ViewAllUom },
   { path: 'addBom', component: AddBom },
@@ -72,7 +80,7 @@ const routes: Routes = [
   { path: 'addBomBomView', component: AddBomView },
   { path: 'viewBomBomView/:id', component: ViewFullBomView },
   { path: 'viewBomBomView', component: ViewFullBomView },
-  { path: 'createOrder', component: CreateOrder, canActivate:[AdminGuard] },
+  { path: 'createOrder', component: CreateOrder },
   { path: 'viewHalfOrder', component: HalfViewOrder },
   { path: 'updateEmp/:id', component: UpdateEmployee },
   { path: 'fullOrderView/:id', component: FullOrderView },
