@@ -9,7 +9,7 @@
 
 .navbar .nav-link:hover,
 .navbar .nav-link.active {
-  color: #00e6ac !important;
+  color: #badfd5 !important;
   transition: all 0.3s ease;
 }
 
