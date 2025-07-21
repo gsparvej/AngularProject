@@ -29,6 +29,14 @@
     }
   ],
   "department": [
+        {
+      "id": "0781",
+      "name": "Production",
+      "designations": [
+        "d104",
+        "978a"
+      ]
+    },
     {
       "id": "3b5a",
       "name": "Administration ",
