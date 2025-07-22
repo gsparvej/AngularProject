@@ -50,11 +50,18 @@ import { AdminProfile } from './Auth/admin-profile/admin-profile';
 import { ViewUsers } from './User/view-users/view-users';
 import { UpdateUsers } from './User/update-users/update-users';
 import { ChatComponent } from './Chat/chat-component/chat-component';
+import { SuperAdmin } from './Auth/super-admin/super-admin';
+import { HrExecutive } from './Auth/hr-executive/hr-executive';
+import { HrAdmin } from './Auth/hr-admin/hr-admin';
+import { MerchandiserJunior } from './Auth/merchandiser-junior/merchandiser-junior';
+import { MerchandiserManager } from './Auth/merchandiser-manager/merchandiser-manager';
 
 const routes: Routes = [
   { path: '', component: Home },
   { path: 'reg', component: Registration },
   { path: 'login', component: Login },
+
+
   { path: 'viewAllEmp', component: ViewAllEmployee },
   { path: 'addEmp', component: AddEmployee },
   { path: 'viewAllDepart', component: ViewAllDepartment },
@@ -65,14 +72,27 @@ const routes: Routes = [
   { path: 'viewAllLeave', component: ViewAllLeave },
   { path: 'addLeave', component: AddLeave },
   {path: 'updateLeave/:id', component: UpdateLeave},
+
+
+
   { path: 'viewAllBuyer', component: ViewAllBuyer },
   {path: 'updateBuy/:id', component: UpdateBuyer},
   { path: 'addBuyer', component: AddBuyer },
+
+
   {path: 'viewAllUser', component: ViewUsers},
   {path: 'updateUser/:id', component: UpdateUsers},
 
+  //role Profile
   {path: 'userprofile', component: UserProfile },
   {path: 'adminprofile', component: AdminProfile},
+  {path: 'superadmin', component: SuperAdmin},
+  {path: 'hrexecutive', component: HrExecutive},
+  {path: 'hradmin', component: HrAdmin},
+  {path: 'merchandiserjunior', component: MerchandiserJunior},
+  {path: 'merchandisermanager', component: MerchandiserManager},
+
+
 
   { path: 'addUom', component: AddUom },
   { path: 'viewAllUom', component: ViewAllUom },

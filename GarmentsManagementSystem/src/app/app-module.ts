@@ -56,6 +56,11 @@ import { AdminProfile } from './Auth/admin-profile/admin-profile';
 import { ViewUsers } from './User/view-users/view-users';
 import { UpdateUsers } from './User/update-users/update-users';
 import { ChatComponent } from './Chat/chat-component/chat-component';
+import { SuperAdmin } from './Auth/super-admin/super-admin';
+import { HrExecutive } from './Auth/hr-executive/hr-executive';
+import { HrAdmin } from './Auth/hr-admin/hr-admin';
+import { MerchandiserJunior } from './Auth/merchandiser-junior/merchandiser-junior';
+import { MerchandiserManager } from './Auth/merchandiser-manager/merchandiser-manager';
 
 @NgModule({
   declarations: [
@@ -111,6 +116,11 @@ import { ChatComponent } from './Chat/chat-component/chat-component';
     ViewUsers,
     UpdateUsers,
     ChatComponent,
+    SuperAdmin,
+    HrExecutive,
+    HrAdmin,
+    MerchandiserJunior,
+    MerchandiserManager,
   ],
   imports: [
     BrowserModule,

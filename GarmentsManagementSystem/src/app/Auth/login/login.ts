@@ -49,7 +49,23 @@ onSubmit(): void {
         this.router.navigate(['/adminprofile']);
       } else if (role === 'user') {
         this.router.navigate(['/userprofile']);
-      } else {
+      }
+       else if (role === 'superadmin') {
+        this.router.navigate(['/superadmin']);
+      }
+      else if (role === 'hrexecutive') {
+        this.router.navigate(['/hrexecutive']);
+      }
+      else if (role === 'hradmin') {
+        this.router.navigate(['/hradmin']);
+      }
+      else if (role === 'merchandiserjunior') {
+        this.router.navigate(['/merchandiserjunior']);
+      }
+      else if (role === 'merchandisermanager') {
+        this.router.navigate(['/merchandisermanager']);
+      }
+      else {
         this.errorMessage = 'Unknown user role.';
       }
 

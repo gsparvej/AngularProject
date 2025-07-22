@@ -1,6 +1,6 @@
 export interface ChatMessage {
   id?: number;
-  sender: string;       // example: "Alice" or "Bob"
+  sender: string;    
   content: string;
   timestamp: Date;
 }
