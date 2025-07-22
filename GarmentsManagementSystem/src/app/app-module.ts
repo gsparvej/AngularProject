@@ -55,6 +55,7 @@ import { UpdateLeave } from './HR/update-leave/update-leave';
 import { AdminProfile } from './Auth/admin-profile/admin-profile';
 import { ViewUsers } from './User/view-users/view-users';
 import { UpdateUsers } from './User/update-users/update-users';
+import { ChatComponent } from './Chat/chat-component/chat-component';
 
 @NgModule({
   declarations: [
@@ -109,6 +110,7 @@ import { UpdateUsers } from './User/update-users/update-users';
     AdminProfile,
     ViewUsers,
     UpdateUsers,
+    ChatComponent,
   ],
   imports: [
     BrowserModule,

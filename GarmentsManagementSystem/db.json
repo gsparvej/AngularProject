@@ -335,7 +335,7 @@
       "email": "rahmat@gmail.com",
       "password": "12345",
       "photo": "https://avatars.githubusercontent.com/u/108518708?v=4",
-      "role": "hrexecutive"
+      "role": "user"
     },
     {
       "id": "399f",
@@ -1470,6 +1470,92 @@
       "itemId": "af5a",
       "quantity": 50,
       "transactionDate": "2025-07-16"
+    }
+  ],
+  "messages": [
+    {
+      "id": "d5aa",
+      "sender": "You",
+      "content": "hi",
+      "timestamp": "2025-07-22T06:19:52.012Z"
+    },
+    {
+      "id": "de17",
+      "sender": "You",
+      "content": "hello, whats up!",
+      "timestamp": "2025-07-22T06:20:12.216Z"
+    },
+    {
+      "id": "bb7f",
+      "sender": "You",
+      "content": "hello, guys!",
+      "timestamp": "2025-07-22T06:21:17.071Z"
+    },
+    {
+      "id": "a658",
+      "sender": "You",
+      "content": "hey",
+      "timestamp": "2025-07-22T06:26:20.704Z"
+    },
+    {
+      "id": "cb31",
+      "sender": "You",
+      "content": "nice",
+      "timestamp": "2025-07-22T06:26:35.172Z"
+    },
+    {
+      "id": "44b1",
+      "sender": "",
+      "content": "hello",
+      "timestamp": "2025-07-22T06:32:26.767Z"
+    },
+    {
+      "id": "08b7",
+      "sender": "",
+      "content": "hi",
+      "timestamp": "2025-07-22T06:32:48.055Z"
+    },
+    {
+      "id": "868c",
+      "sender": "Rahmatullah",
+      "content": "hello eiasin broooo",
+      "timestamp": "2025-07-22T06:43:52.736Z"
+    },
+    {
+      "id": "cff8",
+      "sender": "Rahmatullah",
+      "content": "fine, what about you ! Rahmatullah ?",
+      "timestamp": "2025-07-22T06:44:35.015Z"
+    },
+    {
+      "id": "fcac",
+      "sender": "Eiasin",
+      "content": "fine, what about Rahmatullah !",
+      "timestamp": "2025-07-22T06:46:29.310Z"
+    },
+    {
+      "id": "d1b6",
+      "sender": "Eiasin",
+      "content": "Tell me Your Project's Update ",
+      "timestamp": "2025-07-22T06:55:52.648Z"
+    },
+    {
+      "id": "7a8d",
+      "sender": "Rahmatullah",
+      "content": "Ops! Bro, I think I am so late about my Project but inshaallah i will do this in time. ",
+      "timestamp": "2025-07-22T06:57:07.497Z"
+    },
+    {
+      "id": "5707",
+      "sender": "Rahmatullah",
+      "content": "please, pray for me",
+      "timestamp": "2025-07-22T06:57:21.087Z"
+    },
+    {
+      "id": "c63d",
+      "sender": "Eiasin",
+      "content": "Sure bro, Don't be Upset, your work is awesome, i think your project will be the best. ",
+      "timestamp": "2025-07-22T06:58:20.246Z"
     }
   ]
 }

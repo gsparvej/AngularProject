@@ -49,6 +49,7 @@ import { Logout } from './Auth/logout/logout';
 import { AdminProfile } from './Auth/admin-profile/admin-profile';
 import { ViewUsers } from './User/view-users/view-users';
 import { UpdateUsers } from './User/update-users/update-users';
+import { ChatComponent } from './Chat/chat-component/chat-component';
 
 const routes: Routes = [
   { path: '', component: Home },
@@ -98,7 +99,8 @@ const routes: Routes = [
   {path: 'viewPO' , component: ViewAllPO},
   {path: 'viewPODetails/:id', component: ViewPODetails},
   {path: 'viewAllRequ' , component: ViewAllRequ},
-  {path: 'viewRequDetails/:id' ,component: ViewRequDetails}
+  {path: 'viewRequDetails/:id' ,component: ViewRequDetails},
+  {path: 'chatBox', component: ChatComponent}
 ];
 
 @NgModule({
