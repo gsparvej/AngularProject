@@ -27,6 +27,16 @@
 
             </div>
 
+
+            <div class="col-md-4 " formGroupName="bom">
+
+                <label for="" class="form-label">Style Code:</label>
+                <select id="" formControlName="styleCode" class="form-select">
+                    <option *ngFor="let b of bom" [ngValue]="b.styleCode">{{b.styleCode}}</option>
+                </select>
+
+            </div>
+
             <div class="col-md-4">
                 <label for="" class="form-label">Quantity</label>
                 <input type="number" class="form-control" id="" formControlName="quantity">

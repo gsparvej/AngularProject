@@ -74,14 +74,12 @@ export class UpdateEmployee implements OnInit {
     })
   }
 
-  compareDepartment(d1: Department, d2: Department): boolean {
+  compareDepartment(d1: any, d2: any): boolean {
+  return d1 && d2 ? d1.id === d2.id : d1 === d2;
+}
 
-    return d1 && d2 ? d1.id === d2.id : d1 === d2;
-  }
-
-  compareDesignation(d1: Designation, d2: Designation): boolean {
-
-    return d1 && d2 ? d1.id === d2.id : d1 === d2;
-  }
+compareDesignation(d1: any, d2: any): boolean {
+  return d1 && d2 ? d1.id === d2.id : d1 === d2;
+}
 
 }

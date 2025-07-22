@@ -60,13 +60,13 @@ export class AddBomView implements OnInit {
 
     // eituk code use kori ni , ***
 
-    //   this.formBomView.get('bom')?.get('styleCode')?.valueChanges.subscribe(styleCode => {
-    //   const selectedStyleCode = this.bom.find(b => b.styleCode === styleCode);
-    //   if(selectedStyleCode) {
+      this.formBomView.get('bom')?.get('styleCode')?.valueChanges.subscribe(styleCode => {
+      const selectedStyleCode = this.bom.find(b => b.styleCode === styleCode);
+      if(selectedStyleCode) {
 
-    //     this.formBomView.patchValue({bom: selectedStyleCode});
-    //   }
-    //  });
+        this.formBomView.patchValue({bom: selectedStyleCode});
+      }
+     });
 
     //   this.formBomView.get('bom')?.get('description')?.valueChanges.subscribe(description => {
     //   const selectedDescription = this.bom.find(b => b.description === description);
@@ -117,6 +117,7 @@ export class AddBomView implements OnInit {
 
       next: (bom) => {
         this.bom = bom;
+        this.cdr.detectChanges();
 
       },
       error: (err) => {
@@ -134,6 +135,7 @@ export class AddBomView implements OnInit {
 
       next: (s) => {
         this.uom = s;
+        this.cdr.detectChanges();
 
       },
       error: (err) => {
