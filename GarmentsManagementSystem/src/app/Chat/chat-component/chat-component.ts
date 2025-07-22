@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ChatMessage } from '../../../model/Chat/chatBox.model';
 import { ChatBox } from '../../service/Chat/chat-box';
 import { AuthService } from '../../service/Auth/auth-service';
@@ -9,13 +9,13 @@ import { AuthService } from '../../service/Auth/auth-service';
   templateUrl: './chat-component.html',
   styleUrl: './chat-component.css'
 })
-export class ChatComponent {
+export class ChatComponent implements OnInit{
 
-    messages: ChatMessage[] = [];
+  messages: ChatMessage[] = [];
   newMessage: string = '';
   currentUserName: string = 'Guest'; // fallback name
 
-  constructor(private chatService: ChatBox, private authService: AuthService) {}
+  constructor(private chatService: ChatBox, private authService: AuthService) { }
 
   ngOnInit() {
     this.loadMessages();

@@ -7,16 +7,16 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 
-export class SuperAdminGuard implements CanActivate{
+export class SuperAdminGuard implements CanActivate {
 
   constructor(
     private authService: AuthService,
-    private router: Router, 
+    private router: Router,
 
     @Inject(PLATFORM_ID) private platformId: Object
   ) { }
 
-    canActivate(): boolean | UrlTree | Observable<boolean | UrlTree> {
+  canActivate(): boolean | UrlTree | Observable<boolean | UrlTree> {
     if (this.authService.isAuthenticated() && this.authService.isSuperAdmin()) {
       return true;
     }

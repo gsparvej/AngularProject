@@ -14,12 +14,8 @@ constructor(
     private router: Router, 
     @Inject(PLATFORM_ID) private platformId: Object
   ) { }
-  // canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): MaybeAsync<GuardResult> {
-  //   throw new Error('Method not implemented.');
-  // }
 
-
-   canActivate(): boolean | UrlTree | Observable<boolean | UrlTree> {
+  canActivate(): boolean | UrlTree | Observable<boolean | UrlTree> {
     if (this.authService.isAuthenticated() && this.authService.isUser()) {
       return true;
     }
