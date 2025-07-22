@@ -343,7 +343,7 @@
       "email": "rakib@gmail.com",
       "password": "12345",
       "photo": "https://avatars.githubusercontent.com/u/196038058?v=4",
-      "role": "user"
+      "role": "hradmin"
     },
     {
       "id": "3293",
@@ -359,7 +359,7 @@
       "email": "sazid@gmail.com",
       "password": "12345",
       "photo": "https://avatars.githubusercontent.com/u/45362238?v=4",
-      "role": "user"
+      "role": "merchandiserjunior"
     },
     {
       "id": "3728",
@@ -375,7 +375,7 @@
       "email": "atiq@gmail.com",
       "password": "12345",
       "photo": "https://avatars.githubusercontent.com/u/196037602?v=4",
-      "role": "user"
+      "role": "purchasemanager"
     },
     {
       "id": "d834",
@@ -383,7 +383,7 @@
       "email": "imran@gmail.com",
       "password": "12345",
       "photo": "https://avatars.githubusercontent.com/u/195880852?v=4",
-      "role": "user"
+      "role": "merchandisermanager"
     }
   ],
   "uom": [
