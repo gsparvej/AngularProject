@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { PurchaseOrder } from '../../../model/Purchase/po.model';
 import { PoService } from '../../service/Purchase/po-service';
 import { Router } from '@angular/router';
@@ -15,7 +15,8 @@ export class ViewAllPO implements OnInit{
 
   constructor(
     private poService: PoService,
-    private router: Router
+    private router: Router,
+    private cdr: ChangeDetectorRef
   ){}
 
   ngOnInit(): void {
@@ -29,6 +30,7 @@ export class ViewAllPO implements OnInit{
         this.po = result;     
 
         console.log('po:', this.po);
+        this.cdr.detectChanges();
 
 
         // ⚠️ Don't navigate here unless needed

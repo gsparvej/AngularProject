@@ -61,6 +61,8 @@ import { HrExecutive } from './Auth/hr-executive/hr-executive';
 import { HrAdmin } from './Auth/hr-admin/hr-admin';
 import { MerchandiserJunior } from './Auth/merchandiser-junior/merchandiser-junior';
 import { MerchandiserManager } from './Auth/merchandiser-manager/merchandiser-manager';
+import { PurchaseExecutive } from './Auth/purchase-executive/purchase-executive';
+import { PurchaseManager } from './Auth/purchase-manager/purchase-manager';
 
 @NgModule({
   declarations: [
@@ -121,6 +123,8 @@ import { MerchandiserManager } from './Auth/merchandiser-manager/merchandiser-ma
     HrAdmin,
     MerchandiserJunior,
     MerchandiserManager,
+    PurchaseExecutive,
+    PurchaseManager,
   ],
   imports: [
     BrowserModule,

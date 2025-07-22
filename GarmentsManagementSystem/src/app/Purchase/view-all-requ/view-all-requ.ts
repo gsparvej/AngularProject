@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { PurchaseRequisition } from '../../../model/Purchase/requisition.model';
 import { RequisitionService } from '../../service/Purchase/requisition-service';
 import { Router } from '@angular/router';
@@ -15,7 +15,8 @@ export class ViewAllRequ implements OnInit{
 
   constructor(
     private requisitionService: RequisitionService,
-    private router: Router
+    private router: Router,
+    private cdr: ChangeDetectorRef
   ){}
   ngOnInit(): void {
     this.loadAllRequisition();
@@ -29,6 +30,7 @@ export class ViewAllRequ implements OnInit{
         this.requisition = result;     
 
         console.log('requisitions:', this.requisition);
+        this.cdr.detectChanges();
 
 
         // ⚠️ Don't navigate here unless needed

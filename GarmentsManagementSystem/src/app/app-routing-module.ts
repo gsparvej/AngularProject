@@ -55,6 +55,8 @@ import { HrExecutive } from './Auth/hr-executive/hr-executive';
 import { HrAdmin } from './Auth/hr-admin/hr-admin';
 import { MerchandiserJunior } from './Auth/merchandiser-junior/merchandiser-junior';
 import { MerchandiserManager } from './Auth/merchandiser-manager/merchandiser-manager';
+import { PurchaseExecutive } from './Auth/purchase-executive/purchase-executive';
+import { PurchaseManager } from './Auth/purchase-manager/purchase-manager';
 
 const routes: Routes = [
   { path: '', component: Home },
@@ -91,6 +93,8 @@ const routes: Routes = [
   {path: 'hradmin', component: HrAdmin},
   {path: 'merchandiserjunior', component: MerchandiserJunior},
   {path: 'merchandisermanager', component: MerchandiserManager},
+  {path: 'purchaseexecutive', component: PurchaseExecutive},
+  {path: 'purchasemanager', component: PurchaseManager},
 
 
 

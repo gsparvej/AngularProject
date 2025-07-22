@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { Designation } from '../../../model/HR/designation.model';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { HrService } from '../../service/HR/hr-service';
@@ -17,7 +17,8 @@ export class AddDesignation implements OnInit{
 
   constructor(
     private formBuilder : FormBuilder,
-    private hrService: HrService
+    private hrService: HrService,
+    private cdr: ChangeDetectorRef
   ){
     this.desigForm = this.formBuilder.group({
 
@@ -35,6 +36,7 @@ export class AddDesignation implements OnInit{
   loadDesignation(){
     this.hrService.getAllDesignation().subscribe(data =>{
       this.designations = data;
+      this.cdr.detectChanges();
     });
   }
 

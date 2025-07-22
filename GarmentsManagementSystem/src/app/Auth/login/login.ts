@@ -65,6 +65,12 @@ onSubmit(): void {
       else if (role === 'merchandisermanager') {
         this.router.navigate(['/merchandisermanager']);
       }
+      else if (role === 'purchaseexecutive') {
+        this.router.navigate(['/purchaseexecutive']);
+      }
+      else if (role === 'purchasemanager') {
+        this.router.navigate(['/purchasemanager']);
+      }
       else {
         this.errorMessage = 'Unknown user role.';
       }
