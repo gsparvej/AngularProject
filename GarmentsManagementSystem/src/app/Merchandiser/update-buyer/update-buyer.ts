@@ -40,6 +40,7 @@ export class UpdateBuyer implements OnInit{
   loadBuyerById(): void {
   this.merchandiserService.getBuyerById(this.id).subscribe(data => {
     this.buyer = data;
+    this.cdr.detectChanges();
   });
 }
 

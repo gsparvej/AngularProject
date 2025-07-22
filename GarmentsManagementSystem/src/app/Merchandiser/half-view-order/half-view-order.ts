@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { Order } from '../../../model/Merchandiser/order.model';
 import { Bom } from '../../../model/Merchandiser/bom.model';
 import { OrderStatus } from '../../../model/Merchandiser/orderStatus.model';
@@ -19,7 +19,8 @@ export class HalfViewOrder implements OnInit{
 
   constructor(
     private merchandiserService: MerchandiserService,
-    private router: Router
+    private router: Router,
+    private cdr: ChangeDetectorRef
   ) {}
 
   ngOnInit(): void {
@@ -33,6 +34,7 @@ export class HalfViewOrder implements OnInit{
         this.orders = result;     
 
         console.log('Orders:', this.orders);
+        this.cdr.detectChanges();
 
 
         // ⚠️ Don't navigate here unless needed

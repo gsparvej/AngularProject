@@ -60,6 +60,37 @@
         "978a",
         "16d7"
       ]
+    },
+    {
+      "id": "456b",
+      "name": "HR",
+      "designations": [
+        "9472",
+        "b633"
+      ]
+    },
+    {
+      "id": "6966",
+      "name": "Merchandiser",
+      "designations": [
+        "d3a1",
+        "785e"
+      ]
+    },
+    {
+      "id": "5e3a",
+      "name": "Purchase",
+      "designations": [
+        "9472",
+        "d3a1"
+      ]
+    },
+    {
+      "id": "db22",
+      "name": "Management",
+      "designations": [
+        "b633"
+      ]
     }
   ],
   "designation": [
@@ -82,6 +113,18 @@
     {
       "id": "9472",
       "designationTitle": "Executive"
+    },
+    {
+      "id": "d3a1",
+      "designationTitle": "Manager"
+    },
+    {
+      "id": "785e",
+      "designationTitle": "Junior"
+    },
+    {
+      "id": "b633",
+      "designationTitle": "Admin"
     }
   ],
   "attendance": [
@@ -300,6 +343,46 @@
       "email": "rakib@gmail.com",
       "password": "12345",
       "photo": "https://avatars.githubusercontent.com/u/196038058?v=4",
+      "role": "user"
+    },
+    {
+      "id": "3293",
+      "name": "Mohammad Emran Hossain",
+      "email": "emranhss@gmail.com",
+      "password": "12345",
+      "photo": "https://avatars.githubusercontent.com/u/21266856?v=4",
+      "role": "superadmin"
+    },
+    {
+      "id": "e376",
+      "name": "Sazid Mahmud Joy",
+      "email": "sazid@gmail.com",
+      "password": "12345",
+      "photo": "https://avatars.githubusercontent.com/u/45362238?v=4",
+      "role": "user"
+    },
+    {
+      "id": "3728",
+      "name": "Md. Rahim Khan",
+      "email": "mdrahim@gmail.com",
+      "password": "12345",
+      "photo": "https://avatars.githubusercontent.com/u/196035214?v=4",
+      "role": "purchaseexecutive"
+    },
+    {
+      "id": "4696",
+      "name": "Md. Atiqul Islam",
+      "email": "atiq@gmail.com",
+      "password": "12345",
+      "photo": "https://avatars.githubusercontent.com/u/196037602?v=4",
+      "role": "user"
+    },
+    {
+      "id": "d834",
+      "name": "Md. Imran Mia",
+      "email": "imran@gmail.com",
+      "password": "12345",
+      "photo": "https://avatars.githubusercontent.com/u/195880852?v=4",
       "role": "user"
     }
   ],

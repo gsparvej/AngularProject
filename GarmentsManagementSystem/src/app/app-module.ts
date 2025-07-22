@@ -8,7 +8,7 @@ import { AddEmployee } from './HR/add-employee/add-employee';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { provideHttpClient, withFetch } from '@angular/common/http';
 import { Header } from './header/header';
-import { Footer } from './footer/footer';
+
 import { AddDepartment } from './HR/add-department/add-department';
 import { ViewAllDepartment } from './HR/view-all-department/view-all-department';
 import { UpdateEmployee } from './HR/update-employee/update-employee';
@@ -62,7 +62,7 @@ import { UpdateUsers } from './User/update-users/update-users';
     ViewAllEmployee,
     AddEmployee,
     Header,
-    Footer,
+  
     AddDepartment,
     ViewAllDepartment,
     UpdateEmployee,

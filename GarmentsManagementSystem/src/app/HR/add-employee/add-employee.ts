@@ -48,6 +48,7 @@ export class AddEmployee implements OnInit{
   onDepartmentChange(){
     const selectedDepartId = this.formGroup.value.department;
     const selectedDepartment = this.allDepartments.find(d => d.id == selectedDepartId);
+    this.cdr.detectChanges();
     if(selectedDepartment){
       this.filteredDesignations = this.allDesignations.filter(desig => selectedDepartment.designations.includes(desig.id!));
       this.formGroup.patchValue({designation: ''});

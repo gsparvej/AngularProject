@@ -147,18 +147,11 @@ storeToken(token: string): void {
     }
     return null;
   }
-
-
-  getAdminProfileFromStorage(): AdminModel | null {
-    if (this.isBrowser()) {
-      const userProfile = localStorage.getItem('currentUser');
-      console.log('User Profile is: ', userProfile);
-      return userProfile ? JSON.parse(userProfile) : null;
-    }
-    return null;
-  }
-
-
+  
+  isSuperAdmin(): boolean {
+  const role = this.getUserRole();
+  return role === 'superadmin';
+}
    isAdmin(): boolean {
     return this.getUserRole() === 'admin';
   }
@@ -167,6 +160,33 @@ storeToken(token: string): void {
     const role = this.getUserRole();
     return role === 'user';
   }
+isPurchaseManager(): boolean {
+  const role = this.getUserRole();
+  return role === 'purchasemanager';
+}
+isPurchaseExecutive(): boolean {
+  const role = this.getUserRole();
+  return role === 'purchaseexecutive';
+}
+isMerchandiserManager(): boolean {
+  const role = this.getUserRole();
+  return role === 'merchandisermanager';
+}
+isMerchandiserJr(): boolean {
+  const role = this.getUserRole();
+  return role === 'merchandiserjunior';
+}
+
+isHRAdmin(): boolean {
+  const role = this.getUserRole();
+  return role === 'hradmin';
+}
+isHRExecutive(): boolean {
+  const role = this.getUserRole();
+  return role === 'hrexecutive';
+}
+
+
 
 
 
