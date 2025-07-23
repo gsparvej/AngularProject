@@ -63,7 +63,8 @@ export class CreatePO implements OnInit{
         id: ['', Validators.required],
         companyName: ['', Validators.required],
         contactPerson: ['', Validators.required],
-        phone: ['', Validators.required]
+        phone: ['', Validators.required],
+        address: ['', Validators.required],
       }),
       item: this.formBuilder.group({
         categoryName: ['', Validators.required]

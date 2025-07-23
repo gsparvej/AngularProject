@@ -1013,6 +1013,22 @@
         "styleCode": "",
         "description": ""
       }
+    },
+    {
+      "id": "57ff",
+      "serial": "1",
+      "material": "ttbetyt",
+      "element": "yards",
+      "quantity": 900,
+      "unitPrice": 110,
+      "totalCost": 99000,
+      "uom": {
+        "result": 1.8795
+      },
+      "bom": {
+        "styleCode": "RA765",
+        "description": "Shirt"
+      }
     }
   ],
   "bom": [
@@ -1070,6 +1086,30 @@
       },
       "orderStatus": {
         "status": "Pending"
+      }
+    },
+    {
+      "id": "1eaa",
+      "buyerOrganization": "Atik Fashion House",
+      "shippingAddress": "Bogura",
+      "orderDate": "2025-07-22",
+      "deliveryDate": "2025-08-28",
+      "smallSize": 50,
+      "sPrice": 450,
+      "mediumSize": 50,
+      "mPrice": 580,
+      "largeSize": 50,
+      "lPrice": 600,
+      "subTotal": 81500,
+      "vat": 8,
+      "paidAmount": 30000,
+      "dueAmount": 51500.08,
+      "remarks": "good",
+      "bom": {
+        "styleCode": "RA765"
+      },
+      "orderStatus": {
+        "status": "Confirmed"
       }
     }
   ],
@@ -1283,6 +1323,18 @@
       "tin": "",
       "bin": "",
       "vat": "07452"
+    },
+    {
+      "id": "227c",
+      "vendorName": "",
+      "companyName": "Atik Textiles Ltd.",
+      "contactPerson": "Atik",
+      "email": "Atik@gmail.com",
+      "phone": "6657574",
+      "address": "Bogura",
+      "tin": "AT9080",
+      "bin": "",
+      "vat": ""
     }
   ],
   "item": [
