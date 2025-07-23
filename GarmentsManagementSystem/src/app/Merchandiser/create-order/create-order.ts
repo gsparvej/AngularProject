@@ -173,7 +173,22 @@ export class CreateOrder implements OnInit {
 
     this.dueAmount = this.subTotal+ (this.vat/100) - this.paidAmount;
   }
+
+  totalCalculations() {
+     this.smallSize = this.orderForm.value.smallSize;
+    this.sPrice = this.orderForm.value.sPrice;
+    this.mediumSize = this.orderForm.value.mediumSize;
+    this.mPrice = this.orderForm.value.mPrice;
+    this.largeSize = this.orderForm.value.largeSize;
+    this.lPrice = this.orderForm.value.lPrice;
+
+    this.subTotal = (this.smallSize* this.sPrice) + (this.mediumSize* this.mPrice )+ (this.largeSize* this.lPrice);
+    this.vat = this.orderForm.value.vat;
+    this.total = this.subTotal + this.vat;
+  }
+
   onFocusLost(){
     this.dueAmountCalculation();
+    this.totalCalculations();
   }
 }
