@@ -1552,11 +1552,17 @@
       "itemId": "0ec8",
       "quantity": 10,
       "receivedTransactionDate": "2025-07-18"
+    },
+    {
+      "id": "8150",
+      "itemId": "11c1",
+      "quantity": 100,
+      "receivedTransactionDate": "2025-07-23"
     }
   ],
   "inventories": [
     {
-      "quantity": 0,
+      "quantity": 100,
       "categoryName": "Woven knit Fabric",
       "id": "11c1"
     },
