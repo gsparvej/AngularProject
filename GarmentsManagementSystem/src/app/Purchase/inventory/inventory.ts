@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { InventoryService } from '../../service/Purchase/inventory-service';
 
@@ -16,7 +16,8 @@ export class Inventory implements OnInit {
 
   constructor(
     private fb: FormBuilder,
-    private inventoryService: InventoryService
+    private inventoryService: InventoryService,
+    private cdr: ChangeDetectorRef
   ) { }
 
   ngOnInit(): void {
@@ -26,6 +27,7 @@ export class Inventory implements OnInit {
   loadInventories(): void {
     this.inventoryService.getInventories().subscribe((data) => {
       this.inventories = data;
+      this.cdr.detectChanges();
     });
   }
 }

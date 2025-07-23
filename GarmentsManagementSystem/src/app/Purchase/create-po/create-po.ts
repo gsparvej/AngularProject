@@ -67,7 +67,9 @@ export class CreatePO implements OnInit{
         address: ['', Validators.required],
       }),
       item: this.formBuilder.group({
-        categoryName: ['', Validators.required]
+        id: ['', Validators.required],
+        categoryName: ['', Validators.required],
+        unit: ['', Validators.required]
       })
     });
 
@@ -81,8 +83,8 @@ export class CreatePO implements OnInit{
       }
     });
 
-    this.formPO.get('item.categoryName')?.valueChanges.subscribe(catName => {
-      const selected = this.item.find(i => i.categoryName === catName);
+    this.formPO.get('item.id')?.valueChanges.subscribe(id => {
+      const selected = this.item.find(i => i.id === id);
       if (selected) {
         this.formPO.patchValue({ item: selected });
       }
