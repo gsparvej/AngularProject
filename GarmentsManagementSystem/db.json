@@ -419,6 +419,17 @@
       "wastage": 2,
       "shrinkage": 3,
       "result": 1.7325
+    },
+    {
+      "id": "360d",
+      "productName": "Shirt",
+      "size": "M",
+      "body": 3,
+      "sleeve": 4,
+      "pocket": 5,
+      "wastage": 1,
+      "shrinkage": 4,
+      "result": 12.6
     }
   ],
   "bomview": [
