@@ -171,6 +171,17 @@
         "id": "638f",
         "name": "Md. Parvej Hossen"
       }
+    },
+    {
+      "id": "70bd",
+      "attDate": "2025-07-25T10:32",
+      "atten_status": {
+        "status": "Present"
+      },
+      "employees": {
+        "id": "b527",
+        "name": "Md. Rakib Islam"
+      }
     }
   ],
   "atten_status": [
@@ -266,6 +277,19 @@
         "id": "2",
         "status": "Approve"
       }
+    },
+    {
+      "id": "a8ea",
+      "leaveType": "Casual",
+      "fromDate": "2025-07-24",
+      "toDate": "2025-07-26",
+      "leave_status": {
+        "status": "Approve"
+      },
+      "employees": {
+        "id": "638f",
+        "name": "Md. Parvej Hossen"
+      }
     }
   ],
   "leave_status": [
@@ -318,6 +342,15 @@
       "phone": "77868767",
       "email": "badshah@gmail.com",
       "address": "Mymensingh"
+    },
+    {
+      "id": "34bd",
+      "name": "Ching Chong Texttiles Ltd.",
+      "country": "Chaina",
+      "contactperson": "Tanjina",
+      "phone": "77868767",
+      "email": "ching@gmail.com",
+      "address": "Beijing"
     }
   ],
   "user": [
@@ -430,6 +463,17 @@
       "wastage": 1,
       "shrinkage": 4,
       "result": 12.6
+    },
+    {
+      "id": "f302",
+      "productName": "Short Sleeve Shirt",
+      "size": "M",
+      "body": 34,
+      "sleeve": 10,
+      "pocket": 8,
+      "wastage": 2,
+      "shrinkage": 3,
+      "result": 54.6
     }
   ],
   "bomview": [
@@ -544,6 +588,38 @@
         "styleCode": "RA765",
         "description": "Shirt"
       }
+    },
+    {
+      "id": "537d",
+      "serial": "1",
+      "material": "Woven Fabric ",
+      "element": "yards",
+      "quantity": 1000,
+      "unitPrice": 90,
+      "totalCost": 90000,
+      "uom": {
+        "result": 54.6
+      },
+      "bom": {
+        "styleCode": "TAN123",
+        "description": "Short Sleeve Shirt"
+      }
+    },
+    {
+      "id": "500c",
+      "serial": "2",
+      "material": "Plastic Button",
+      "element": "",
+      "quantity": 10,
+      "unitPrice": 1.5,
+      "totalCost": 15,
+      "uom": {
+        "result": ""
+      },
+      "bom": {
+        "styleCode": "TAN123",
+        "description": "Short Sleeve Shirt"
+      }
     }
   ],
   "bom": [
@@ -576,6 +652,11 @@
       "id": "0d49",
       "styleCode": "RA765",
       "description": "Shirt"
+    },
+    {
+      "id": "d486",
+      "styleCode": "TAN123",
+      "description": "Short Sleeve Shirt"
     }
   ],
   "order": [
@@ -651,6 +732,31 @@
       "orderStatus": {
         "status": "Completed"
       }
+    },
+    {
+      "id": "721f",
+      "buyerOrganization": "Ching Chong Tehgsdjh",
+      "shippingAddress": "Chaina",
+      "orderDate": "2025-07-25",
+      "deliveryDate": "2025-09-25",
+      "smallSize": 1000,
+      "sPrice": 200,
+      "mediumSize": 1500,
+      "mPrice": 220,
+      "largeSize": 2000,
+      "lPrice": 250,
+      "subTotal": 1030000,
+      "vat": 12,
+      "paidAmount": 500000,
+      "dueAmount": 530000.12,
+      "total": 1030012,
+      "remarks": "goods",
+      "bom": {
+        "styleCode": "TAN123"
+      },
+      "orderStatus": {
+        "status": "Confirmed"
+      }
     }
   ],
   "orderStatus": [
@@ -705,6 +811,30 @@
       },
       "item": {
         "categoryName": "Woven knit Fabric"
+      }
+    },
+    {
+      "id": "46c7",
+      "poNumber": "TA4545",
+      "poDate": "2025-07-27",
+      "quantity": 2500,
+      "rate": 92,
+      "tax": 8,
+      "deliveryDate": "2025-08-09",
+      "termsAndCondition": "dtujcduktdukyd\nut3uduryrudil\nyudu3yiel\n3dud\nuerudyriril\nud3rduy\n3ukdy3kdy34il",
+      "subTotal": 230000,
+      "totalAmount": 248400,
+      "vendor": {
+        "id": "77d6",
+        "companyName": "Badshah Fabric Mills",
+        "contactPerson": "parvej",
+        "phone": "7878788",
+        "address": "Mymensingh, Bangladesh"
+      },
+      "item": {
+        "id": "11c1",
+        "categoryName": "Woven knit Fabric",
+        "unit": "yards"
       }
     }
   ],
@@ -853,6 +983,26 @@
       },
       "order": {
         "id": "0bc2"
+      },
+      "prStatus": {
+        "status": "Requesting"
+      }
+    },
+    {
+      "id": "0db3",
+      "prDate": "2025-07-26",
+      "requestedBy": "tanha",
+      "quantity": 2000,
+      "approxUnitPrice": 95,
+      "totalEstPrice": 190000,
+      "department": {
+        "name": "Sewing"
+      },
+      "item": {
+        "categoryName": "Woven knit Fabric"
+      },
+      "order": {
+        "id": "721f"
       },
       "prStatus": {
         "status": "Requesting"
@@ -1073,11 +1223,17 @@
       "itemId": "11c1",
       "quantity": 100,
       "receivedTransactionDate": "2025-07-23"
+    },
+    {
+      "id": "020e",
+      "itemId": "11c1",
+      "quantity": 2500,
+      "receivedTransactionDate": "2025-08-09"
     }
   ],
   "inventories": [
     {
-      "quantity": 100,
+      "quantity": 500,
       "categoryName": "Woven knit Fabric",
       "id": "11c1"
     },
@@ -1125,6 +1281,12 @@
       "itemId": "af5a",
       "quantity": 50,
       "transactionDate": "2025-07-16"
+    },
+    {
+      "id": "3b64",
+      "itemId": "11c1",
+      "quantity": 2100,
+      "transactionDate": "2025-08-11"
     }
   ],
   "messages": [
@@ -1271,6 +1433,24 @@
       "sender": "Md. Atiqul Islam",
       "content": "hiii, eiasin",
       "timestamp": "2025-07-22T18:14:02.534Z"
+    },
+    {
+      "id": "ed68",
+      "sender": "Rahmatullah",
+      "content": "hello, eiasin whatsUp!",
+      "timestamp": "2025-07-25T04:07:49.015Z"
+    },
+    {
+      "id": "d4e3",
+      "sender": "Eiasin",
+      "content": "hi, I am iffine . Lets have a cup of tee in break time ",
+      "timestamp": "2025-07-25T04:08:55.735Z"
+    },
+    {
+      "id": "ee07",
+      "sender": "Rahmatullah",
+      "content": "Thats a great plan , lets go",
+      "timestamp": "2025-07-25T04:09:36.143Z"
     }
   ]
 }
